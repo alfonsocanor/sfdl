@@ -1,0 +1,21 @@
+{
+  "name": "sfdl2u",
+  "version": "1.0.0",
+  "description": "Salesforce Debu Logs to you it's a cli app that allow user download ApexLogs using token and instanceUrl",
+  "main": "src/index.js",
+  "bin": {
+    "sfdl2u": "bin/sfdl2u"
+  },
+  "scripts": {
+    "test": "echo \"Error: no tests specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "sfdl2u"
+  ],
+  "dependencies": {
+    "arg": "^5.0.1",
+    "esm": "^3.2.25",
+    "inquirer": "^8.2.0"
+  }
+}
