@@ -81,14 +81,16 @@ export async function cli(args){
    let options = parseArgumentsIntoOptions(args);
    sessionInformation = await promtRequiredArguments(options);
   
-   console.log('downloading...');
    let apexLogInformation = await getApexLogsInformation();
  
    if(JSON.parse(apexLogInformation).size > 0){
+        console.log('downloading...');
        //Create Folder to save logs => Default ApexLog
        !fs.existsSync(sessionInformation.folderName) && fs.mkdirSync(sessionInformation.folderName, { recursive: true });
  
        processApexLogs(JSON.parse(apexLogInformation).records);    
+   } else {
+       console.log('No logs to download...');
    }
 }  
  
