@@ -31,7 +31,7 @@ async function promtRequiredArguments(options){
  
    const configInfo = getInformationFromConfig();
  
-   if(!configInfo.authToken || !configInfo.instanceUrl){
+   if(!configInfo || !configInfo.authToken || !configInfo.instanceUrl){
        questions.push(
            {
                type: 'input',
@@ -175,7 +175,7 @@ function saveApexLog(fileName, apexLogBody){
 }
  
 function getInformationFromConfig(){
-   return JSON.parse(fs.readFileSync('./config.json'));
+   return fs.existsSync('./config.json') ? JSON.parse(fs.readFileSync('./config.json')) : null;
 }
  
 function formatApexLog(body){
