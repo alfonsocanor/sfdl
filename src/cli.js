@@ -5,6 +5,7 @@ import http from 'https';
 const fs = require('fs')
 const apexLogIdsQueryUrl = '/services/data/v51.0/tooling/query/?q=SELECT Id, LastModifiedDate, LogLength, LogUser.Name, Operation FROM ApexLog ';
 const apexLogBodyUrl = '/services/data/v51.0/sobjects/ApexLog/';
+const KB2MB = 0.00000095367432;
  
 let sessionInformation;
  
@@ -13,7 +14,8 @@ function parseArgumentsIntoOptions(rawArgs){
        {
            '--queryWhere': Boolean,
            '--folderName': Boolean,
-           '--debug': Boolean
+           '--debug': Boolean,
+           '--createDraftConfig': Boolean
        },
        {
            argv: rawArgs.slice(2),
@@ -22,11 +24,16 @@ function parseArgumentsIntoOptions(rawArgs){
    return {
        queryWhere: args['--queryWhere'] || false,
        folderName: args['--folderName'] || false,
-       debug: args['--debug'] || false
+       debug: args['--debug'] || false,
+       createDraftConfig: args['--createDraftConfig'] || false
    }
 }
  
 async function promtRequiredArguments(options){
+    if(options.createDraftConfig){
+        return options;
+    }
+
    const questions = [];
  
    const configInfo = getInformationFromConfig();
@@ -74,12 +81,18 @@ async function promtRequiredArguments(options){
        queryWhere: answers.queryWhere || '',
        folderName: answers.folderName || './ApexLogs',
        debug: options.debug || false
+
    };
 }
  
 export async function cli(args){
    let options = parseArgumentsIntoOptions(args);
    sessionInformation = await promtRequiredArguments(options);
+
+   if(sessionInformation.createDraftConfig){
+        createDraftConfigFile();
+        return;
+   }
   
    let apexLogInformation = await getApexLogsInformation();
  
@@ -111,10 +124,11 @@ function processApexLogs(apexLogList){
        var regex = new RegExp('/', 'g');
  
        let fileName =
-           apexLog.LogLength + 'kb-' +
-           apexLog.Operation.replace(regex,'') + '-' +
-           apexLog.LastModifiedDate + '-' +
-           apexLog.LogUser.Name + '.log';
+           (apexLog.LogLength * KB2MB).toFixed(4) + 'MB | ' +
+           apexLog.Operation.replace(regex,'') + ' | ' +
+           apexLog.LastModifiedDate.split('.')[0] + ' | ' +
+           apexLog.LogUser.Name + ' | ' + 
+           apexLog.Id + '.log';
  
        getInformationFromSalesforce(completeUrl)
        .then((body) => {
@@ -175,7 +189,16 @@ function saveApexLog(fileName, apexLogBody){
 }
  
 function getInformationFromConfig(){
-   return fs.existsSync('./config.json') ? JSON.parse(fs.readFileSync('./config.json')) : null;
+   return fs.existsSync('config.json') ? JSON.parse(fs.readFileSync('config.json')) : null;
+}
+
+function createDraftConfigFile(){
+    let configFileBody = {"authToken":"","instaceUrl":""};
+    if(!fs.existsSync('config.json')){
+        fs.writeFile('config.json', JSON.stringify(configFileBody, null, '\t'), function (err) {
+            if (err) return console.log(err);
+        });
+    }
 }
  
 function formatApexLog(body){
