@@ -51,6 +51,8 @@ export function sfdlu2Help(){
     );
     
     printOnConsole(table.toString(), FONTBLUE);
+
+    printOnConsole('\nRepository: https://github.com/alfonsocanor/sfdl2u\n', FONTWHITE);
 }
 
 export function getInformationFromConfig() {
