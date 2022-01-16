@@ -1,6 +1,6 @@
 
 # SFDL2U
-SFDL2U is a command line interface tool to download Salesforce Apex Logs
+SFDL2U is a command line interface tool to download, format and extract information from Salesforce Apex Logs
 
 # Installation
 
@@ -61,3 +61,6 @@ The boolean options supported using `--optionName` are:
 | queryWhere   |`Allows you to enter a SOQL statements after the FROM ApexLog` |WHERE Operation != '<empty'> ORDER BY LastModifiedDate DESC|
 |folderName          |`Allows you to enter the name of the folder where the logs will be saved` |NewLogs2022            | ApexLog
 | debug | `It Will turn on logs from the module` | 
+|createDraftConfig|It will create config.json file|{"authToken":"","instanceUrl": ""}|
+|clearFinest|It will remove all lines that contains HEAP_ALLOCATE and STATEMENT_EXECUTE||
+|format|It will give 3 options: 1) One file: Extract all query lines, 2) One file: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE, 3) All files in a folder: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE ||
