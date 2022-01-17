@@ -1,14 +1,10 @@
 import arg from 'arg';
 import inquirer from 'inquirer';
-/* import http from 'https'; */
 
 const fs = require('fs');
 const utils = require('./utils');
 const filesManipulation = require('./filesManipulation');
 const salesforceInteration = require('./salesforceInteration');
-/* const apexLogIdsQueryUrl = '/services/data/v51.0/tooling/query/?q=SELECT Id, LastModifiedDate, LogLength, LogUser.Name, Operation FROM ApexLog ';
-const apexLogBodyUrl = '/services/data/v51.0/sobjects/ApexLog/';
-const KB2MB = 0.00000095367432; */
 
 let sessionInformation;
 
@@ -90,7 +86,7 @@ async function promtRequiredArguments(options) {
     }
 
     if (options.folderName) {
-        formatExtraQuestions.push({
+        questions.push({
             type: 'input',
             name: 'folderName',
             message: 'Enter a folder to save the logs'
@@ -209,81 +205,3 @@ export async function cli(args) {
         utils.printOnConsole('No logs to download...', utils.FONTMAGENTA);
     }
 }
-
-//=========== Start get information from Salesforce =========
-/* async function getApexLogsInformation(sessionInformation) {
-    let url2GetApexLogIds = sessionInformation.instanceUrl + apexLogIdsQueryUrl + sessionInformation.queryWhere;
-    return await getInformationFromSalesforce(url2GetApexLogIds, null);
-}
-
-function processApexLogs(apexLogList) {
-    let promises2Return = [];
-
-    apexLogList.forEach(apexLog => {
-        let completeUrl = sessionInformation.instanceUrl + apexLogBodyUrl + apexLog.Id + '/Body';
-
-        if (sessionInformation.debug) console.log('processApexLogs completeUrl: ', completeUrl);
-
-        //Some operation values contains '/' char
-        var regex = new RegExp('/', 'g');
-
-        let fileName =
-            (apexLog.LogLength * KB2MB).toFixed(4) + 'MB | ' +
-            apexLog.Operation.replace(regex, '') + ' | ' +
-            apexLog.LastModifiedDate.split('.')[0] + ' | ' +
-            apexLog.LogUser.Name + ' | ' +
-            apexLog.Id + '.log';
-
-        promises2Return.push(getInformationFromSalesforce(completeUrl, { fileName }));
-    });
-    return promises2Return;
-}
-
-function getInformationFromSalesforce(requestUrl, additionalOutputs) {
-    return new Promise((resolve, reject) => {
-        let options = {
-            headers: {
-                'Authorization': sessionInformation.authToken,
-                'Content-type': 'application/json'
-            }
-        }
-
-        const req = http.request(requestUrl, options, function(res) {
-            if (sessionInformation.debug) console.log('response code: ' + res.statusCode);
-
-            if (res.statusCode < 200 || res.statusCode >= 300) {
-                return reject(new Error('statusCode=' + res.statusCode));
-            }
-            let body = [];
-            res.setEncoding('utf8');
-            res.on('data', function(data) {
-                body.push(data);
-            });
-            res.on('end', function() {
-                let response = '';
-                try {
-                    for (const bodyIndex in body) {
-                        response += body[bodyIndex];
-                    }
-                    response = JSON.parse(JSON.stringify(response));
-                } catch (e) {
-                    if (sessionInformation.debug) console.log('error: ', e);
-                    reject(e);
-                }
-
-                resolve({
-                    response,
-                    additionalOutputs
-                });
-            });
-        });
-
-        req.on('error', (e) => {
-            if (sessionInformation.debug) console.log('error: ', e);
-            reject(e.message);
-        });
-        // send the request
-        req.end();
-    })
-} */
-//===========  End get information from Salesforce =========

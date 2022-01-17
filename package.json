@@ -1,6 +1,6 @@
 {
   "name": "sfdl2u",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Salesforce Debu Logs to you it's a cli app that allow user download ApexLogs using token and instanceUrl",
   "main": "src/index.js",
   "bin": {
