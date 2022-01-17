@@ -1,7 +1,12 @@
 
+
 # SFDL2U
 SFDL2U is a command line interface tool to download, format and extract information from Salesforce Apex Logs
 
+# Releases
+- **v1.x.x** - Functionality mainly focus on troubleshooting sessions that require extract Manage Package logs using Subscriber Access. The reason is that with the feature the User don't have credentials for authentication and that's why of the Workaround describe bellow to obtain the sessionId
+```v.1.2.0: Download, format and extract logs information``` 
+ 
 # Installation
 
 - Download and Install Node at: [https://nodejs.org/](https://nodejs.org/) 
