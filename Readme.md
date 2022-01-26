@@ -1,5 +1,5 @@
-# SFDL2U
-SFDL2U is a command line interface tool to download, format and extract information from Salesforce Apex Logs
+# sfdl
+sfdl is a command line interface tool to download, format and extract information from Salesforce Apex Logs
 
 # Releases
 - **v1.x.x** - This version is focused on troubleshooting analysis, requiring to extract <em>Manage Package logs using Grant Salesforce Support</em> login access where Users don't have credentials (username/password) for authentication. [Workaround](#workaround-to-get-theauthToken) described bellow.<br/>
@@ -9,8 +9,8 @@ SFDL2U is a command line interface tool to download, format and extract informat
 
 - Download and Install Node at: [https://nodejs.org/](https://nodejs.org/) 
 - Validate your version Node using `node -v`
-- Install the SFDL2U using NPM
-	`npm install --global sfdl2u`
+- Install the sfdl using NPM
+	`npm install --global sfdl`
 
 # Configuration
 
@@ -21,7 +21,7 @@ config.json contains the information required for authentication purpose.
 	"instanceUrl": "https://{yourinstance}.my.salesforce.com"
 }
 ```
-**Note:** If this file is not added, each time you execute sfdl2u the authToken and the instanceUrl will be asked as inputs
+**Note:** If this file is not added, each time you execute sfdl the authToken and the instanceUrl will be asked as inputs
 
 
 # Execution
@@ -42,9 +42,9 @@ config.json contains the information required for authentication purpose.
 
 - If you copy/paste the cUrl request in the config file as the image above, delete the cUrl request information and save the file with the proper JSON format
 
-### Run SFDL2U
+### Run sfdl
 
-- Execute `sfdl2u` in your troubleshooting directory where you configured the config.json file
+- Execute `sfdl` in your troubleshooting directory where you configured the config.json file
 
 - A new folder called ApexLogs will be created with all the existing logs in the org***
 
@@ -67,4 +67,4 @@ The options using `--optionName` are:
 |createDraftConfig|It will create config.json file|{<br/>&nbsp;&nbsp;&nbsp;"authToken":"",<br/>&nbsp;&nbsp;&nbsp;"instanceUrl": ""<br/>}|
 |clearFinest|It will remove all lines that contains HEAP_ALLOCATE and STATEMENT_EXECUTE||
 |format|It will display 3 options: <br/>&nbsp;&nbsp;&nbsp;1) One file: Extract all query lines, <br/>&nbsp;&nbsp;&nbsp;2) One file: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE, <br/>&nbsp;&nbsp;&nbsp;3) All files in a folder: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE ||
-|help|Additional information related to sfdl2u cli app||
+|help|Additional information related to sfdl cli app||

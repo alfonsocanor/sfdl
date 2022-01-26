@@ -33,9 +33,9 @@ export function createDraftConfigFile() {
 }
 
 export function sfdlu2Help(){
-    printOnConsole('\n\t\t *** SFDL2U is a command line interface tool to download Salesforce Apex Logs ***', FONTCYAN);
+    printOnConsole('\n\t\t *** sfdl is a command line interface tool to download Salesforce Apex Logs ***', FONTCYAN);
 
-    printOnConsole('\n$ sfdl2u [options]\n', FONTCYAN);
+    printOnConsole('\n$ sfdl [options]\n', FONTCYAN);
 
     let table = new Table({ head: ["options", "description"] }); 
     table.push(
@@ -52,7 +52,7 @@ export function sfdlu2Help(){
     
     printOnConsole(table.toString(), FONTBLUE);
 
-    printOnConsole('\nRepository: https://github.com/alfonsocanor/sfdl2u\n', FONTWHITE);
+    printOnConsole('\nRepository: https://github.com/alfonsocanor/sfdl\n', FONTWHITE);
 }
 
 export function getInformationFromConfig() {

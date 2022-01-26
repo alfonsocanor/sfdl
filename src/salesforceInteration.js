@@ -1,4 +1,5 @@
 import http from 'https';
+const utils = require('./utils');
 const apexLogIdsQueryUrl = '/services/data/v51.0/tooling/query/?q=SELECT Id, LastModifiedDate, LogLength, LogUser.Name, Operation FROM ApexLog ';
 const apexLogBodyUrl = '/services/data/v51.0/sobjects/ApexLog/';
 const KB2MB = 0.00000095367432;
@@ -44,7 +45,8 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
             if (sessionInformation.debug) console.log('response code: ' + res.statusCode);
 
             if (res.statusCode < 200 || res.statusCode >= 300) {
-                return reject(new Error('statusCode=' + res.statusCode));
+                utils.printOnConsole('Session expired or invalid || Error: renew or validate config.json file info, authToken and instanceUrl || statusCode: ' + res.statusCode, utils.FONTRED);
+                return;
             }
             let body = [];
             res.setEncoding('utf8');
