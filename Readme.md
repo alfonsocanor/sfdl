@@ -61,6 +61,7 @@ The options using `--optionName` are:
 
 | Option Name     |Description                   |Example                |Default value |
 |----------------|-------------------------------|-----------------------|---------|
+|methodHierarchy|`Nests information between METHOD_ENTRY with its METHOD_EXIT as well as CODE_UNIT_STARTED and CODE_UNIT_FINISHED`| sfdl --methodHierarchy OR sfdl --format |
 | queryWhere   |`Allows you to enter a SOQL statements after the FROM ApexLog` |WHERE Operation != '<empty'> ORDER BY LastModifiedDate DESC|
 |folderName          |`Allows you to enter the name of the folder where the logs will be saved` |NewLogs2022            | ApexLog
 | debug | `It will turn on logs from the module` | 
