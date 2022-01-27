@@ -1,0 +1,52 @@
+45.0 APEX_CODE,FINEST;APEX_PROFILING,NONE;CALLOUT,NONE;DB,INFO;NBA,NONE;SYSTEM,NONE;VALIDATION,NONE;VISUALFORCE,NONE;WAVE,NONE;WORKFLOW,NONE
+11:04:01.0 (210731)|USER_INFO|[EXTERNAL]|0052v00000fQDGY|api@naturalchemist.com.au.sand1|(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)|GMT+11:00
+11:04:01.0 (292751)|EXECUTION_STARTED
+11:04:01.0 (302665)|CODE_UNIT_STARTED|[EXTERNAL]|01p2v00000SpN2U|CustomersFromBigCommerceBatch
+	11:04:01.0 (2444691)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+	11:04:01.0 (2469313)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+	11:04:01.0 (2496483)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+	11:04:01.0 (2701806)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x2fa3c0ff
+	11:04:01.0 (2713313)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+	11:04:01.0 (2907649)|VARIABLE_ASSIGNMENT|[31]|jobId|"7071y00000J9FPCAA3"
+	11:04:01.0 (2916500)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+	11:04:01.0 (2932839)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+	11:04:01.0 (14128885)|METHOD_ENTRY|[1]|01p2v00000SpN2U|CustomersFromBigCommerceBatch.CustomersFromBigCommerceBatch()
+	11:04:01.0 (14150481)|METHOD_EXIT|[1]|CustomersFromBigCommerceBatch
+	11:04:01.0 (14171198)|VARIABLE_SCOPE_BEGIN|[97]|this|CustomersFromBigCommerceBatch|true|false
+	11:04:01.0 (14244134)|VARIABLE_ASSIGNMENT|[97]|this|{"batchScheduleName":"67117","isManual":false}|0x169e6bbe
+	11:04:01.0 (14255487)|VARIABLE_SCOPE_BEGIN|[97]|context|Database.BatchableContext|true|false
+	11:04:01.0 (14359372)|VARIABLE_ASSIGNMENT|[97]|context|{"jobId":"7071y00000J9FPCAA3"}|0x2fa3c0ff
+	11:04:01.0 (14491477)|CONSTRUCTOR_ENTRY|[100]|01p2v00000SpN2U|<init>(Integer)|CustomersFromBigCommerceBatch
+	11:04:01.0 (14506066)|VARIABLE_SCOPE_BEGIN|[8]|this|CustomersFromBigCommerceBatch|true|false
+	11:04:01.0 (14537080)|VARIABLE_ASSIGNMENT|[8]|this|{}|0x28ab185e
+	11:04:01.0 (14547980)|VARIABLE_SCOPE_BEGIN|[8]|conditionalBatchNameNumber|Integer|false|false
+	11:04:01.0 (14563729)|VARIABLE_ASSIGNMENT|[8]|conditionalBatchNameNumber|67117
+	11:04:01.0 (14620994)|VARIABLE_ASSIGNMENT|[12]|conditionalBatchNameNumber|67118
+	11:04:01.0 (14678859)|VARIABLE_ASSIGNMENT|[13]|this.batchScheduleName|"67118"|0x28ab185e
+	11:04:01.0 (14721114)|VARIABLE_ASSIGNMENT|[14]|this.isManual|false|0x28ab185e
+	11:04:01.0 (14737042)|CONSTRUCTOR_EXIT|[100]|01p2v00000SpN2U|<init>(Integer)|CustomersFromBigCommerceBatch
+	11:04:01.0 (14749340)|VARIABLE_SCOPE_BEGIN|[100]|newBatch|CustomersFromBigCommerceBatch|true|false
+	11:04:01.0 (14787513)|VARIABLE_ASSIGNMENT|[100]|newBatch|{"batchScheduleName":"67118","isManual":false}|0x28ab185e
+	11:04:01.0 (15032870)|SYSTEM_METHOD_ENTRY|[14]|ScheduledBatch.ScheduledBatch()
+	11:04:01.0 (15045410)|SYSTEM_METHOD_EXIT|[14]|ScheduledBatch
+	11:04:01.0 (15072611)|VARIABLE_SCOPE_BEGIN|[27]|this|System.ScheduledBatch|true|false
+	11:04:01.0 (15144055)|VARIABLE_ASSIGNMENT|[27]|this|{}|0x10f242e2
+	11:04:01.0 (15153556)|VARIABLE_SCOPE_BEGIN|[27]|batchObj|Object|false|false
+	11:04:01.0 (15181154)|VARIABLE_ASSIGNMENT|[27]|batchObj|{"batchScheduleName":"67118","isManual":false}
+	11:04:01.0 (15192410)|VARIABLE_SCOPE_BEGIN|[27]|scope|Integer|false|false
+	11:04:01.0 (15205503)|VARIABLE_ASSIGNMENT|[27]|scope|null
+	11:04:01.0 (44826995)|SYSTEM_METHOD_ENTRY|[1]|Test.Test()
+	11:04:01.0 (44846151)|SYSTEM_METHOD_EXIT|[1]|Test
+	11:04:01.0 (44872616)|METHOD_ENTRY|[109]||System.Test.isRunningTest()
+	11:04:01.0 (44930278)|METHOD_EXIT|[109]||System.Test.isRunningTest()
+	11:04:01.0 (46290100)|METHOD_ENTRY|[1]|01p2v00000Tr0KR|ProductsFromBCBatch.ProductsFromBCBatch()
+	11:04:01.0 (46319334)|METHOD_EXIT|[1]|ProductsFromBCBatch
+	11:04:01.0 (46353781)|CONSTRUCTOR_ENTRY|[110]|01p2v00000Tr0KR|<init>()|ProductsFromBCBatch
+	11:04:01.0 (46392738)|VARIABLE_SCOPE_BEGIN|[6]|this|ProductsFromBCBatch|true|false
+	11:04:01.0 (46443666)|VARIABLE_ASSIGNMENT|[6]|this|{}|0x7aeac342
+	11:04:01.0 (46514162)|VARIABLE_ASSIGNMENT|[7]|this.updateFromProductQuickAction|false|0x7aeac342
+	11:04:01.0 (46534046)|CONSTRUCTOR_EXIT|[110]|01p2v00000Tr0KR|<init>()|ProductsFromBCBatch
+	11:04:01.0 (46545924)|VARIABLE_SCOPE_BEGIN|[110]|productBatch|ProductsFromBCBatch|true|false
+	11:04:01.0 (46573400)|VARIABLE_ASSIGNMENT|[110]|productBatch|{"updateFromProductQuickAction":false}|0x7aeac342
+11:04:01.0 (85134775)|CODE_UNIT_FINISHED|CustomersFromBigCommerceBatch
+11:04:01.0 (85158244)|EXECUTION_FINISHED

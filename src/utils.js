@@ -32,7 +32,7 @@ export function createDraftConfigFile() {
     }
 }
 
-export function sfdlu2Help(){
+export function sfdlHelp(){
     printOnConsole('\n\t\t *** sfdl is a command line interface tool to download Salesforce Apex Logs ***', FONTCYAN);
 
     printOnConsole('\n$ sfdl [options]\n', FONTCYAN);

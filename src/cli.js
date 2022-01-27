@@ -5,6 +5,7 @@ const fs = require('fs');
 const utils = require('./utils');
 const filesManipulation = require('./filesManipulation');
 const salesforceInteration = require('./salesforceInteration');
+const SFDL_BUILD_VERSION = require('../package.json').version;
 
 let sessionInformation;
 
@@ -22,7 +23,10 @@ export async function cli(args) {
         utils.createDraftConfigFile();
         return;
     } else if (sessionInformation.help){
-        utils.sfdlu2Help();
+        utils.sfdlHelp();
+        return;
+    } else if (sessionInformation.version){
+        utils.printOnConsole('sfdl version ' + SFDL_BUILD_VERSION, utils.FONTMAGENTA);
         return;
     }
 
@@ -123,7 +127,15 @@ function parseArgumentsIntoOptions(rawArgs) {
         '--clearFinest': Boolean,
         '--methodHierarchy': Boolean,
         '--format': Boolean,
-        '--help': Boolean
+        '--help': Boolean,
+        '--version': Boolean,
+        '-q': '--queryWhere',
+        '-n': '--folderName',
+        '-d': '--debug',
+        '-c': '--clearFinest',
+        '-m': '--methodHierarchy',
+        '-f': '--format',
+        '-v': '--version'
     }, {
         argv: rawArgs.slice(2),
     });
@@ -135,18 +147,17 @@ function parseArgumentsIntoOptions(rawArgs) {
         clearFinest: args['--clearFinest'] || false,
         methodHierarchy: args['--methodHierarchy'] || false,
         format: args['--format'] || false,
-        help: args['--help'] || false
+        help: args['--help'] || false,
+        version: args['--version'] || false,
     }
 }
 
 async function promtRequiredArguments(options) {
-    if(options.help){
-        return options;
-    }
+    if(options.version) return options;
 
-    if (options.createDraftConfig) {
-        return options;
-    }
+    if(options.help) return options;
+
+    if (options.createDraftConfig) return options;
 
     const questions = [];
     const formatExtraQuestions = [];

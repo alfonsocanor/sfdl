@@ -1,0 +1,38 @@
+45.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+08:03:15.0 (231023)|USER_INFO|[EXTERNAL]|0052v00000fQDGY|api@naturalchemist.com.au.sand1|(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)|GMT+11:00
+08:03:15.0 (293696)|EXECUTION_STARTED
+08:03:15.0 (301931)|CODE_UNIT_STARTED|[EXTERNAL]|01p2v00000Tr0KM|OrdersFromBigCommerceBatch
+	08:03:15.0 (2611673)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+	08:03:15.0 (2637783)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+	08:03:15.0 (2669048)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+	08:03:15.0 (2760231)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x5267b08b
+	08:03:15.0 (2777306)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+	08:03:15.0 (2946661)|VARIABLE_ASSIGNMENT|[31]|jobId|"7071y00000J9C78AAF"
+	08:03:15.0 (2958950)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+	08:03:15.0 (2979408)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+	08:03:15.0 (15067368)|METHOD_ENTRY|[1]|01p2v00000Tr0KM|OrdersFromBigCommerceBatch.OrdersFromBigCommerceBatch()
+	08:03:15.0 (15099180)|METHOD_EXIT|[1]|OrdersFromBigCommerceBatch
+	08:03:15.0 (15129205)|VARIABLE_SCOPE_BEGIN|[253]|this|OrdersFromBigCommerceBatch|true|false
+	08:03:15.0 (15196908)|VARIABLE_ASSIGNMENT|[253]|this|{"isManual":false}|0xa2634c2
+	08:03:15.0 (15214001)|VARIABLE_SCOPE_BEGIN|[253]|context|Database.BatchableContext|true|false
+	08:03:15.0 (15340790)|VARIABLE_ASSIGNMENT|[253]|context|{"jobId":"7071y00000J9C78AAF"}|0x5267b08b
+	08:03:15.26 (26356952)|CUMULATIVE_LIMIT_USAGE
+	08:03:15.26 (26356952)|LIMIT_USAGE_FOR_NS|(default)|
+	  Number of SOQL queries: 0 out of 200
+	  Number of query rows: 0 out of 50000
+	  Number of SOSL queries: 0 out of 20
+	  Number of DML statements: 0 out of 150
+	  Number of Publish Immediate DML: 0 out of 150
+	  Number of DML rows: 0 out of 10000
+	  Maximum CPU time: 0 out of 60000
+	  Maximum heap size: 0 out of 12000000
+	  Number of callouts: 0 out of 0
+	  Number of Email Invocations: 0 out of 10
+	  Number of future calls: 0 out of 0
+	  Number of queueable jobs added to the queue: 0 out of 1
+	  Number of Mobile Apex push calls: 0 out of 10
+	
+	08:03:15.26 (26356952)|CUMULATIVE_LIMIT_USAGE_END
+	
+08:03:15.0 (26412636)|CODE_UNIT_FINISHED|OrdersFromBigCommerceBatch
+08:03:15.0 (26442896)|EXECUTION_FINISHED

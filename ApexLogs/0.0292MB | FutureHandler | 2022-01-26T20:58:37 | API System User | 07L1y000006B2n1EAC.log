@@ -1,0 +1,295 @@
+52.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+07:58:35.0 (613421)|USER_INFO|[EXTERNAL]|0052v00000fQDGY|api@naturalchemist.com.au.sand1|(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)|GMT+11:00
+07:58:35.0 (710679)|EXECUTION_STARTED
+07:58:35.0 (725528)|CODE_UNIT_STARTED|[EXTERNAL]|FutureHandler - state load
+07:58:35.0 (3047730)|CODE_UNIT_FINISHED|FutureHandler - state load
+07:58:35.0 (3079022)|EXECUTION_FINISHED
+07:58:35.17 (17842840)|USER_INFO|[EXTERNAL]|0052v00000fQDGY|api@naturalchemist.com.au.sand1|(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)|GMT+11:00
+07:58:35.17 (17874455)|EXECUTION_STARTED
+07:58:35.17 (17880287)|CODE_UNIT_STARTED|[EXTERNAL]|01p1y000003W5hZ|InvocableNotifyClinicNewOrder.newOrderWithProductsInActiveScriptsEmailAlert(List<String>)
+	07:58:35.17 (19073341)|METHOD_ENTRY|[1]|01p1y000003W5hZ|InvocableNotifyClinicNewOrder.InvocableNotifyClinicNewOrder()
+		07:58:35.17 (19804607)|SYSTEM_MODE_ENTER|false
+		07:58:35.17 (19873361)|SYSTEM_MODE_EXIT|false
+	07:58:35.17 (19890613)|METHOD_EXIT|[1]|InvocableNotifyClinicNewOrder
+	07:58:35.17 (19980065)|VARIABLE_SCOPE_BEGIN|[14]|orderIds|List<String>|true|false
+	07:58:35.17 (20122130)|VARIABLE_ASSIGNMENT|[14]|orderIds|["8011y000000xCeHAAU"]|0x3a3a14be
+	07:58:35.17 (20157452)|SYSTEM_MODE_ENTER|false
+	07:58:35.17 (20768510)|VARIABLE_SCOPE_BEGIN|[15]|orderInformationList|List<InvocableNotifyClinicNewOrder.SendOrderWrapper>|true|false
+	07:58:35.17 (20835998)|VARIABLE_ASSIGNMENT|[15]|orderInformationList|[]|0x47aef643
+	07:58:35.17 (20898261)|VARIABLE_SCOPE_BEGIN|[16]|contactOrdersWithOrderItemMap|Map<Id,Map<Id,Set<Id>>>|true|false
+	07:58:35.17 (20931546)|VARIABLE_ASSIGNMENT|[16]|contactOrdersWithOrderItemMap|{}|0x3e9d3011
+	07:58:35.17 (21006771)|VARIABLE_SCOPE_BEGIN|[17]|orderIds2SendEmailAlert|Set<Id>|true|false
+	07:58:35.17 (21045119)|VARIABLE_ASSIGNMENT|[17]|orderIds2SendEmailAlert|[]|0x4d421c65
+	07:58:35.17 (21081894)|VARIABLE_SCOPE_BEGIN|[18]|productIdList|Set<Id>|true|false
+	07:58:35.17 (21101745)|VARIABLE_ASSIGNMENT|[18]|productIdList|[]|0x27b77e97
+	07:58:35.17 (21141520)|VARIABLE_SCOPE_BEGIN|[19]|contactIdList|Set<Id>|true|false
+	07:58:35.17 (21161055)|VARIABLE_ASSIGNMENT|[19]|contactIdList|[]|0x179b98cc
+	07:58:35.17 (26388134)|SOQL_EXECUTE_BEGIN|[22]|Aggregations:0|SELECT Id, OrderId, Product2Id, Order.AccountId, Order.Contact__c FROM OrderItem WHERE orderId IN :tmpVar1
+	07:58:35.17 (43800206)|SOQL_EXECUTE_END|[22]|Rows:6
+	07:58:35.17 (44289345)|SYSTEM_METHOD_ENTRY|[7]|QueryLocatorIterator.QueryLocatorIterator()
+	07:58:35.17 (44314644)|SYSTEM_METHOD_EXIT|[7]|QueryLocatorIterator
+	07:58:35.17 (44507517)|VARIABLE_SCOPE_BEGIN|[15]|this|Database.QueryLocatorIterator|true|false
+	07:58:35.17 (44659794)|VARIABLE_ASSIGNMENT|[15]|this|{}|0x73c0dc0
+	07:58:35.17 (44673460)|VARIABLE_SCOPE_BEGIN|[15]|values|List<SObject>|true|false
+	07:58:35.17 (44715855)|VARIABLE_ASSIGNMENT|[15]|values|"List of size 6 too large to display"|0x62372087
+	07:58:35.17 (44732876)|VARIABLE_SCOPE_BEGIN|[15]|ql|Database.QueryLocator|true|false
+	07:58:35.17 (44818764)|VARIABLE_ASSIGNMENT|[15]|ql|{"query":"SELECT Id, OrderId,  (86 more) ..."}|0x7bcf0f46
+	07:58:35.17 (44833308)|VARIABLE_SCOPE_BEGIN|[15]|totalNumRecords|Integer|false|false
+	07:58:35.17 (44860637)|VARIABLE_ASSIGNMENT|[15]|totalNumRecords|6
+	07:58:35.17 (44868074)|VARIABLE_SCOPE_BEGIN|[15]|queryMoreSize|Integer|false|false
+	07:58:35.17 (44883835)|VARIABLE_ASSIGNMENT|[15]|queryMoreSize|49994
+	07:58:35.17 (46710121)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (46901426)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (46918270)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (47083877)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (47103603)|VARIABLE_SCOPE_BEGIN|[22]|oli|OrderItem|true|false
+	07:58:35.17 (47214669)|VARIABLE_ASSIGNMENT|[22]|oli|{"Id":"8021y000000CLJXAA4","OrderId":"8011y000000xCeHAAU","Product2Id":"01t1y000001f2ZVAAY","Order":{"Id":"8011y000000xCeHAAU","AccountId":"0012v000039nEgXAAU","Contact__c":"0032v00003f8v5fAAA"}}|0x32398172
+	07:58:35.17 (48114285)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (48159709)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (48168624)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (48245877)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (48256277)|VARIABLE_SCOPE_BEGIN|[22]|oli|OrderItem|true|false
+	07:58:35.17 (48295562)|VARIABLE_ASSIGNMENT|[22]|oli|{"Id":"8021y000000BwGXAA0","OrderId":"8011y000000xCeHAAU","Product2Id":"01t1y000002eQikAAE","Order":{"Id":"8011y000000xCeHAAU","AccountId":"0012v000039nEgXAAU","Contact__c":"0032v00003f8v5fAAA"}}|0x6951bcaa
+	07:58:35.17 (48452083)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (48475475)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (48482967)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (48553611)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (48566695)|VARIABLE_SCOPE_BEGIN|[22]|oli|OrderItem|true|false
+	07:58:35.17 (48598323)|VARIABLE_ASSIGNMENT|[22]|oli|{"Id":"8021y000000BwGYAA0","OrderId":"8011y000000xCeHAAU","Product2Id":"01t1y000002eQilAAE","Order":{"Id":"8011y000000xCeHAAU","AccountId":"0012v000039nEgXAAU","Contact__c":"0032v00003f8v5fAAA"}}|0x6a672bf9
+	07:58:35.17 (48747915)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (48788298)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (48799661)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (48867059)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (48875257)|VARIABLE_SCOPE_BEGIN|[22]|oli|OrderItem|true|false
+	07:58:35.17 (48904997)|VARIABLE_ASSIGNMENT|[22]|oli|{"Id":"8021y000000BwGZAA0","OrderId":"8011y000000xCeHAAU","Product2Id":"01t1y000002eQimAAE","Order":{"Id":"8011y000000xCeHAAU","AccountId":"0012v000039nEgXAAU","Contact__c":"0032v00003f8v5fAAA"}}|0x5978ae1f
+	07:58:35.17 (49046868)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (49069371)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (49074513)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (49132652)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (49139993)|VARIABLE_SCOPE_BEGIN|[22]|oli|OrderItem|true|false
+	07:58:35.17 (49167411)|VARIABLE_ASSIGNMENT|[22]|oli|{"Id":"8021y000000BwGaAAK","OrderId":"8011y000000xCeHAAU","Product2Id":"01t1y000002eQinAAE","Order":{"Id":"8011y000000xCeHAAU","AccountId":"0012v000039nEgXAAU","Contact__c":"0032v00003f8v5fAAA"}}|0x27348653
+	07:58:35.17 (49307509)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (49327932)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (49334544)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (49393114)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (49402544)|VARIABLE_SCOPE_BEGIN|[22]|oli|OrderItem|true|false
+	07:58:35.17 (49431229)|VARIABLE_ASSIGNMENT|[22]|oli|{"Id":"8021y000000BwGbAAK","OrderId":"8011y000000xCeHAAU","Product2Id":"01t1y000001f5UEAAY","Order":{"Id":"8011y000000xCeHAAU","AccountId":"0012v000039nEgXAAU","Contact__c":"0032v00003f8v5fAAA"}}|0x43e4daf3
+	07:58:35.17 (49570142)|METHOD_ENTRY|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (49585536)|METHOD_EXIT|[22]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (49596118)|VARIABLE_ASSIGNMENT|[22]|oli|null|
+	07:58:35.17 (51509931)|SOQL_EXECUTE_BEGIN|[41]|Aggregations:0|SELECT Product__c, Practitioner__c, Patient__c, Clinic__c FROM Script__c WHERE (Product__c = :tmpVar1 AND Patient__c = :tmpVar2 AND Status__c = 'Active')
+	07:58:35.17 (70965167)|SOQL_EXECUTE_END|[41]|Rows:1
+	07:58:35.17 (71318352)|VARIABLE_SCOPE_BEGIN|[15]|this|Database.QueryLocatorIterator|true|false
+	07:58:35.17 (71371468)|VARIABLE_ASSIGNMENT|[15]|this|{}|0x5847a523
+	07:58:35.17 (71382999)|VARIABLE_SCOPE_BEGIN|[15]|values|List<SObject>|true|false
+	07:58:35.17 (71424178)|VARIABLE_ASSIGNMENT|[15]|values|[{"Product__c":"01t1y000001f2ZVAAY","Practitioner__c":"0032v00003f91VoAAI","Patient__c":"0032v00003f8v5fAAA","Clinic__c":"0012v00002avwNFAAY","Id":"a0r1y000001NOXrAAO"}]|0x3ee49c0d
+	07:58:35.17 (71435259)|VARIABLE_SCOPE_BEGIN|[15]|ql|Database.QueryLocator|true|false
+	07:58:35.17 (71461689)|VARIABLE_ASSIGNMENT|[15]|ql|{"query":"SELECT Product__c, P (133 more) ..."}|0x3e4dc05c
+	07:58:35.17 (71471608)|VARIABLE_SCOPE_BEGIN|[15]|totalNumRecords|Integer|false|false
+	07:58:35.17 (71486831)|VARIABLE_ASSIGNMENT|[15]|totalNumRecords|1
+	07:58:35.17 (71493825)|VARIABLE_SCOPE_BEGIN|[15]|queryMoreSize|Integer|false|false
+	07:58:35.17 (71508417)|VARIABLE_ASSIGNMENT|[15]|queryMoreSize|49993
+	07:58:35.17 (71638372)|METHOD_ENTRY|[41]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (71740327)|METHOD_EXIT|[41]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (71749058)|METHOD_ENTRY|[41]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (71844521)|METHOD_EXIT|[41]||Database.QueryLocatorIterator.next()
+	07:58:35.17 (71854385)|VARIABLE_SCOPE_BEGIN|[41]|script|Script__c|true|false
+	07:58:35.17 (71887765)|VARIABLE_ASSIGNMENT|[41]|script|{"Product__c":"01t1y000001f2ZVAAY","Practitioner__c":"0032v00003f91VoAAI","Patient__c":"0032v00003f8v5fAAA","Clinic__c":"0012v00002avwNFAAY","Id":"a0r1y000001NOXrAAO"}|0x63c6c5a
+	07:58:35.17 (72269187)|VARIABLE_SCOPE_BEGIN|[49]|orderId|String|false|false
+	07:58:35.17 (72290920)|VARIABLE_ASSIGNMENT|[49]|orderId|"8011y000000xCeHAAU"
+	07:58:35.17 (72653085)|VARIABLE_ASSIGNMENT|[49]|orderId|null
+	07:58:35.17 (72667056)|METHOD_ENTRY|[41]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (72692857)|METHOD_EXIT|[41]||Database.QueryLocatorIterator.hasNext()
+	07:58:35.17 (72706182)|VARIABLE_ASSIGNMENT|[41]|script|null|
+	07:58:35.17 (72777355)|METHOD_ENTRY|[58]|01p1y000003W5hZ|InvocableNotifyClinicNewOrder.buildSingleEmailMessages4EmailAlert(Set<Id>)
+		07:58:35.17 (72809970)|VARIABLE_SCOPE_BEGIN|[62]|orderIds|Set<Id>|true|false
+		07:58:35.17 (72834004)|VARIABLE_ASSIGNMENT|[62]|orderIds|["8011y000000xCeHAAU"]|0x4d421c65
+		07:58:35.17 (73874425)|SOQL_EXECUTE_BEGIN|[64]|Aggregations:0|SELECT Id, Name, Body FROM EmailTemplate WHERE Name = 'Notify Clinic About New Order'
+		07:58:35.17 (165203715)|SOQL_EXECUTE_END|[64]|Rows:1
+		07:58:35.17 (165533823)|VARIABLE_SCOPE_BEGIN|[64]|et|EmailTemplate|true|false
+		07:58:35.17 (165582418)|VARIABLE_ASSIGNMENT|[64]|et|{"Id":"00X1y000001QKG2EAO","Name":"Notify Clinic About  (9 more) ..."}|0x1d37723a
+		07:58:35.17 (165733083)|VARIABLE_SCOPE_BEGIN|[70]|email2SendList|List<Messaging.SingleEmailMessage>|true|false
+		07:58:35.17 (165798855)|VARIABLE_ASSIGNMENT|[70]|email2SendList|[]|0x1565474e
+		07:58:35.17 (168152576)|SOQL_EXECUTE_BEGIN|[72]|Aggregations:0|SELECT Id, Contact__c, Contact__r.Account.Prac_Email__c FROM Order WHERE Id = :tmpVar1
+		07:58:35.17 (183705790)|SOQL_EXECUTE_END|[72]|Rows:1
+		07:58:35.17 (184056834)|VARIABLE_SCOPE_BEGIN|[15]|this|Database.QueryLocatorIterator|true|false
+		07:58:35.17 (184115135)|VARIABLE_ASSIGNMENT|[15]|this|{}|0x23774abf
+		07:58:35.17 (184131325)|VARIABLE_SCOPE_BEGIN|[15]|values|List<SObject>|true|false
+		07:58:35.17 (184177685)|VARIABLE_ASSIGNMENT|[15]|values|[{"Id":"8011y000000xCeHAAU","Contact__c":"0032v00003f8v5fAAA","Contact__r":{"Id":"0032v00003f8v5fAAA","AccountId":"0012v000039nEgXAAU","Account":{"Id":"0012v000039nEgXAAU","Prac_email__c":"canorluisa@gmail.com"}}}]|0x4f9ca808
+		07:58:35.17 (184192016)|VARIABLE_SCOPE_BEGIN|[15]|ql|Database.QueryLocator|true|false
+		07:58:35.17 (184218185)|VARIABLE_ASSIGNMENT|[15]|ql|{"query":"SELECT Id, Contact__ (66 more) ..."}|0x7207451
+		07:58:35.17 (184229203)|VARIABLE_SCOPE_BEGIN|[15]|totalNumRecords|Integer|false|false
+		07:58:35.17 (184251829)|VARIABLE_ASSIGNMENT|[15]|totalNumRecords|1
+		07:58:35.17 (184258944)|VARIABLE_SCOPE_BEGIN|[15]|queryMoreSize|Integer|false|false
+		07:58:35.17 (184271710)|VARIABLE_ASSIGNMENT|[15]|queryMoreSize|49991
+		07:58:35.17 (184387620)|METHOD_ENTRY|[72]||Database.QueryLocatorIterator.hasNext()
+		07:58:35.17 (184490649)|METHOD_EXIT|[72]||Database.QueryLocatorIterator.hasNext()
+		07:58:35.17 (184502091)|METHOD_ENTRY|[72]||Database.QueryLocatorIterator.next()
+		07:58:35.17 (184602522)|METHOD_EXIT|[72]||Database.QueryLocatorIterator.next()
+		07:58:35.17 (184614790)|VARIABLE_SCOPE_BEGIN|[72]|ord|Order|true|false
+		07:58:35.17 (184653906)|VARIABLE_ASSIGNMENT|[72]|ord|{"Id":"8011y000000xCeHAAU","Contact__c":"0032v00003f8v5fAAA","Contact__r":{"Id":"0032v00003f8v5fAAA","AccountId":"0012v000039nEgXAAU","Account":{"Id":"0012v000039nEgXAAU","Prac_email__c":"canorluisa@gmail.com"}}}|0x2d0ea804
+		07:58:35.17 (184834044)|VARIABLE_SCOPE_BEGIN|[77]|email2Send|Messaging.SingleEmailMessage|true|false
+		07:58:35.17 (185093585)|VARIABLE_ASSIGNMENT|[77]|email2Send|"common.api.soap.wsdl.SingleEmailMessage@1e2260b1"|0x4634b5f9
+		07:58:35.17 (186029869)|METHOD_ENTRY|[72]||Database.QueryLocatorIterator.hasNext()
+		07:58:35.17 (186061646)|METHOD_EXIT|[72]||Database.QueryLocatorIterator.hasNext()
+		07:58:35.17 (186078641)|VARIABLE_ASSIGNMENT|[72]|ord|null|
+		07:58:36.498 (1498274540)|ENTERING_MANAGED_PKG|smsg
+		07:58:36.498 (1505451019)|ENTERING_MANAGED_PKG|smsg
+		07:58:36.498 (1506358941)|ENTERING_MANAGED_PKG|smsg
+		07:58:36.498 (1506670416)|ENTERING_MANAGED_PKG|smsg
+		07:58:36.514 (1514662843)|CUMULATIVE_LIMIT_USAGE
+		07:58:36.514 (1514662843)|LIMIT_USAGE_FOR_NS|(default)|
+		  Number of SOQL queries: 4 out of 200
+		  Number of query rows: 9 out of 50000
+		  Number of SOSL queries: 0 out of 20
+		  Number of DML statements: 0 out of 150
+		  Number of Publish Immediate DML: 0 out of 150
+		  Number of DML rows: 0 out of 10000
+		  Maximum CPU time: 167 out of 60000
+		  Maximum heap size: 0 out of 12000000
+		  Number of callouts: 0 out of 100
+		  Number of Email Invocations: 1 out of 10
+		  Number of future calls: 0 out of 50
+		  Number of queueable jobs added to the queue: 0 out of 1
+		  Number of Mobile Apex push calls: 0 out of 10
+		
+		07:58:36.514 (1514662843)|CUMULATIVE_LIMIT_USAGE_END
+		
+		07:58:36.696 (1696633745)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:EmailMessage
+			07:58:36.696 (1709547204)|WF_RULE_EVAL_BEGIN|Workflow
+			07:58:36.696 (1709601542)|WF_CRITERIA_BEGIN|[Email Message:  02s1y000000Zy2b]|Reopen_Case3012v000000j82q|01Q2v000000y3eu|ON_CREATE_ONLY|0
+			07:58:36.696 (1709885341)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+			07:58:36.696 (1709896669)|WF_CRITERIA_END|true
+			07:58:36.696 (1721164334)|WF_CRITERIA_BEGIN|[Email Message:  02s1y000000Zy2b]|email_order3012v000000fY9l|01Q2v000000yMiW|ON_CREATE_ONLY|0
+			07:58:36.696 (1721348019)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+			07:58:36.696 (1721360636)|WF_CRITERIA_END|true
+			07:58:36.696 (1721405211)|WF_SPOOL_ACTION_BEGIN|Workflow
+			07:58:36.696 (1721493017)|WF_ACTION| Flow Trigger: 2;
+			07:58:36.696 (1721503999)|WF_RULE_EVAL_END
+			07:58:36.854 (1854538708)|FLOW_CREATE_INTERVIEW_BEGIN|00D1y0000008m7I|3002v000000cQRo|3012v000000fY9l
+			07:58:36.854 (1889734174)|FLOW_CREATE_INTERVIEW_END|772712d633cd843caa5519fb415017e97c2eaee-4ace|Update Order Status When Email is Sent
+			07:58:36.696 (1889858891)|WF_FLOW_ACTION_BEGIN|09L2v000000eFkw
+			07:58:36.890 (1890918228)|FLOW_START_INTERVIEWS_BEGIN|1
+			07:58:36.890 (1890977490)|FLOW_START_INTERVIEW_BEGIN|772712d633cd843caa5519fb415017e97c2eaee-4ace|Update Order Status When Email is Sent
+			07:58:36.890 (1897147941)|FLOW_START_INTERVIEW_END|772712d633cd843caa5519fb415017e97c2eaee-4ace|Update Order Status When Email is Sent
+			07:58:36.890 (2075157199)|FLOW_START_INTERVIEWS_END|1
+			07:58:36.890 (2075225910)|FLOW_INTERVIEW_FINISHED|772712d633cd843caa5519fb415017e97c2eaee-4ace|Update Order Status When Email is Sent
+			07:58:36.696 (2078477400)|WF_FLOW_ACTION_END|09L2v000000eFkw
+			07:58:37.146 (2146057120)|FLOW_CREATE_INTERVIEW_BEGIN|00D1y0000008m7I|3002v000000gePv|3012v000000j82q
+			07:58:37.146 (2170357009)|FLOW_CREATE_INTERVIEW_END|772812d633cd843caa5519fb415017e97c2eaee-4acd|Reopen Case from email
+			07:58:36.696 (2170445996)|WF_FLOW_ACTION_BEGIN|09L2v000000dumz
+			07:58:37.171 (2171087052)|FLOW_START_INTERVIEWS_BEGIN|1
+			07:58:37.171 (2171119037)|FLOW_START_INTERVIEW_BEGIN|772812d633cd843caa5519fb415017e97c2eaee-4acd|Reopen Case from email
+			07:58:37.171 (2172551014)|FLOW_START_INTERVIEW_END|772812d633cd843caa5519fb415017e97c2eaee-4acd|Reopen Case from email
+			07:58:37.171 (2172572050)|FLOW_START_INTERVIEWS_END|1
+			07:58:37.171 (2172584495)|FLOW_INTERVIEW_FINISHED|772812d633cd843caa5519fb415017e97c2eaee-4acd|Reopen Case from email
+			07:58:36.696 (2173957219)|WF_FLOW_ACTION_END|09L2v000000dumz
+			07:58:36.696 (2174258906)|WF_ACTIONS_END| Flow Trigger: 2;
+		07:58:36.696 (2174273096)|CODE_UNIT_FINISHED|Workflow:EmailMessage
+		07:58:36.696 (2176222285)|EMAIL_QUEUE|[86]|subject: Order Notification, bccSender: false, saveAsActivity: true, useSignature: true, ccAddresses: [canorluisa@gmail.com], targetObjectId: 0032v00003f8v5f, whatId: 8011y000000xCeH, templateId: 00X1y000001QKG2, plainTextBody: 
+		        Hi Community Practitioner  - TEST,
+		    
+		        Your patient Alfonso Cano has ordered:
+		                ----------------------------------------------------------------------------------------------------------------------------
+		                Product Name:   Brauer Lip Shimmer French Rose 12 x 2g
+		                Quantity: 1.0
+		                ----------------------------------------------------------------------------------------------------------------------------
+		                Product Name:   162-Metagenics Cholesstanol 60 Tablets
+		                Quantity: 2.0
+		                ----------------------------------------------------------------------------------------------------------------------------
+		                Product Name:   162-Metagenics UltraInflamX 520g
+		                Quantity: 2.0
+		                ----------------------------------------------------------------------------------------------------------------------------
+		                Product Name:   162-Brauer Lip Shimmer French Rose 12 x 2g
+		                Quantity: 1.0
+		                ----------------------------------------------------------------------------------------------------------------------------
+		                Product Name:   162-Wotnot Baby Wash 250 ml
+		                Quantity: 1.0
+		                ----------------------------------------------------------------------------------------------------------------------------
+		                Product Name:   1000059-Metagenics Cartrin 200mL
+		                Quantity: 1.0
+		    
+		        To update scripts or manage notifications click here to login.
+		    
+		        Regards,
+		        Natural Chemist Team, htmlBody: 
+		        <html>
+		            <body>
+		                Hi Community Practitioner  - TEST,
+		                <table><tr><th style="padding:4px"></th></tr></table> 
+		                Your patient Alfonso Cano has ordered:
+		                
+		                <table><tr><th style="padding:4px"></th></tr></table> 
+		                <table border="1" cellpadding="0" cellspacing="0">
+		                    <tr>
+		                        <th style="padding:4px">Product Name</th>
+		                        <th style="padding:4px">Quantity</th>
+		                    </tr>
+		                        <tr>
+		                            <td style="padding:4px">Brauer Lip Shimmer French Rose 12 x 2g</td>
+		                            <td style="padding:4px; text-align: center; vertical-align: middle;"> 1
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td style="padding:4px">162-Metagenics Cholesstanol 60 Tablets</td>
+		                            <td style="padding:4px; text-align: center; vertical-align: middle;"> 2
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td style="padding:4px">162-Metagenics UltraInflamX 520g</td>
+		                            <td style="padding:4px; text-align: center; vertical-align: middle;"> 2
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td style="padding:4px">162-Brauer Lip Shimmer French Rose 12 x 2g</td>
+		                            <td style="padding:4px; text-align: center; vertical-align: middle;"> 1
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td style="padding:4px">162-Wotnot Baby Wash 250 ml</td>
+		                            <td style="padding:4px; text-align: center; vertical-align: middle;"> 1
+		                            </td>
+		                        </tr>
+		                        <tr>
+		                            <td style="padding:4px">1000059-Metagenics Cartrin 200mL</td>
+		                            <td style="padding:4px; text-align: center; vertical-align: middle;"> 1
+		                            </td>
+		                        </tr>
+		                </table>
+		                
+		                <table><tr><th style="padding:4px"></th></tr></table> 
+		                To update scripts or manage notifications click here to login.
+		                
+		                <table><tr><th style="padding:4px"></th></tr></table> 
+		                <table>
+		                    <tr>
+		                        <td>Regards,</td>
+		                    </tr>
+		                    <tr>
+		                        <td>Natural Chemist Team</td>
+		                    </tr>
+		                </table>
+		            </body>
+		        </html>, 
+	07:58:36.696 (2176534086)|METHOD_EXIT|[58]|01p1y000003W5hZ|InvocableNotifyClinicNewOrder.buildSingleEmailMessages4EmailAlert(Set<Id>)
+	07:58:36.696 (2176546094)|SYSTEM_MODE_EXIT|false
+	07:58:37.176 (2176564083)|CUMULATIVE_LIMIT_USAGE
+	07:58:37.176 (2176564083)|LIMIT_USAGE_FOR_NS|(default)|
+	  Number of SOQL queries: 5 out of 200
+	  Number of query rows: 9 out of 50000
+	  Number of SOSL queries: 0 out of 20
+	  Number of DML statements: 0 out of 150
+	  Number of Publish Immediate DML: 0 out of 150
+	  Number of DML rows: 0 out of 10000
+	  Maximum CPU time: 167 out of 60000
+	  Maximum heap size: 0 out of 12000000
+	  Number of callouts: 0 out of 100
+	  Number of Email Invocations: 1 out of 10
+	  Number of future calls: 0 out of 50
+	  Number of queueable jobs added to the queue: 0 out of 1
+	  Number of Mobile Apex push calls: 0 out of 10
+	
+	07:58:37.176 (2176564083)|CUMULATIVE_LIMIT_USAGE_END
+	
+07:58:36.696 (2176599376)|CODE_UNIT_FINISHED|InvocableNotifyClinicNewOrder.newOrderWithProductsInActiveScriptsEmailAlert(List<String>)
+07:58:36.696 (2176610430)|EXECUTION_FINISHED

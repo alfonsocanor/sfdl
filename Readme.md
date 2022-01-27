@@ -1,3 +1,4 @@
+
 # sfdl
 sfdl is a command line interface tool to download, format and extract information from Salesforce Apex Logs
 
@@ -61,11 +62,12 @@ The options using `--optionName` are:
 
 | Option Name     |Description                   |Example                |Default value |
 |----------------|-------------------------------|-----------------------|---------|
-|methodHierarchy|`Nests information between METHOD_ENTRY with its METHOD_EXIT as well as CODE_UNIT_STARTED and CODE_UNIT_FINISHED`| sfdl --methodHierarchy OR sfdl --format |
-| queryWhere   |`Allows you to enter a SOQL statements after the FROM ApexLog` |WHERE Operation != '<empty'> ORDER BY LastModifiedDate DESC|
-|folderName          |`Allows you to enter the name of the folder where the logs will be saved` |NewLogs2022            | ApexLog
-| debug | `It will turn on logs from the module` | 
+|methodHierarchy OR -m|`Nests information between METHOD_ENTRY with its METHOD_EXIT as well as CODE_UNIT_STARTED and CODE_UNIT_FINISHED`| sfdl --methodHierarchy OR sfdl --format |
+| queryWhere  OR -q |`Allows you to enter a SOQL statements after the FROM ApexLog` |WHERE Operation != '<empty'> ORDER BY LastModifiedDate DESC|
+|folderName      OR -n    |`Allows you to enter the name of the folder where the logs will be saved` |NewLogs2022            | ApexLog
+| debug OR -d| `It will turn on logs from the module` | 
 |createDraftConfig|It will create config.json file|{<br/>&nbsp;&nbsp;&nbsp;"authToken":"",<br/>&nbsp;&nbsp;&nbsp;"instanceUrl": ""<br/>}|
-|clearFinest|It will remove all lines that contains HEAP_ALLOCATE and STATEMENT_EXECUTE||
-|format|It will display 3 options: <br/>&nbsp;&nbsp;&nbsp;1) One file: Extract all query lines, <br/>&nbsp;&nbsp;&nbsp;2) One file: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE, <br/>&nbsp;&nbsp;&nbsp;3) All files in a folder: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE ||
+|clearFinest OR -c|It will remove all lines that contains HEAP_ALLOCATE and STATEMENT_EXECUTE||
+|format OR -f|It will display 3 options: <br/>&nbsp;&nbsp;&nbsp;1) One file: Extract all query lines, <br/>&nbsp;&nbsp;&nbsp;2) One file: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE, <br/>&nbsp;&nbsp;&nbsp;3) All files in a folder: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE ||
 |help|Additional information related to sfdl cli app||
+|version OR -v|current version sfdl installed in your system||

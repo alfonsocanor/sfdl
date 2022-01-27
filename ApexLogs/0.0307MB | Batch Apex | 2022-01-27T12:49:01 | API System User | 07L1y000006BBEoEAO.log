@@ -1,0 +1,218 @@
+45.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+23:49:00.0 (445197)|USER_INFO|[EXTERNAL]|0052v00000fQDGY|api@naturalchemist.com.au.sand1|(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)|GMT+11:00
+23:49:00.0 (487441)|EXECUTION_STARTED
+23:49:00.0 (494484)|CODE_UNIT_STARTED|[EXTERNAL]|01p2v00000SpN2U|CustomersFromBigCommerceBatch
+	23:49:00.0 (18381544)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+	23:49:00.0 (18427617)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+	23:49:00.0 (18458186)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+	23:49:00.0 (18594972)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x28ac5d7a
+	23:49:00.0 (18604904)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+	23:49:00.0 (18793269)|VARIABLE_ASSIGNMENT|[31]|jobId|"7071y00000JM9FGAA1"
+	23:49:00.0 (18800799)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+	23:49:00.0 (18811044)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+	23:49:00.0 (21822155)|METHOD_ENTRY|[1]|01p2v00000SpN2U|CustomersFromBigCommerceBatch.CustomersFromBigCommerceBatch()
+	23:49:00.0 (21841127)|METHOD_EXIT|[1]|CustomersFromBigCommerceBatch
+	23:49:00.0 (21863213)|VARIABLE_SCOPE_BEGIN|[23]|this|CustomersFromBigCommerceBatch|true|false
+	23:49:00.0 (21920381)|VARIABLE_ASSIGNMENT|[23]|this|{"batchScheduleName":"67264","isManual":false}|0x439b80b4
+	23:49:00.0 (21929222)|VARIABLE_SCOPE_BEGIN|[23]|context|Database.BatchableContext|true|false
+	23:49:00.0 (22029398)|VARIABLE_ASSIGNMENT|[23]|context|{"jobId":"7071y00000JM9FGAA1"}|0x28ac5d7a
+	23:49:00.0 (24506958)|METHOD_ENTRY|[1]|01p2v00000SpN2V|CustomersFromBigCommerceBatchHelper.CustomersFromBigCommerceBatchHelper()
+	23:49:00.0 (24529175)|METHOD_EXIT|[1]|CustomersFromBigCommerceBatchHelper
+	23:49:00.0 (24597311)|METHOD_ENTRY|[30]|01p2v00000SpN2V|CustomersFromBigCommerceBatchHelper.getCustomersFromBigCommerce(Boolean, Datetime, Datetime)
+		23:49:00.0 (24669859)|VARIABLE_SCOPE_BEGIN|[80]|isManual|Boolean|false|false
+		23:49:00.0 (24704946)|VARIABLE_ASSIGNMENT|[80]|isManual|false
+		23:49:00.0 (24721484)|VARIABLE_SCOPE_BEGIN|[80]|beginDate|Datetime|false|false
+		23:49:00.0 (24735919)|VARIABLE_ASSIGNMENT|[80]|beginDate|null
+		23:49:00.0 (24744174)|VARIABLE_SCOPE_BEGIN|[80]|endDate|Datetime|false|false
+		23:49:00.0 (24753338)|VARIABLE_ASSIGNMENT|[80]|endDate|null
+		23:49:00.0 (27195689)|VARIABLE_SCOPE_BEGIN|[4]|WSCustomersFromBigCommerce.SERVICE_CONFIG|Webservice_endpoint_setting__mdt|true|true
+		23:49:00.0 (27264856)|METHOD_ENTRY|[1]|01p2v00000SpN2g|WSCustomersFromBigCommerce.WSCustomersFromBigCommerce()
+			23:49:00.0 (27817146)|VARIABLE_SCOPE_BEGIN|[3]|GenericUtilsHelper.currentOrg|Organization|true|true
+			23:49:00.0 (27884818)|VARIABLE_SCOPE_BEGIN|[101]|GenericUtilsHelper.mapRecordTypes|Map<String,RecordType>|true|true
+			23:49:00.0 (27941050)|METHOD_ENTRY|[1]|01p2v00000SpN2Y|GenericUtilsHelper.GenericUtilsHelper()
+				23:49:00.0 (28062948)|VARIABLE_ASSIGNMENT|[101]|GenericUtilsHelper.mapRecordTypes|{}|0x11db78bd
+			23:49:00.0 (28076713)|METHOD_EXIT|[1]|GenericUtilsHelper
+			23:49:00.0 (28098473)|METHOD_ENTRY|[5]|01p2v00000SpN2Y|GenericUtilsHelper.getWebServiceConfig(String)
+				23:49:00.0 (28128618)|VARIABLE_SCOPE_BEGIN|[86]|name|String|false|false
+				23:49:00.0 (28148411)|VARIABLE_ASSIGNMENT|[86]|name|"SALESFORCE.BIGCOMMER (2 more) ..."
+				23:49:00.0 (28171493)|METHOD_ENTRY|[87]|01p2v00000SpN2Y|GenericUtilsHelper.isSandboxEnviroment()
+					23:49:00.0 (34038208)|SOQL_EXECUTE_BEGIN|[81]|Aggregations:0|SELECT Id, Name, IsSandbox FROM Organization LIMIT 1
+					23:49:00.0 (36815559)|SOQL_EXECUTE_END|[81]|Rows:1
+					23:49:00.0 (37105901)|VARIABLE_ASSIGNMENT|[81]|GenericUtilsHelper.currentOrg|{"Id":"00D1y0000008m7IEAQ","Name":"Natural Chemist","IsSandbox":true}|0xbafd25d
+				23:49:00.0 (37172879)|METHOD_EXIT|[87]|01p2v00000SpN2Y|GenericUtilsHelper.isSandboxEnviroment()
+				23:49:00.0 (37195365)|VARIABLE_SCOPE_BEGIN|[87]|isProduction|Boolean|false|false
+				23:49:00.0 (37217363)|VARIABLE_ASSIGNMENT|[87]|isProduction|false
+				23:49:00.0 (38320135)|SOQL_EXECUTE_BEGIN|[88]|Aggregations:0|SELECT Id, URL__c, ClientId__c, ClientSecret__c, ActivateNatualScriptCallout__c, StoreHash__c, AppStoreUrl__c, AccessToken__c, ShipStation_Packing_UserId__c, ShipStation_Admin_UserId__c FROM Webservice_endpoint_setting__mdt WHERE (MasterLabel = :tmpVar1 AND Is_Production__c = :tmpVar2)
+				23:49:00.0 (42302080)|SOQL_EXECUTE_END|[88]|Rows:1
+				23:49:00.0 (42458185)|VARIABLE_SCOPE_BEGIN|[88]|result|List<Webservice_endpoint_setting__mdt>|true|false
+				23:49:00.0 (42513678)|VARIABLE_ASSIGNMENT|[88]|result|[{"Id":"m002v000000yiYYAAY","URL__c":"https://api.bigcomme (26 more) ...","ClientId__c":"qgoe1p6a5xvhgkkvsiu5 (11 more) ...","ClientSecret__c":"d6631082dbbca140cafb (44 more) ...","ActivateNatualScriptCallout__c":false,"StoreHash__c":"n9dr7ak2qq","AppStoreUrl__c":"https://natural-chem (30 more) ...","AccessToken__c":"64so0mrm0qmlsrl3dl8l (11 more) ..."}]|0x22d739cc
+			23:49:00.0 (42665710)|METHOD_EXIT|[5]|01p2v00000SpN2Y|GenericUtilsHelper.getWebServiceConfig(String)
+			23:49:00.0 (42706568)|VARIABLE_ASSIGNMENT|[4]|WSCustomersFromBigCommerce.SERVICE_CONFIG|{"Id":"m002v000000yiYYAAY","URL__c":"https://api.bigcomme (26 more) ...","ClientId__c":"qgoe1p6a5xvhgkkvsiu5 (11 more) ...","ClientSecret__c":"d6631082dbbca140cafb (44 more) ...","ActivateNatualScriptCallout__c":false,"StoreHash__c":"n9dr7ak2qq","AppStoreUrl__c":"https://natural-chem (30 more) ...","AccessToken__c":"64so0mrm0qmlsrl3dl8l (11 more) ..."}|0x7a67aa0b
+		23:49:00.0 (42733605)|METHOD_EXIT|[1]|WSCustomersFromBigCommerce
+		23:49:00.0 (42773019)|METHOD_ENTRY|[81]|01p2v00000SpN2g|WSCustomersFromBigCommerce.getCustomersUpdates(Boolean, Datetime, Datetime)
+			23:49:00.0 (43605230)|VARIABLE_SCOPE_BEGIN|[65]|isManual|Boolean|false|false
+			23:49:00.0 (43627042)|VARIABLE_ASSIGNMENT|[65]|isManual|false
+			23:49:00.0 (43641700)|VARIABLE_SCOPE_BEGIN|[65]|beginDate|Datetime|false|false
+			23:49:00.0 (43651621)|VARIABLE_ASSIGNMENT|[65]|beginDate|null
+			23:49:00.0 (43666159)|VARIABLE_SCOPE_BEGIN|[65]|endDate|Datetime|false|false
+			23:49:00.0 (43675843)|VARIABLE_ASSIGNMENT|[65]|endDate|null
+			23:49:00.0 (45425049)|SOQL_EXECUTE_BEGIN|[83]|Aggregations:0|SELECT Id, BC_Date_Modified__c FROM Contact WHERE BC_Date_Modified__c != NULL ORDER BY BC_Date_Modified__c DESC NULLS FIRST LIMIT 1
+			23:49:00.0 (78018310)|SOQL_EXECUTE_END|[83]|Rows:1
+			23:49:00.0 (78218087)|VARIABLE_SCOPE_BEGIN|[83]|dateModifiedList|List<Contact>|true|false
+			23:49:00.0 (78296773)|VARIABLE_ASSIGNMENT|[83]|dateModifiedList|[{"Id":"0032v00003f8v5fAAA","BC_Date_Modified__c":"2022-01-26T09:52:14.000Z"}]|0x719c0009
+			23:49:00.0 (78649467)|VARIABLE_SCOPE_BEGIN|[91]|lastDateModified|String|false|false
+			23:49:00.0 (78676431)|VARIABLE_ASSIGNMENT|[91]|lastDateModified|"2022-01-26 20:52:15"
+			23:49:00.0 (78744044)|USER_DEBUG|[97]|DEBUG|WS lastDateModified: 2022-01-26 20:52:15
+			23:49:00.0 (79510406)|METHOD_ENTRY|[1]|01p2v00000SpN2a|RestWS.RestWS()
+			23:49:00.0 (79536484)|METHOD_EXIT|[1]|RestWS
+			23:49:00.0 (80354106)|CONSTRUCTOR_ENTRY|[99]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>)|RestWS
+			23:49:00.0 (80403877)|VARIABLE_SCOPE_BEGIN|[23]|this|RestWS|true|false
+			23:49:00.0 (80496125)|VARIABLE_ASSIGNMENT|[23]|this|{}|0x1ed7b2d0
+			23:49:00.0 (80508435)|VARIABLE_SCOPE_BEGIN|[23]|endpoint|String|false|false
+			23:49:00.0 (80530386)|VARIABLE_ASSIGNMENT|[23]|endpoint|"https://api.bigcomme (87 more) ..."
+			23:49:00.0 (80538466)|VARIABLE_SCOPE_BEGIN|[23]|method|String|false|false
+			23:49:00.0 (80555842)|VARIABLE_ASSIGNMENT|[23]|method|"GET"
+			23:49:00.0 (80563909)|VARIABLE_SCOPE_BEGIN|[23]|urlParameters|List<WSParameter>|true|false
+			23:49:00.0 (80582062)|VARIABLE_ASSIGNMENT|[23]|urlParameters|null|
+			23:49:00.0 (80619087)|CONSTRUCTOR_ENTRY|[24]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,String)|RestWS
+			23:49:00.0 (80652929)|VARIABLE_SCOPE_BEGIN|[19]|this|RestWS|true|false
+			23:49:00.0 (80695069)|VARIABLE_ASSIGNMENT|[19]|this|{}|0x1ed7b2d0
+			23:49:00.0 (80702589)|VARIABLE_SCOPE_BEGIN|[19]|endpoint|String|false|false
+			23:49:00.0 (80716191)|VARIABLE_ASSIGNMENT|[19]|endpoint|"https://api.bigcomme (87 more) ..."
+			23:49:00.0 (80724959)|VARIABLE_SCOPE_BEGIN|[19]|method|String|false|false
+			23:49:00.0 (80738364)|VARIABLE_ASSIGNMENT|[19]|method|"GET"
+			23:49:00.0 (80745694)|VARIABLE_SCOPE_BEGIN|[19]|urlParameters|List<WSParameter>|true|false
+			23:49:00.0 (80757901)|VARIABLE_ASSIGNMENT|[19]|urlParameters|null|
+			23:49:00.0 (80765145)|VARIABLE_SCOPE_BEGIN|[19]|bodyParameter|String|false|false
+			23:49:00.0 (80777477)|VARIABLE_ASSIGNMENT|[19]|bodyParameter|""
+			23:49:00.0 (80818839)|METHOD_ENTRY|[1]|01p2v00000SpN2h|WSParameter.WSParameter()
+			23:49:00.0 (80840127)|METHOD_EXIT|[1]|WSParameter
+			23:49:00.0 (80883777)|CONSTRUCTOR_ENTRY|[20]|01p2v00000SpN2h|<init>(String,String,Boolean,Boolean)|WSParameter
+			23:49:00.0 (80915008)|VARIABLE_SCOPE_BEGIN|[11]|this|WSParameter|true|false
+			23:49:00.0 (80953887)|VARIABLE_ASSIGNMENT|[11]|this|{}|0x5aa7210
+			23:49:00.0 (80963897)|VARIABLE_SCOPE_BEGIN|[11]|name|String|false|false
+			23:49:00.0 (80978943)|VARIABLE_ASSIGNMENT|[11]|name|"body"
+			23:49:00.0 (80985630)|VARIABLE_SCOPE_BEGIN|[11]|value|String|false|false
+			23:49:00.0 (80999378)|VARIABLE_ASSIGNMENT|[11]|value|""
+			23:49:00.0 (81012338)|VARIABLE_SCOPE_BEGIN|[11]|isRequired|Boolean|false|false
+			23:49:00.0 (81026981)|VARIABLE_ASSIGNMENT|[11]|isRequired|false
+			23:49:00.0 (81035164)|VARIABLE_SCOPE_BEGIN|[11]|urlEncoding|Boolean|false|false
+			23:49:00.0 (81046981)|VARIABLE_ASSIGNMENT|[11]|urlEncoding|false
+			23:49:00.0 (81120581)|VARIABLE_ASSIGNMENT|[12]|this.name|"body"|0x5aa7210
+			23:49:00.0 (81152507)|VARIABLE_ASSIGNMENT|[13]|this.isRequired|false|0x5aa7210
+			23:49:00.0 (81171966)|VARIABLE_ASSIGNMENT|[14]|this.value|""|0x5aa7210
+			23:49:00.0 (81200996)|VARIABLE_ASSIGNMENT|[15]|this.urlEncoding|false|0x5aa7210
+			23:49:00.0 (81217687)|CONSTRUCTOR_EXIT|[20]|01p2v00000SpN2h|<init>(String,String,Boolean,Boolean)|WSParameter
+			23:49:00.0 (81241507)|CONSTRUCTOR_ENTRY|[20]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,WSParameter)|RestWS
+			23:49:00.0 (81256142)|VARIABLE_SCOPE_BEGIN|[10]|this|RestWS|true|false
+			23:49:00.0 (81290682)|VARIABLE_ASSIGNMENT|[10]|this|{}|0x1ed7b2d0
+			23:49:00.0 (81300405)|VARIABLE_SCOPE_BEGIN|[10]|endpoint|String|false|false
+			23:49:00.0 (81316741)|VARIABLE_ASSIGNMENT|[10]|endpoint|"https://api.bigcomme (87 more) ..."
+			23:49:00.0 (81324020)|VARIABLE_SCOPE_BEGIN|[10]|method|String|false|false
+			23:49:00.0 (81337599)|VARIABLE_ASSIGNMENT|[10]|method|"GET"
+			23:49:00.0 (81347002)|VARIABLE_SCOPE_BEGIN|[10]|urlParameters|List<WSParameter>|true|false
+			23:49:00.0 (81359972)|VARIABLE_ASSIGNMENT|[10]|urlParameters|null|
+			23:49:00.0 (81366807)|VARIABLE_SCOPE_BEGIN|[10]|bodyParameter|WSParameter|true|false
+			23:49:00.0 (81402464)|VARIABLE_ASSIGNMENT|[10]|bodyParameter|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x5aa7210
+			23:49:00.0 (81429258)|VARIABLE_ASSIGNMENT|[2]|this.endpoint|""|0x1ed7b2d0
+			23:49:00.0 (81471115)|VARIABLE_ASSIGNMENT|[7]|this.hasError|false|0x1ed7b2d0
+			23:49:00.0 (81488873)|VARIABLE_ASSIGNMENT|[8]|this.errorMessage|""|0x1ed7b2d0
+			23:49:00.0 (81619989)|VARIABLE_ASSIGNMENT|[11]|this.request|"System.HttpRequest[Endpoint=null, Method=null]"|0x1ed7b2d0
+			23:49:00.0 (81727827)|VARIABLE_ASSIGNMENT|[14]|this.bodyParameter|0x5aa7210|0x1ed7b2d0
+			23:49:00.0 (81743940)|VARIABLE_ASSIGNMENT|[15]|this.endpoint|"https://api.bigcomme (87 more) ..."|0x1ed7b2d0
+			23:49:00.0 (81764178)|VARIABLE_ASSIGNMENT|[16]|this.parameters|null|0x1ed7b2d0
+			23:49:00.0 (81786427)|CONSTRUCTOR_EXIT|[20]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,WSParameter)|RestWS
+			23:49:00.0 (81804855)|CONSTRUCTOR_EXIT|[24]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,String)|RestWS
+			23:49:00.0 (81821451)|CONSTRUCTOR_EXIT|[99]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>)|RestWS
+			23:49:00.0 (81830764)|VARIABLE_SCOPE_BEGIN|[99]|ws|RestWS|true|false
+			23:49:00.0 (82198618)|VARIABLE_ASSIGNMENT|[99]|ws|{"bodyParameter":"0x5aa7210","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x1ed7b2d0
+			23:49:00.0 (82319175)|VARIABLE_SCOPE_BEGIN|[18]|this|WSParameter|true|false
+			23:49:00.0 (82340450)|VARIABLE_ASSIGNMENT|[18]|this|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x5aa7210
+			23:49:00.0 (82442072)|USER_DEBUG|[104]|DEBUG|The ws: RestWS:[bodyParameter=, endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200, errorMessage=, hasError=false, parameters=null, request=System.HttpRequest[Endpoint=null, Method=GET]]
+			23:49:00.0 (82734012)|CONSTRUCTOR_ENTRY|[110]|01p2v00000SpN2g|<init>()|WSCustomersFromBigCommerce.Response
+			23:49:00.0 (82756048)|VARIABLE_SCOPE_BEGIN|[113]|this|WSCustomersFromBigCommerce.Response|true|false
+			23:49:00.0 (82800038)|VARIABLE_ASSIGNMENT|[113]|this|{}|0x6f908c4b
+			23:49:00.0 (82822924)|METHOD_ENTRY|[1]|01p2v00000SpN2i|WSResult.WSResult()
+			23:49:00.0 (82837800)|METHOD_EXIT|[1]|WSResult
+			23:49:00.0 (82844230)|CONSTRUCTOR_ENTRY|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+			23:49:00.0 (82858246)|VARIABLE_SCOPE_BEGIN|[1]|this|WSResult|true|false
+			23:49:00.0 (82875458)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x6f908c4b
+			23:49:00.0 (82912406)|CONSTRUCTOR_EXIT|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+			23:49:00.0 (82924700)|CONSTRUCTOR_EXIT|[110]|01p2v00000SpN2g|<init>()|WSCustomersFromBigCommerce.Response
+			23:49:00.0 (82953125)|METHOD_ENTRY|[110]|01p2v00000SpN2a|RestWS.invoke(WSResult)
+				23:49:00.0 (82959911)|VARIABLE_SCOPE_BEGIN|[78]|this|RestWS|true|false
+				23:49:00.0 (83047310)|VARIABLE_ASSIGNMENT|[78]|this|{"bodyParameter":"0x5aa7210","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x1ed7b2d0
+				23:49:00.0 (83057603)|VARIABLE_SCOPE_BEGIN|[78]|result|WSResult|true|false
+				23:49:00.0 (83073321)|VARIABLE_ASSIGNMENT|[78]|result|{}|0x6f908c4b
+				23:49:00.0 (83103848)|METHOD_ENTRY|[88]|01p2v00000SpN2a|RestWS.getMissingParametersMessage()
+					23:49:00.0 (83121255)|VARIABLE_SCOPE_BEGIN|[27]|this|RestWS|true|false
+					23:49:00.0 (83173743)|VARIABLE_ASSIGNMENT|[27]|this|{"bodyParameter":"0x5aa7210","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x1ed7b2d0
+					23:49:00.0 (83286098)|VARIABLE_SCOPE_BEGIN|[32]|parametersToCheck|List<WSParameter>|true|false
+					23:49:00.0 (83328153)|VARIABLE_ASSIGNMENT|[32]|parametersToCheck|[]|0x1a1e3327
+					23:49:00.0 (83449178)|VARIABLE_SCOPE_BEGIN|[40]|missingParms|List<String>|true|false
+					23:49:00.0 (83481536)|VARIABLE_ASSIGNMENT|[40]|missingParms|[]|0x3a3e5cb1
+					23:49:00.0 (83679123)|VARIABLE_SCOPE_BEGIN|[41]|parameter|WSParameter|true|false
+					23:49:00.0 (83724853)|VARIABLE_ASSIGNMENT|[41]|parameter|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x5aa7210
+					23:49:00.0 (83776425)|VARIABLE_ASSIGNMENT|[41]|parameter|null|
+				23:49:00.0 (83828140)|METHOD_EXIT|[88]|01p2v00000SpN2a|RestWS.getMissingParametersMessage()
+				23:49:00.0 (83837664)|VARIABLE_SCOPE_BEGIN|[88]|missingParamsMessage|String|false|false
+				23:49:00.0 (83849034)|VARIABLE_ASSIGNMENT|[88]|missingParamsMessage|""
+				23:49:00.0 (83903116)|METHOD_ENTRY|[96]|01p2v00000SpN2a|RestWS.formatEndpoint()
+					23:49:00.0 (83915627)|VARIABLE_SCOPE_BEGIN|[58]|this|RestWS|true|false
+					23:49:00.0 (83996986)|VARIABLE_ASSIGNMENT|[58]|this|{"bodyParameter":"0x5aa7210","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x1ed7b2d0
+				23:49:00.0 (84022710)|METHOD_EXIT|[96]|01p2v00000SpN2a|RestWS.formatEndpoint()
+				23:49:00.0 (84060297)|METHOD_ENTRY|[97]|01p2v00000SpN2a|RestWS.getBody()
+					23:49:00.0 (84075322)|VARIABLE_SCOPE_BEGIN|[69]|this|RestWS|true|false
+					23:49:00.0 (84161844)|VARIABLE_ASSIGNMENT|[69]|this|{"bodyParameter":"0x5aa7210","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200, Method=GET]"}|0x1ed7b2d0
+				23:49:00.0 (84253946)|METHOD_EXIT|[97]|01p2v00000SpN2a|RestWS.getBody()
+				23:49:00.0 (84261796)|VARIABLE_SCOPE_BEGIN|[97]|body|String|false|false
+				23:49:00.0 (84273486)|VARIABLE_ASSIGNMENT|[97]|body|""
+				23:49:00.0 (84453330)|CALLOUT_REQUEST|[104]|System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200, Method=GET]
+				23:49:00.0 (610628891)|CALLOUT_RESPONSE|[104]|System.HttpResponse[Status=No Content, StatusCode=204]
+				23:49:00.0 (610706282)|VARIABLE_SCOPE_BEGIN|[104]|response|System.HttpResponse|true|false
+				23:49:00.0 (610772248)|VARIABLE_ASSIGNMENT|[104]|response|"System.HttpResponse[Status=No Content, StatusCode=204]"|0x194e9f0f
+				23:49:00.0 (611010929)|USER_DEBUG|[107]|DEBUG|
+				23:49:00.0 (611124976)|METHOD_ENTRY|[112]|01p2v00000SpN2g|WSCustomersFromBigCommerce.Response.processResponse(System.HttpResponse)
+					23:49:00.0 (611166142)|VARIABLE_SCOPE_BEGIN|[116]|this|WSCustomersFromBigCommerce.Response|true|false
+					23:49:00.0 (611283186)|VARIABLE_ASSIGNMENT|[116]|this|{"hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200, Method=GET]","response":"System.HttpResponse[Status=No Content, StatusCode=204]"}|0x6f908c4b
+					23:49:00.0 (611293467)|VARIABLE_SCOPE_BEGIN|[116]|response|System.HttpResponse|true|false
+					23:49:00.0 (611316080)|VARIABLE_ASSIGNMENT|[116]|response|"System.HttpResponse[Status=No Content, StatusCode=204]"|0x194e9f0f
+					23:49:00.0 (611491009)|SYSTEM_METHOD_ENTRY|[1]|Type.Type()
+					23:49:00.0 (611503990)|SYSTEM_METHOD_EXIT|[1]|Type
+					23:49:00.0 (611538141)|VARIABLE_SCOPE_BEGIN|[4]|this|System.Type|true|false
+					23:49:00.0 (611563444)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x3fc9e333
+					23:49:00.0 (611572737)|VARIABLE_SCOPE_BEGIN|[4]|apextype|java:common.apex.runtime.ApexObjectType|true|false
+					23:49:00.0 (611637975)|VARIABLE_ASSIGNMENT|[4]|apextype|"List<WSCustomersBigCommerceResponse>"|0x1c3ee9e7
+					23:49:00.0 (611727256)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+					23:49:00.0 (611736646)|SYSTEM_METHOD_EXIT|[1]|JSON
+					23:49:00.0 (611759005)|METHOD_ENTRY|[118]||System.JSON.deserialize(String, System.Type)
+					23:49:00.0 (612115773)|METHOD_EXIT|[118]||System.JSON.deserialize(String, System.Type)
+				23:49:00.0 (612128508)|METHOD_EXIT|[112]|01p2v00000SpN2g|WSCustomersFromBigCommerce.Response.processResponse(System.HttpResponse)
+				23:49:00.0 (612154189)|VARIABLE_SCOPE_BEGIN|[115]|ex|Exception|true|false
+				23:49:00.0 (612202117)|VARIABLE_ASSIGNMENT|[115]|ex|"common.apex.runtime.impl.ExecutionException: No content to map to Object due to end of input"|0x1da0d95b
+			23:49:00.0 (612290808)|METHOD_EXIT|[110]|01p2v00000SpN2a|RestWS.invoke(WSResult)
+		23:49:00.0 (612303736)|METHOD_EXIT|[81]|01p2v00000SpN2g|WSCustomersFromBigCommerce.getCustomersUpdates(Boolean, Datetime, Datetime)
+		23:49:00.0 (612310435)|VARIABLE_SCOPE_BEGIN|[81]|response|WSCustomersFromBigCommerce.Response|true|false
+		23:49:00.0 (612400512)|VARIABLE_ASSIGNMENT|[81]|response|{"hasError":true,"message":"No content to map to Object due to end of input","request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v2/customers?min_date_modified=2022-01-26T20:52:15Z&limit=200, Method=GET]","response":"System.HttpResponse[Status=No Content, StatusCode=204]"}|0x6f908c4b
+		23:49:00.0 (612438164)|USER_DEBUG|[82]|DEBUG|System.HttpResponse[Status=No Content, StatusCode=204]
+	23:49:00.0 (612591172)|METHOD_EXIT|[30]|01p2v00000SpN2V|CustomersFromBigCommerceBatchHelper.getCustomersFromBigCommerce(Boolean, Datetime, Datetime)
+	23:49:00.631 (631324385)|CUMULATIVE_LIMIT_USAGE
+	23:49:00.631 (631324385)|LIMIT_USAGE_FOR_NS|(default)|
+	  Number of SOQL queries: 0 out of 200
+	  Number of query rows: 0 out of 50000
+	  Number of SOSL queries: 0 out of 20
+	  Number of DML statements: 0 out of 150
+	  Number of Publish Immediate DML: 0 out of 150
+	  Number of DML rows: 0 out of 10000
+	  Maximum CPU time: 0 out of 60000
+	  Maximum heap size: 0 out of 12000000
+	  Number of callouts: 0 out of 0
+	  Number of Email Invocations: 0 out of 10
+	  Number of future calls: 0 out of 0
+	  Number of queueable jobs added to the queue: 0 out of 1
+	  Number of Mobile Apex push calls: 0 out of 10
+	
+	23:49:00.631 (631324385)|CUMULATIVE_LIMIT_USAGE_END
+	
+23:49:00.0 (631377413)|CODE_UNIT_FINISHED|CustomersFromBigCommerceBatch
+23:49:00.0 (631392528)|EXECUTION_FINISHED

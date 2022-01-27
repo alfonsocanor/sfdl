@@ -1,0 +1,209 @@
+53.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+06:03:42.0 (818806)|USER_INFO|[EXTERNAL]|0052v00000fQDGY|api@naturalchemist.com.au.sand1|(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)|GMT+11:00
+06:03:42.0 (902661)|EXECUTION_STARTED
+06:03:42.0 (910932)|CODE_UNIT_STARTED|[EXTERNAL]|apex://UpdateProductFromQuickActionCtl/ACTION$getProductFromBCInformation
+	06:03:42.0 (5011784)|CODE_UNIT_STARTED|[EXTERNAL]|01p2v00000U4Yxc|UpdateProductFromQuickActionCtl.getProductFromBCInformation(String)
+		06:03:42.0 (6305293)|METHOD_ENTRY|[1]|01p2v00000U4Yxc|UpdateProductFromQuickActionCtl.UpdateProductFromQuickActionCtl()
+		06:03:42.0 (6495794)|METHOD_EXIT|[1]|UpdateProductFromQuickActionCtl
+		06:03:42.0 (6517217)|VARIABLE_SCOPE_BEGIN|[4]|productId|String|false|false
+		06:03:42.0 (6593328)|VARIABLE_ASSIGNMENT|[4]|productId|"01t1y000001f2NFAAY"
+		06:03:42.0 (6701803)|CONSTRUCTOR_ENTRY|[5]|01p2v00000U4Yxc|<init>()|UpdateProductFromQuickActionCtl.WrapperOrderUpdate
+		06:03:42.0 (6764776)|VARIABLE_SCOPE_BEGIN|[34]|this|UpdateProductFromQuickActionCtl.WrapperOrderUpdate|true|false
+		06:03:42.0 (6866250)|VARIABLE_ASSIGNMENT|[34]|this|{}|0x2e1043af
+		06:03:42.0 (8820035)|VARIABLE_ASSIGNMENT|[35]|this.hasError|false|0x2e1043af
+		06:03:42.0 (8838925)|VARIABLE_ASSIGNMENT|[36]|this.message|null|0x2e1043af
+		06:03:42.0 (8856134)|CONSTRUCTOR_EXIT|[5]|01p2v00000U4Yxc|<init>()|UpdateProductFromQuickActionCtl.WrapperOrderUpdate
+		06:03:42.0 (8869882)|VARIABLE_SCOPE_BEGIN|[5]|aResponse|UpdateProductFromQuickActionCtl.WrapperOrderUpdate|true|false
+		06:03:42.0 (8913714)|VARIABLE_ASSIGNMENT|[5]|aResponse|{"hasError":false}|0x2e1043af
+		06:03:42.0 (9369777)|SOQL_EXECUTE_BEGIN|[7]|Aggregations:0|SELECT Id, BC_ProductId__c FROM Product2 WHERE Id = :tmpVar1
+		06:03:42.0 (23217938)|SOQL_EXECUTE_END|[7]|Rows:1
+		06:03:42.0 (23447733)|VARIABLE_SCOPE_BEGIN|[7]|productInfo|List<Product2>|true|false
+		06:03:42.0 (23514625)|VARIABLE_ASSIGNMENT|[7]|productInfo|[{"Id":"01t1y000001f2NFAAY","BC_ProductID__c":"14966"}]|0x3930242c
+		06:03:42.0 (23899687)|VARIABLE_SCOPE_BEGIN|[4]|WSProductsFromBC.SERVICE_CONFIG|Webservice_endpoint_setting__mdt|true|true
+		06:03:42.0 (23950798)|METHOD_ENTRY|[1]|01p2v00000Tr0Kh|WSProductsFromBC.WSProductsFromBC()
+			06:03:42.0 (24104130)|VARIABLE_SCOPE_BEGIN|[3]|GenericUtilsHelper.currentOrg|Organization|true|true
+			06:03:42.0 (24165676)|VARIABLE_SCOPE_BEGIN|[101]|GenericUtilsHelper.mapRecordTypes|Map<String,RecordType>|true|true
+			06:03:42.0 (24238583)|METHOD_ENTRY|[1]|01p2v00000SpN2Y|GenericUtilsHelper.GenericUtilsHelper()
+				06:03:42.0 (24355490)|VARIABLE_ASSIGNMENT|[101]|GenericUtilsHelper.mapRecordTypes|{}|0x459d277f
+			06:03:42.0 (24367814)|METHOD_EXIT|[1]|GenericUtilsHelper
+			06:03:42.0 (24398396)|METHOD_ENTRY|[5]|01p2v00000SpN2Y|GenericUtilsHelper.getWebServiceConfig(String)
+				06:03:42.0 (24424965)|VARIABLE_SCOPE_BEGIN|[86]|name|String|false|false
+				06:03:42.0 (24441666)|VARIABLE_ASSIGNMENT|[86]|name|"SALESFORCE.BIGCOMMER (2 more) ..."
+				06:03:42.0 (24464996)|METHOD_ENTRY|[87]|01p2v00000SpN2Y|GenericUtilsHelper.isSandboxEnviroment()
+					06:03:42.0 (32082506)|SOQL_EXECUTE_BEGIN|[81]|Aggregations:0|SELECT Id, Name, IsSandbox FROM Organization LIMIT 1
+					06:03:42.0 (34711997)|SOQL_EXECUTE_END|[81]|Rows:1
+					06:03:42.0 (34989461)|VARIABLE_ASSIGNMENT|[81]|GenericUtilsHelper.currentOrg|{"Id":"00D1y0000008m7IEAQ","Name":"Natural Chemist","IsSandbox":true}|0x3bf1b9de
+				06:03:42.0 (35062121)|METHOD_EXIT|[87]|01p2v00000SpN2Y|GenericUtilsHelper.isSandboxEnviroment()
+				06:03:42.0 (35079767)|VARIABLE_SCOPE_BEGIN|[87]|isProduction|Boolean|false|false
+				06:03:42.0 (35108276)|VARIABLE_ASSIGNMENT|[87]|isProduction|false
+				06:03:42.0 (35821733)|SOQL_EXECUTE_BEGIN|[88]|Aggregations:0|SELECT Id, URL__c, ClientId__c, ClientSecret__c, ActivateNatualScriptCallout__c, StoreHash__c, AppStoreUrl__c, AccessToken__c, ShipStation_Packing_UserId__c, ShipStation_Admin_UserId__c FROM Webservice_endpoint_setting__mdt WHERE (MasterLabel = :tmpVar1 AND Is_Production__c = :tmpVar2)
+				06:03:42.0 (39720669)|SOQL_EXECUTE_END|[88]|Rows:1
+				06:03:42.0 (39881381)|VARIABLE_SCOPE_BEGIN|[88]|result|List<Webservice_endpoint_setting__mdt>|true|false
+				06:03:42.0 (39944610)|VARIABLE_ASSIGNMENT|[88]|result|[{"Id":"m002v000000yiYYAAY","URL__c":"https://api.bigcomme (26 more) ...","ClientId__c":"qgoe1p6a5xvhgkkvsiu5 (11 more) ...","ClientSecret__c":"d6631082dbbca140cafb (44 more) ...","ActivateNatualScriptCallout__c":false,"StoreHash__c":"n9dr7ak2qq","AppStoreUrl__c":"https://natural-chem (30 more) ...","AccessToken__c":"64so0mrm0qmlsrl3dl8l (11 more) ..."}]|0x3dced857
+			06:03:42.0 (40080595)|METHOD_EXIT|[5]|01p2v00000SpN2Y|GenericUtilsHelper.getWebServiceConfig(String)
+			06:03:42.0 (40121635)|VARIABLE_ASSIGNMENT|[4]|WSProductsFromBC.SERVICE_CONFIG|{"Id":"m002v000000yiYYAAY","URL__c":"https://api.bigcomme (26 more) ...","ClientId__c":"qgoe1p6a5xvhgkkvsiu5 (11 more) ...","ClientSecret__c":"d6631082dbbca140cafb (44 more) ...","ActivateNatualScriptCallout__c":false,"StoreHash__c":"n9dr7ak2qq","AppStoreUrl__c":"https://natural-chem (30 more) ...","AccessToken__c":"64so0mrm0qmlsrl3dl8l (11 more) ..."}|0x4640e731
+		06:03:42.0 (40148350)|METHOD_EXIT|[1]|WSProductsFromBC
+		06:03:42.0 (40168883)|METHOD_ENTRY|[14]|01p2v00000Tr0Kh|WSProductsFromBC.getProductsFromBC(String)
+			06:03:42.0 (40977660)|VARIABLE_SCOPE_BEGIN|[34]|bcProductId|String|false|false
+			06:03:42.0 (40998554)|VARIABLE_ASSIGNMENT|[34]|bcProductId|"14966"
+			06:03:42.0 (41104951)|METHOD_ENTRY|[1]|01p2v00000SpN2a|RestWS.RestWS()
+			06:03:42.0 (41121654)|METHOD_EXIT|[1]|RestWS
+			06:03:42.0 (41294394)|CONSTRUCTOR_ENTRY|[35]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>)|RestWS
+			06:03:42.0 (41332289)|VARIABLE_SCOPE_BEGIN|[23]|this|RestWS|true|false
+			06:03:42.0 (41415194)|VARIABLE_ASSIGNMENT|[23]|this|{}|0x428d46c8
+			06:03:42.0 (41426795)|VARIABLE_SCOPE_BEGIN|[23]|endpoint|String|false|false
+			06:03:42.0 (41444766)|VARIABLE_ASSIGNMENT|[23]|endpoint|"https://api.bigcomme (54 more) ..."
+			06:03:42.0 (41451981)|VARIABLE_SCOPE_BEGIN|[23]|method|String|false|false
+			06:03:42.0 (41466647)|VARIABLE_ASSIGNMENT|[23]|method|"GET"
+			06:03:42.0 (41474028)|VARIABLE_SCOPE_BEGIN|[23]|urlParameters|List<WSParameter>|true|false
+			06:03:42.0 (41491395)|VARIABLE_ASSIGNMENT|[23]|urlParameters|null|
+			06:03:42.0 (41515997)|CONSTRUCTOR_ENTRY|[24]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,String)|RestWS
+			06:03:42.0 (41538941)|VARIABLE_SCOPE_BEGIN|[19]|this|RestWS|true|false
+			06:03:42.0 (41563844)|VARIABLE_ASSIGNMENT|[19]|this|{}|0x428d46c8
+			06:03:42.0 (41573760)|VARIABLE_SCOPE_BEGIN|[19]|endpoint|String|false|false
+			06:03:42.0 (41589654)|VARIABLE_ASSIGNMENT|[19]|endpoint|"https://api.bigcomme (54 more) ..."
+			06:03:42.0 (41596316)|VARIABLE_SCOPE_BEGIN|[19]|method|String|false|false
+			06:03:42.0 (41608591)|VARIABLE_ASSIGNMENT|[19]|method|"GET"
+			06:03:42.0 (41617805)|VARIABLE_SCOPE_BEGIN|[19]|urlParameters|List<WSParameter>|true|false
+			06:03:42.0 (41631177)|VARIABLE_ASSIGNMENT|[19]|urlParameters|null|
+			06:03:42.0 (41639879)|VARIABLE_SCOPE_BEGIN|[19]|bodyParameter|String|false|false
+			06:03:42.0 (41652462)|VARIABLE_ASSIGNMENT|[19]|bodyParameter|""
+			06:03:42.0 (41685128)|METHOD_ENTRY|[1]|01p2v00000SpN2h|WSParameter.WSParameter()
+			06:03:42.0 (41703825)|METHOD_EXIT|[1]|WSParameter
+			06:03:42.0 (41734208)|CONSTRUCTOR_ENTRY|[20]|01p2v00000SpN2h|<init>(String,String,Boolean,Boolean)|WSParameter
+			06:03:42.0 (41755990)|VARIABLE_SCOPE_BEGIN|[11]|this|WSParameter|true|false
+			06:03:42.0 (41781790)|VARIABLE_ASSIGNMENT|[11]|this|{}|0x6511c19b
+			06:03:42.0 (41791848)|VARIABLE_SCOPE_BEGIN|[11]|name|String|false|false
+			06:03:42.0 (41805043)|VARIABLE_ASSIGNMENT|[11]|name|"body"
+			06:03:42.0 (41820383)|VARIABLE_SCOPE_BEGIN|[11]|value|String|false|false
+			06:03:42.0 (41833928)|VARIABLE_ASSIGNMENT|[11]|value|""
+			06:03:42.0 (41847269)|VARIABLE_SCOPE_BEGIN|[11]|isRequired|Boolean|false|false
+			06:03:42.0 (41862992)|VARIABLE_ASSIGNMENT|[11]|isRequired|false
+			06:03:42.0 (41870681)|VARIABLE_SCOPE_BEGIN|[11]|urlEncoding|Boolean|false|false
+			06:03:42.0 (41885912)|VARIABLE_ASSIGNMENT|[11]|urlEncoding|false
+			06:03:42.0 (41948613)|VARIABLE_ASSIGNMENT|[12]|this.name|"body"|0x6511c19b
+			06:03:42.0 (41974288)|VARIABLE_ASSIGNMENT|[13]|this.isRequired|false|0x6511c19b
+			06:03:42.0 (41990593)|VARIABLE_ASSIGNMENT|[14]|this.value|""|0x6511c19b
+			06:03:42.0 (42014524)|VARIABLE_ASSIGNMENT|[15]|this.urlEncoding|false|0x6511c19b
+			06:03:42.0 (42029791)|CONSTRUCTOR_EXIT|[20]|01p2v00000SpN2h|<init>(String,String,Boolean,Boolean)|WSParameter
+			06:03:42.0 (42048870)|CONSTRUCTOR_ENTRY|[20]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,WSParameter)|RestWS
+			06:03:42.0 (42064616)|VARIABLE_SCOPE_BEGIN|[10]|this|RestWS|true|false
+			06:03:42.0 (42089157)|VARIABLE_ASSIGNMENT|[10]|this|{}|0x428d46c8
+			06:03:42.0 (42108544)|VARIABLE_SCOPE_BEGIN|[10]|endpoint|String|false|false
+			06:03:42.0 (42134101)|VARIABLE_ASSIGNMENT|[10]|endpoint|"https://api.bigcomme (54 more) ..."
+			06:03:42.0 (42144857)|VARIABLE_SCOPE_BEGIN|[10]|method|String|false|false
+			06:03:42.0 (42166318)|VARIABLE_ASSIGNMENT|[10]|method|"GET"
+			06:03:42.0 (42177162)|VARIABLE_SCOPE_BEGIN|[10]|urlParameters|List<WSParameter>|true|false
+			06:03:42.0 (42195440)|VARIABLE_ASSIGNMENT|[10]|urlParameters|null|
+			06:03:42.0 (42205398)|VARIABLE_SCOPE_BEGIN|[10]|bodyParameter|WSParameter|true|false
+			06:03:42.0 (42237960)|VARIABLE_ASSIGNMENT|[10]|bodyParameter|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x6511c19b
+			06:03:42.0 (42263204)|VARIABLE_ASSIGNMENT|[2]|this.endpoint|""|0x428d46c8
+			06:03:42.0 (42299052)|VARIABLE_ASSIGNMENT|[7]|this.hasError|false|0x428d46c8
+			06:03:42.0 (42315193)|VARIABLE_ASSIGNMENT|[8]|this.errorMessage|""|0x428d46c8
+			06:03:42.0 (42696189)|VARIABLE_ASSIGNMENT|[11]|this.request|"System.HttpRequest[Endpoint=null, Method=null]"|0x428d46c8
+			06:03:42.0 (42852766)|VARIABLE_ASSIGNMENT|[14]|this.bodyParameter|0x6511c19b|0x428d46c8
+			06:03:42.0 (42874383)|VARIABLE_ASSIGNMENT|[15]|this.endpoint|"https://api.bigcomme (54 more) ..."|0x428d46c8
+			06:03:42.0 (42892885)|VARIABLE_ASSIGNMENT|[16]|this.parameters|null|0x428d46c8
+			06:03:42.0 (42913504)|CONSTRUCTOR_EXIT|[20]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,WSParameter)|RestWS
+			06:03:42.0 (42937722)|CONSTRUCTOR_EXIT|[24]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,String)|RestWS
+			06:03:42.0 (42954535)|CONSTRUCTOR_EXIT|[35]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>)|RestWS
+			06:03:42.0 (42966138)|VARIABLE_SCOPE_BEGIN|[35]|ws|RestWS|true|false
+			06:03:42.0 (43152863)|VARIABLE_ASSIGNMENT|[35]|ws|{"bodyParameter":"0x6511c19b","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x428d46c8
+			06:03:42.0 (43378662)|CONSTRUCTOR_ENTRY|[43]|01p2v00000Tr0Kh|<init>()|WSProductsFromBC.Response
+			06:03:42.0 (43403341)|VARIABLE_SCOPE_BEGIN|[60]|this|WSProductsFromBC.Response|true|false
+			06:03:42.0 (43548731)|VARIABLE_ASSIGNMENT|[60]|this|{}|0x24a9cb67
+			06:03:42.0 (43577922)|METHOD_ENTRY|[1]|01p2v00000SpN2i|WSResult.WSResult()
+			06:03:42.0 (43595546)|METHOD_EXIT|[1]|WSResult
+			06:03:42.0 (43604761)|CONSTRUCTOR_ENTRY|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+			06:03:42.0 (43625253)|VARIABLE_SCOPE_BEGIN|[1]|this|WSResult|true|false
+			06:03:42.0 (43652155)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x24a9cb67
+			06:03:42.0 (43691827)|CONSTRUCTOR_EXIT|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+			06:03:42.0 (43708184)|CONSTRUCTOR_EXIT|[43]|01p2v00000Tr0Kh|<init>()|WSProductsFromBC.Response
+			06:03:42.0 (43739368)|METHOD_ENTRY|[43]|01p2v00000SpN2a|RestWS.invoke(WSResult)
+				06:03:42.0 (43747845)|VARIABLE_SCOPE_BEGIN|[78]|this|RestWS|true|false
+				06:03:42.0 (43880930)|VARIABLE_ASSIGNMENT|[78]|this|{"bodyParameter":"0x6511c19b","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x428d46c8
+				06:03:42.0 (43894467)|VARIABLE_SCOPE_BEGIN|[78]|result|WSResult|true|false
+				06:03:42.0 (43915679)|VARIABLE_ASSIGNMENT|[78]|result|{}|0x24a9cb67
+				06:03:42.0 (43955242)|METHOD_ENTRY|[88]|01p2v00000SpN2a|RestWS.getMissingParametersMessage()
+					06:03:42.0 (43977128)|VARIABLE_SCOPE_BEGIN|[27]|this|RestWS|true|false
+					06:03:42.0 (44070675)|VARIABLE_ASSIGNMENT|[27]|this|{"bodyParameter":"0x6511c19b","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x428d46c8
+					06:03:42.0 (44167855)|VARIABLE_SCOPE_BEGIN|[32]|parametersToCheck|List<WSParameter>|true|false
+					06:03:42.0 (44212166)|VARIABLE_ASSIGNMENT|[32]|parametersToCheck|[]|0x54f6f2ed
+					06:03:42.0 (44322592)|VARIABLE_SCOPE_BEGIN|[40]|missingParms|List<String>|true|false
+					06:03:42.0 (44358823)|VARIABLE_ASSIGNMENT|[40]|missingParms|[]|0x5518fa95
+					06:03:42.0 (44565028)|VARIABLE_SCOPE_BEGIN|[41]|parameter|WSParameter|true|false
+					06:03:42.0 (44603566)|VARIABLE_ASSIGNMENT|[41]|parameter|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x6511c19b
+					06:03:42.0 (44646512)|VARIABLE_ASSIGNMENT|[41]|parameter|null|
+				06:03:42.0 (44689425)|METHOD_EXIT|[88]|01p2v00000SpN2a|RestWS.getMissingParametersMessage()
+				06:03:42.0 (44698901)|VARIABLE_SCOPE_BEGIN|[88]|missingParamsMessage|String|false|false
+				06:03:42.0 (44715112)|VARIABLE_ASSIGNMENT|[88]|missingParamsMessage|""
+				06:03:42.0 (44780083)|METHOD_ENTRY|[96]|01p2v00000SpN2a|RestWS.formatEndpoint()
+					06:03:42.0 (44796416)|VARIABLE_SCOPE_BEGIN|[58]|this|RestWS|true|false
+					06:03:42.0 (44916153)|VARIABLE_ASSIGNMENT|[58]|this|{"bodyParameter":"0x6511c19b","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x428d46c8
+				06:03:42.0 (44950447)|METHOD_EXIT|[96]|01p2v00000SpN2a|RestWS.formatEndpoint()
+				06:03:42.0 (44992008)|METHOD_ENTRY|[97]|01p2v00000SpN2a|RestWS.getBody()
+					06:03:42.0 (45011011)|VARIABLE_SCOPE_BEGIN|[69]|this|RestWS|true|false
+					06:03:42.0 (45115053)|VARIABLE_ASSIGNMENT|[69]|this|{"bodyParameter":"0x6511c19b","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966, Method=GET]"}|0x428d46c8
+				06:03:42.0 (45216218)|METHOD_EXIT|[97]|01p2v00000SpN2a|RestWS.getBody()
+				06:03:42.0 (45226813)|VARIABLE_SCOPE_BEGIN|[97]|body|String|false|false
+				06:03:42.0 (45242462)|VARIABLE_ASSIGNMENT|[97]|body|""
+				06:03:42.0 (45394827)|CALLOUT_REQUEST|[104]|System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966, Method=GET]
+				06:03:42.0 (634033980)|CALLOUT_RESPONSE|[104]|System.HttpResponse[Status=OK, StatusCode=200]
+				06:03:42.0 (634119126)|VARIABLE_SCOPE_BEGIN|[104]|response|System.HttpResponse|true|false
+				06:03:42.0 (634272004)|VARIABLE_ASSIGNMENT|[104]|response|"System.HttpResponse[Status=OK, StatusCode=200]"|0x490de0ad
+				06:03:42.0 (634909160)|USER_DEBUG|[107]|DEBUG|{"data":[{"id":14966,"name":"Nature's Sunshine Astragalus 450mg 100c","type":"physical","sku":"NSAST","description":"<p><span>Astragalus is a traditional Chinese herb commonly used to support the body's immune function following illness. It is now used increasingly by western herbalists to enhance immunity and as a \"rejuvenating tonic\".<\/span><br \/><br \/><\/p>\r\n<ul>\r\n<li>May assist with recovery after illness<\/li>\r\n<li>Rejuvenating<\/li>\r\n<\/ul>\r\n<p><span>Traditionally used in Chinese medicine to:<\/span><br \/><br \/><\/p>\r\n<ul>\r\n<li>Support the immune system to fight illness<\/li>\r\n<li>Support healthy immune system function<\/li>\r\n<li>Stimulate healthy immune system response<\/li>\r\n<\/ul>\r\n<p><span>Each gelatin capsule contains:<\/span><\/p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p><em>&nbsp;<\/em><\/p>\r\n<p><em>Astragalus membranaceus<\/em>&nbsp;(Astragalus) root powder<\/p>\r\n<\/td>\r\n<td>\r\n<p>&nbsp;<\/p>\r\n<p>450mg<\/p>\r\n<\/td>\r\n<\/tr>\r\n<\/tbody>\r\n<\/table>\r\n<p><br \/><span>No added gluten, lactose, soy, starch, sugars or salt, wheat products, artificial colourings, flavourings or preservatives.<\/span><\/p>\r\n<p>&nbsp;<\/p>\r\n<p><span><span>Adults:<\/span><span>&nbsp;Take 2 capsules three times daily with a meal, or as professionally prescribed<\/span><\/span><\/p>\r\n<p>&nbsp;<\/p>\r\n<p><span>Cautions:<\/span><br \/><span>Not recommended while pregnant or breast feeding.<\/span><br \/><span>Take two hours away from all prescription medications.<\/span><br \/><br \/><span>Warnings:<\/span><br \/><span>Always read the label. Follow directions for use.&nbsp;If symptoms persist, talk to your healthcare professional.<\/span><\/p>","weight":0.2,"width":0,"depth":0,"height":0,"price":39.39,"cost_price":23.87,"retail_price":0,"sale_price":0,"map_price":0,"tax_class_id":0,"product_tax_code":"","calculated_price":39.39,"categories":[693,1027],"brand_id":84,"option_set_id":null,"option_set_display":"right","inventory_level":0,"inventory_warning_level":0,"inventory_tracking":"none","reviews_rating_sum":0,"reviews_count":0,"total_sold":0,"fixed_cost_shipping_price":0,"is_free_shipping":true,"is_visible":true,"is_featured":true,"related_products":[-1],"warranty":"\"{\\\"0\\\": {\\\"tabName\\\": \\\"Features & Benefits\\\", \\\"tabContent\\\": \\\"<br>Astragalus is a traditional Chinese herb commonly used to support the body's immune function following illness. It is now used increasingly by western herbalists to enhance immunity and as a \\\"rejuvenating tonic\\\".<br><br><ul><li>May assist with recovery after illness<\/li><li>Rejuvenating<\/li><\/ul><br\/><br>Traditionally used in Chinese medicine to:<BR><br><ul><li>Support the immune system to fight illness<\/li><li>Support healthy immune system function<\/li><li>Stimulate healthy immune system response<\/li><\/ul>\\\"}, \\\"1\\\": {\\\"tabName\\\": \\\"Dose & Administration\\\", \\\"tabContent\\\": \\\"<br><b>Adults:<\/b> Take 2 capsules three times daily with a meal, or as professionally prescribed<br\/>\\\"}, \\\"2\\\": {\\\"tabName\\\": \\\"Ingredients\\\", \\\"tabContent\\\": \\\"<p> <\/p><p><b>Each gelatin capsule contains:<\/b><\/p><table ><tbody><tr><td ><p><i><br><\/i><\/p><p><i>Astragalus membranaceus<\/i> (Astragalus) root powder<\/p><\/td><td ><p><br><\/p><p>450mg<\/p><\/td><\/tr><\/tbody><\/table><br>No added gluten, lactose, soy, starch, sugars or salt, wheat products, artificial colourings, flavourings or preservatives.\\\"}, \\\"3\\\": {\\\"tabName\\\": \\\"Cautions & Contraindications\\\", \\\"tabContent\\\": \\\"<br><b>Cautions:<\/b><br>Not recommended while pregnant or breast feeding.<br>Take two hours away from all prescription medications.<br><br><b>Warnings:<\/b><br>Always read the label. Follow directions for use. If symptoms persist, talk to your healthcare professional.\\\"}}\"","bin_picking_number":"","layout_file":"product.html","upc":"99904170445","mpn":"","gtin":"","search_keywords":"Astragalus membranaceus, Astragalus","availability":"available","availability_description":"","gift_wrapping_options_type":"any","gift_wrapping_options_list":[],"sort_order":0,"condition":"New","is_condition_shown":true,"order_quantity_minimum":1,"order_quantity_maximum":200,"page_title":"","meta_keywords":[],"meta_description":"","date_created":"2021-07-08T08:54:54+00:00","date_modified":"2021-12-21T06:01:16+00:00","view_count":0,"preorder_release_date":null,"preorder_message":"","is_preorder_only":false,"is_price_hidden":false,"price_hidden_label":"","custom_url":{"url":"\/natures-sunshine-astragalus-450mg-100-capsules\/","is_customized":true},"base_variant_id":15356,"open_graph_type":"product","open_graph_title":"","open_graph_description":"","open_graph_use_meta_description":true,"open_graph_use_product_name":true,"open_graph_use_image":true}],"meta":{"pagination":{"total":1,"count":1,"per_page":50,"current_page":1,"total_pages":1,"links":{"current":"?id=14966&page=1&limit=50"},"too_many":false}}}
+				06:03:42.0 (635274163)|METHOD_ENTRY|[112]|01p2v00000Tr0Kh|WSProductsFromBC.Response.processResponse(System.HttpResponse)
+					06:03:42.0 (635333122)|VARIABLE_SCOPE_BEGIN|[63]|this|WSProductsFromBC.Response|true|false
+					06:03:42.0 (635580074)|VARIABLE_ASSIGNMENT|[63]|this|{"hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966, Method=GET]","response":"System.HttpResponse[Status=OK, StatusCode=200]"}|0x24a9cb67
+					06:03:42.0 (635597726)|VARIABLE_SCOPE_BEGIN|[63]|response|System.HttpResponse|true|false
+					06:03:42.0 (635661308)|VARIABLE_ASSIGNMENT|[63]|response|"System.HttpResponse[Status=OK, StatusCode=200]"|0x490de0ad
+					06:03:42.0 (636149934)|SYSTEM_METHOD_ENTRY|[1]|Type.Type()
+					06:03:42.0 (636169745)|SYSTEM_METHOD_EXIT|[1]|Type
+					06:03:42.0 (636213824)|VARIABLE_SCOPE_BEGIN|[4]|this|System.Type|true|false
+					06:03:42.0 (636244751)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x4ed1f8f
+					06:03:42.0 (636256064)|VARIABLE_SCOPE_BEGIN|[4]|apextype|java:common.apex.runtime.ApexObjectType|true|false
+					06:03:42.0 (636363519)|VARIABLE_ASSIGNMENT|[4]|apextype|"WSProductsFromBCResponse"|0x22c38f37
+					06:03:42.0 (636474885)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+					06:03:42.0 (636487082)|SYSTEM_METHOD_EXIT|[1]|JSON
+					06:03:42.0 (636509499)|METHOD_ENTRY|[65]||System.JSON.deserialize(String, System.Type)
+					06:03:42.0 (643839918)|METHOD_EXIT|[65]||System.JSON.deserialize(String, System.Type)
+					06:03:42.0 (643868288)|VARIABLE_ASSIGNMENT|[64]|this.productsFromBigCommerce|0x68eebaa1|0x24a9cb67
+				06:03:42.0 (643886925)|METHOD_EXIT|[112]|01p2v00000Tr0Kh|WSProductsFromBC.Response.processResponse(System.HttpResponse)
+			06:03:42.0 (643906095)|METHOD_EXIT|[43]|01p2v00000SpN2a|RestWS.invoke(WSResult)
+		06:03:42.0 (643925845)|METHOD_EXIT|[14]|01p2v00000Tr0Kh|WSProductsFromBC.getProductsFromBC(String)
+		06:03:42.0 (643937754)|VARIABLE_SCOPE_BEGIN|[14]|resp|WSProductsFromBC.Response|true|false
+		06:03:42.0 (644091739)|VARIABLE_ASSIGNMENT|[14]|resp|{"productsFromBigCommerce":"0x68eebaa1","hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966, Method=GET]","response":"System.HttpResponse[Status=OK, StatusCode=200]"}|0x24a9cb67
+		06:03:42.0 (644338125)|METHOD_ENTRY|[1]|01p2v00000Tr0KR|ProductsFromBCBatch.ProductsFromBCBatch()
+		06:03:42.0 (644362321)|METHOD_EXIT|[1]|ProductsFromBCBatch
+		06:03:42.0 (644442227)|CONSTRUCTOR_ENTRY|[21]|01p2v00000Tr0KR|<init>(String)|ProductsFromBCBatch
+		06:03:42.0 (644477254)|VARIABLE_SCOPE_BEGIN|[10]|this|ProductsFromBCBatch|true|false
+		06:03:42.0 (644511483)|VARIABLE_ASSIGNMENT|[10]|this|{}|0x3a175cd6
+		06:03:42.0 (644523645)|VARIABLE_SCOPE_BEGIN|[10]|bcProductId|String|false|false
+		06:03:42.0 (644539875)|VARIABLE_ASSIGNMENT|[10]|bcProductId|"14966"
+		06:03:42.0 (644597514)|VARIABLE_ASSIGNMENT|[11]|this.updateFromProductQuickAction|true|0x3a175cd6
+		06:03:42.0 (644616052)|VARIABLE_ASSIGNMENT|[12]|this.bcProductId|"14966"|0x3a175cd6
+		06:03:42.0 (644631115)|CONSTRUCTOR_EXIT|[21]|01p2v00000Tr0KR|<init>(String)|ProductsFromBCBatch
+		06:03:42.0 (644643112)|VARIABLE_SCOPE_BEGIN|[21]|productBatch|ProductsFromBCBatch|true|false
+		06:03:42.0 (644671716)|VARIABLE_ASSIGNMENT|[21]|productBatch|{"bcProductId":"14966","updateFromProductQuickAction":true}|0x3a175cd6
+		06:03:42.0 (683175874)|VARIABLE_ASSIGNMENT|[23]|this.message|"Product Updated"|0x2e1043af
+		06:03:42.688 (688654164)|CUMULATIVE_LIMIT_USAGE
+		06:03:42.688 (688654164)|LIMIT_USAGE_FOR_NS|(default)|
+		  Number of SOQL queries: 2 out of 100
+		  Number of query rows: 3 out of 50000
+		  Number of SOSL queries: 0 out of 20
+		  Number of DML statements: 0 out of 150
+		  Number of Publish Immediate DML: 0 out of 150
+		  Number of DML rows: 0 out of 10000
+		  Maximum CPU time: 0 out of 10000
+		  Maximum heap size: 0 out of 6000000
+		  Number of callouts: 1 out of 100
+		  Number of Email Invocations: 0 out of 10
+		  Number of future calls: 0 out of 50
+		  Number of queueable jobs added to the queue: 0 out of 50
+		  Number of Mobile Apex push calls: 0 out of 10
+		
+		06:03:42.688 (688654164)|CUMULATIVE_LIMIT_USAGE_END
+		
+	06:03:42.0 (688730743)|CODE_UNIT_FINISHED|UpdateProductFromQuickActionCtl.getProductFromBCInformation(String)
+06:03:42.0 (689085046)|CODE_UNIT_FINISHED|apex://UpdateProductFromQuickActionCtl/ACTION$getProductFromBCInformation
+06:03:42.0 (689102785)|EXECUTION_FINISHED

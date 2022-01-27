@@ -1,0 +1,47 @@
+53.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: InvocableNotifyClinicNewOrder.sendEmailNotification(
+Execute Anonymous:     new List<Id>{'8011y000000xCeHAAU'}
+Execute Anonymous: );
+Execute Anonymous: 
+07:58:35.3 (3344145)|USER_INFO|[EXTERNAL]|0052v00000fQDGY|api@naturalchemist.com.au.sand1|(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)|GMT+11:00
+07:58:35.3 (3379573)|EXECUTION_STARTED
+07:58:35.3 (3385905)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+	07:58:35.3 (4412420)|SYSTEM_MODE_ENTER|false
+	07:58:35.3 (34302420)|METHOD_ENTRY|[1]|01p1y000003W5hZ|InvocableNotifyClinicNewOrder.InvocableNotifyClinicNewOrder()
+	07:58:35.3 (34358327)|METHOD_EXIT|[1]|InvocableNotifyClinicNewOrder
+	07:58:35.3 (34414174)|METHOD_ENTRY|[1]|01p1y000003W5hZ|InvocableNotifyClinicNewOrder.sendEmailNotification(List<Id>)
+		07:58:35.3 (34475024)|VARIABLE_SCOPE_BEGIN|[4]|orderIds|List<Id>|true|false
+		07:58:35.3 (34624374)|VARIABLE_ASSIGNMENT|[4]|orderIds|["8011y000000xCeHAAU"]|0x63051346
+		07:58:35.3 (46081655)|METHOD_ENTRY|[1]|01p1y000002uJ67|NaturalChemistDebugging.NaturalChemistDebugging()
+		07:58:35.3 (46129340)|METHOD_EXIT|[1]|NaturalChemistDebugging
+		07:58:35.3 (46184251)|METHOD_ENTRY|[9]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+			07:58:35.3 (46261115)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+			07:58:35.3 (46300531)|VARIABLE_ASSIGNMENT|[3]|name|"ordersIds from Invoc (24 more) ..."
+			07:58:35.3 (46317229)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+			07:58:35.3 (46344263)|VARIABLE_ASSIGNMENT|[3]|element|["8011y000000xCeHAAU"]
+			07:58:35.3 (54623730)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+			07:58:35.3 (54668690)|VARIABLE_ASSIGNMENT|[5]|print|true
+			07:58:35.3 (54809995)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - ordersIds from InvocableNotifyClinicNewOrder : (8011y000000xCeHAAU)
+		07:58:35.3 (54834527)|METHOD_EXIT|[9]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+	07:58:35.3 (90526533)|METHOD_EXIT|[1]|01p1y000003W5hZ|InvocableNotifyClinicNewOrder.sendEmailNotification(List<Id>)
+	07:58:35.3 (90575145)|SYSTEM_MODE_EXIT|false
+	07:58:35.96 (96559490)|CUMULATIVE_LIMIT_USAGE
+	07:58:35.96 (96559490)|LIMIT_USAGE_FOR_NS|(default)|
+	  Number of SOQL queries: 0 out of 100
+	  Number of query rows: 0 out of 50000
+	  Number of SOSL queries: 0 out of 20
+	  Number of DML statements: 0 out of 150
+	  Number of Publish Immediate DML: 0 out of 150
+	  Number of DML rows: 0 out of 10000
+	  Maximum CPU time: 0 out of 10000
+	  Maximum heap size: 0 out of 6000000
+	  Number of callouts: 0 out of 100
+	  Number of Email Invocations: 0 out of 10
+	  Number of future calls: 1 out of 50
+	  Number of queueable jobs added to the queue: 0 out of 50
+	  Number of Mobile Apex push calls: 0 out of 10
+	
+	07:58:35.96 (96559490)|CUMULATIVE_LIMIT_USAGE_END
+	
+07:58:35.3 (96623304)|CODE_UNIT_FINISHED|execute_anonymous_apex
+07:58:35.3 (96643128)|EXECUTION_FINISHED

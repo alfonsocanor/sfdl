@@ -1,0 +1,727 @@
+45.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+06:03:43.0 (635991)|USER_INFO|[EXTERNAL]|0052v00000fQDGY|api@naturalchemist.com.au.sand1|(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)|GMT+11:00
+06:03:43.0 (735449)|EXECUTION_STARTED
+06:03:43.0 (747423)|CODE_UNIT_STARTED|[EXTERNAL]|01p2v00000Tr0KR|ProductsFromBCBatch
+	06:03:43.0 (9532469)|SYSTEM_METHOD_ENTRY|[15]|BatchableContextImpl.BatchableContextImpl()
+	06:03:43.0 (9565851)|SYSTEM_METHOD_EXIT|[15]|BatchableContextImpl
+	06:03:43.0 (9596180)|VARIABLE_SCOPE_BEGIN|[31]|this|Database.BatchableContextImpl|true|false
+	06:03:43.0 (9733976)|VARIABLE_ASSIGNMENT|[31]|this|{}|0x26721fa6
+	06:03:43.0 (9744389)|VARIABLE_SCOPE_BEGIN|[31]|jobId|Id|false|false
+	06:03:43.0 (9938274)|VARIABLE_ASSIGNMENT|[31]|jobId|"7071y00000J99goAAB"
+	06:03:43.0 (9948901)|VARIABLE_SCOPE_BEGIN|[31]|childJobId|Id|false|false
+	06:03:43.0 (9963789)|VARIABLE_ASSIGNMENT|[31]|childJobId|null
+	06:03:43.0 (12800428)|METHOD_ENTRY|[1]|01p2v00000Tr0KR|ProductsFromBCBatch.ProductsFromBCBatch()
+	06:03:43.0 (12822933)|METHOD_EXIT|[1]|ProductsFromBCBatch
+	06:03:43.0 (12868387)|VARIABLE_SCOPE_BEGIN|[57]|this|ProductsFromBCBatch|true|false
+	06:03:43.0 (12922257)|VARIABLE_ASSIGNMENT|[57]|this|{"bcProductId":"14966","updateFromProductQuickAction":true}|0x44e7cb45
+	06:03:43.0 (12933620)|VARIABLE_SCOPE_BEGIN|[57]|context|Database.BatchableContext|true|false
+	06:03:43.0 (13033699)|VARIABLE_ASSIGNMENT|[57]|context|{"jobId":"7071y00000J99goAAB"}|0x26721fa6
+	06:03:43.0 (13047114)|VARIABLE_SCOPE_BEGIN|[57]|scope|List<ANY>|true|false
+	06:03:43.0 (13139532)|VARIABLE_ASSIGNMENT|[57]|scope|[{"lastModifiedDateInBC":"","page":1}]|0x72de6350
+	06:03:43.0 (13427819)|VARIABLE_SCOPE_BEGIN|[61]|wra|ProductsFromBCBatch.WrapperPaginationClass|true|false
+	06:03:43.0 (13461198)|VARIABLE_ASSIGNMENT|[61]|wra|{"lastModifiedDateInBC":"","page":1}|0x9d6c381
+	06:03:43.0 (14676979)|CONSTRUCTOR_ENTRY|[62]|01p2v00000Tr0Kh|<init>()|WSProductsFromBC.Response
+	06:03:43.0 (14717255)|VARIABLE_SCOPE_BEGIN|[60]|this|WSProductsFromBC.Response|true|false
+	06:03:43.0 (15265982)|VARIABLE_ASSIGNMENT|[60]|this|{}|0x1524d68a
+	06:03:43.0 (15301798)|METHOD_ENTRY|[1]|01p2v00000SpN2i|WSResult.WSResult()
+	06:03:43.0 (15319745)|METHOD_EXIT|[1]|WSResult
+	06:03:43.0 (15331240)|CONSTRUCTOR_ENTRY|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+	06:03:43.0 (15354667)|VARIABLE_SCOPE_BEGIN|[1]|this|WSResult|true|false
+	06:03:43.0 (15386533)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x1524d68a
+	06:03:43.0 (15430798)|CONSTRUCTOR_EXIT|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+	06:03:43.0 (15447810)|CONSTRUCTOR_EXIT|[62]|01p2v00000Tr0Kh|<init>()|WSProductsFromBC.Response
+	06:03:43.0 (15459001)|VARIABLE_SCOPE_BEGIN|[62]|response|WSProductsFromBC.Response|true|false
+	06:03:43.0 (15481536)|VARIABLE_ASSIGNMENT|[62]|response|{}|0x1524d68a
+	06:03:43.0 (16070137)|CONSTRUCTOR_ENTRY|[65]|01p2v00000U4Yxe|<init>()|WSGetAllProductImagesFromBC.Response
+	06:03:43.0 (16097809)|VARIABLE_SCOPE_BEGIN|[19]|this|WSGetAllProductImagesFromBC.Response|true|false
+	06:03:43.0 (17069122)|VARIABLE_ASSIGNMENT|[19]|this|{}|0x4a30ccd2
+	06:03:43.0 (17092295)|CONSTRUCTOR_ENTRY|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+	06:03:43.0 (17112416)|VARIABLE_SCOPE_BEGIN|[1]|this|WSResult|true|false
+	06:03:43.0 (17143553)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x4a30ccd2
+	06:03:43.0 (17185085)|CONSTRUCTOR_EXIT|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+	06:03:43.0 (17202007)|CONSTRUCTOR_EXIT|[65]|01p2v00000U4Yxe|<init>()|WSGetAllProductImagesFromBC.Response
+	06:03:43.0 (17210325)|VARIABLE_SCOPE_BEGIN|[65]|imagesResponse|WSGetAllProductImagesFromBC.Response|true|false
+	06:03:43.0 (17232503)|VARIABLE_ASSIGNMENT|[65]|imagesResponse|{}|0x4a30ccd2
+	06:03:43.0 (17524661)|VARIABLE_SCOPE_BEGIN|[4]|WSProductsFromBC.SERVICE_CONFIG|Webservice_endpoint_setting__mdt|true|true
+	06:03:43.0 (17574060)|METHOD_ENTRY|[1]|01p2v00000Tr0Kh|WSProductsFromBC.WSProductsFromBC()
+		06:03:43.0 (18214660)|VARIABLE_SCOPE_BEGIN|[3]|GenericUtilsHelper.currentOrg|Organization|true|true
+		06:03:43.0 (18291747)|VARIABLE_SCOPE_BEGIN|[101]|GenericUtilsHelper.mapRecordTypes|Map<String,RecordType>|true|true
+		06:03:43.0 (18410449)|METHOD_ENTRY|[1]|01p2v00000SpN2Y|GenericUtilsHelper.GenericUtilsHelper()
+			06:03:43.0 (18556780)|VARIABLE_ASSIGNMENT|[101]|GenericUtilsHelper.mapRecordTypes|{}|0x1623e50e
+		06:03:43.0 (18573613)|METHOD_EXIT|[1]|GenericUtilsHelper
+		06:03:43.0 (18598304)|METHOD_ENTRY|[5]|01p2v00000SpN2Y|GenericUtilsHelper.getWebServiceConfig(String)
+			06:03:43.0 (18624964)|VARIABLE_SCOPE_BEGIN|[86]|name|String|false|false
+			06:03:43.0 (18650010)|VARIABLE_ASSIGNMENT|[86]|name|"SALESFORCE.BIGCOMMER (2 more) ..."
+			06:03:43.0 (18676143)|METHOD_ENTRY|[87]|01p2v00000SpN2Y|GenericUtilsHelper.isSandboxEnviroment()
+				06:03:43.0 (26041922)|SOQL_EXECUTE_BEGIN|[81]|Aggregations:0|SELECT Id, Name, IsSandbox FROM Organization LIMIT 1
+				06:03:43.0 (30129742)|SOQL_EXECUTE_END|[81]|Rows:1
+				06:03:43.0 (30463633)|VARIABLE_ASSIGNMENT|[81]|GenericUtilsHelper.currentOrg|{"Id":"00D1y0000008m7IEAQ","Name":"Natural Chemist","IsSandbox":true}|0xba6d62b
+			06:03:43.0 (30534733)|METHOD_EXIT|[87]|01p2v00000SpN2Y|GenericUtilsHelper.isSandboxEnviroment()
+			06:03:43.0 (30553731)|VARIABLE_SCOPE_BEGIN|[87]|isProduction|Boolean|false|false
+			06:03:43.0 (30579153)|VARIABLE_ASSIGNMENT|[87]|isProduction|false
+			06:03:43.0 (31279263)|SOQL_EXECUTE_BEGIN|[88]|Aggregations:0|SELECT Id, URL__c, ClientId__c, ClientSecret__c, ActivateNatualScriptCallout__c, StoreHash__c, AppStoreUrl__c, AccessToken__c, ShipStation_Packing_UserId__c, ShipStation_Admin_UserId__c FROM Webservice_endpoint_setting__mdt WHERE (MasterLabel = :tmpVar1 AND Is_Production__c = :tmpVar2)
+			06:03:43.0 (34951936)|SOQL_EXECUTE_END|[88]|Rows:1
+			06:03:43.0 (35122519)|VARIABLE_SCOPE_BEGIN|[88]|result|List<Webservice_endpoint_setting__mdt>|true|false
+			06:03:43.0 (35184379)|VARIABLE_ASSIGNMENT|[88]|result|[{"Id":"m002v000000yiYYAAY","URL__c":"https://api.bigcomme (26 more) ...","ClientId__c":"qgoe1p6a5xvhgkkvsiu5 (11 more) ...","ClientSecret__c":"d6631082dbbca140cafb (44 more) ...","ActivateNatualScriptCallout__c":false,"StoreHash__c":"n9dr7ak2qq","AppStoreUrl__c":"https://natural-chem (30 more) ...","AccessToken__c":"64so0mrm0qmlsrl3dl8l (11 more) ..."}]|0x51e1bc22
+		06:03:43.0 (35329144)|METHOD_EXIT|[5]|01p2v00000SpN2Y|GenericUtilsHelper.getWebServiceConfig(String)
+		06:03:43.0 (35373835)|VARIABLE_ASSIGNMENT|[4]|WSProductsFromBC.SERVICE_CONFIG|{"Id":"m002v000000yiYYAAY","URL__c":"https://api.bigcomme (26 more) ...","ClientId__c":"qgoe1p6a5xvhgkkvsiu5 (11 more) ...","ClientSecret__c":"d6631082dbbca140cafb (44 more) ...","ActivateNatualScriptCallout__c":false,"StoreHash__c":"n9dr7ak2qq","AppStoreUrl__c":"https://natural-chem (30 more) ...","AccessToken__c":"64so0mrm0qmlsrl3dl8l (11 more) ..."}|0x6222a251
+	06:03:43.0 (35398972)|METHOD_EXIT|[1]|WSProductsFromBC
+	06:03:43.0 (35422015)|METHOD_ENTRY|[68]|01p2v00000Tr0Kh|WSProductsFromBC.getProductsFromBC(String)
+		06:03:43.0 (35447123)|VARIABLE_SCOPE_BEGIN|[34]|bcProductId|String|false|false
+		06:03:43.0 (35463009)|VARIABLE_ASSIGNMENT|[34]|bcProductId|"14966"
+		06:03:43.0 (36101762)|METHOD_ENTRY|[1]|01p2v00000SpN2a|RestWS.RestWS()
+		06:03:43.0 (36120858)|METHOD_EXIT|[1]|RestWS
+		06:03:43.0 (36808842)|CONSTRUCTOR_ENTRY|[35]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>)|RestWS
+		06:03:43.0 (36854802)|VARIABLE_SCOPE_BEGIN|[23]|this|RestWS|true|false
+		06:03:43.0 (36937941)|VARIABLE_ASSIGNMENT|[23]|this|{}|0x4372de1f
+		06:03:43.0 (36948366)|VARIABLE_SCOPE_BEGIN|[23]|endpoint|String|false|false
+		06:03:43.0 (36969082)|VARIABLE_ASSIGNMENT|[23]|endpoint|"https://api.bigcomme (54 more) ..."
+		06:03:43.0 (36976422)|VARIABLE_SCOPE_BEGIN|[23]|method|String|false|false
+		06:03:43.0 (36991182)|VARIABLE_ASSIGNMENT|[23]|method|"GET"
+		06:03:43.0 (36998917)|VARIABLE_SCOPE_BEGIN|[23]|urlParameters|List<WSParameter>|true|false
+		06:03:43.0 (37016495)|VARIABLE_ASSIGNMENT|[23]|urlParameters|null|
+		06:03:43.0 (37053229)|CONSTRUCTOR_ENTRY|[24]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,String)|RestWS
+		06:03:43.0 (37083400)|VARIABLE_SCOPE_BEGIN|[19]|this|RestWS|true|false
+		06:03:43.0 (37108703)|VARIABLE_ASSIGNMENT|[19]|this|{}|0x4372de1f
+		06:03:43.0 (37122577)|VARIABLE_SCOPE_BEGIN|[19]|endpoint|String|false|false
+		06:03:43.0 (37138867)|VARIABLE_ASSIGNMENT|[19]|endpoint|"https://api.bigcomme (54 more) ..."
+		06:03:43.0 (37145977)|VARIABLE_SCOPE_BEGIN|[19]|method|String|false|false
+		06:03:43.0 (37160522)|VARIABLE_ASSIGNMENT|[19]|method|"GET"
+		06:03:43.0 (37167643)|VARIABLE_SCOPE_BEGIN|[19]|urlParameters|List<WSParameter>|true|false
+		06:03:43.0 (37181850)|VARIABLE_ASSIGNMENT|[19]|urlParameters|null|
+		06:03:43.0 (37188862)|VARIABLE_SCOPE_BEGIN|[19]|bodyParameter|String|false|false
+		06:03:43.0 (37202054)|VARIABLE_ASSIGNMENT|[19]|bodyParameter|""
+		06:03:43.0 (37232263)|METHOD_ENTRY|[1]|01p2v00000SpN2h|WSParameter.WSParameter()
+		06:03:43.0 (37247677)|METHOD_EXIT|[1]|WSParameter
+		06:03:43.0 (37276059)|CONSTRUCTOR_ENTRY|[20]|01p2v00000SpN2h|<init>(String,String,Boolean,Boolean)|WSParameter
+		06:03:43.0 (37297162)|VARIABLE_SCOPE_BEGIN|[11]|this|WSParameter|true|false
+		06:03:43.0 (37322874)|VARIABLE_ASSIGNMENT|[11]|this|{}|0x4d91298c
+		06:03:43.0 (37333005)|VARIABLE_SCOPE_BEGIN|[11]|name|String|false|false
+		06:03:43.0 (37347769)|VARIABLE_ASSIGNMENT|[11]|name|"body"
+		06:03:43.0 (37354725)|VARIABLE_SCOPE_BEGIN|[11]|value|String|false|false
+		06:03:43.0 (37369410)|VARIABLE_ASSIGNMENT|[11]|value|""
+		06:03:43.0 (37382544)|VARIABLE_SCOPE_BEGIN|[11]|isRequired|Boolean|false|false
+		06:03:43.0 (37395819)|VARIABLE_ASSIGNMENT|[11]|isRequired|false
+		06:03:43.0 (37405304)|VARIABLE_SCOPE_BEGIN|[11]|urlEncoding|Boolean|false|false
+		06:03:43.0 (37418004)|VARIABLE_ASSIGNMENT|[11]|urlEncoding|false
+		06:03:43.0 (37474187)|VARIABLE_ASSIGNMENT|[12]|this.name|"body"|0x4d91298c
+		06:03:43.0 (37497943)|VARIABLE_ASSIGNMENT|[13]|this.isRequired|false|0x4d91298c
+		06:03:43.0 (37514255)|VARIABLE_ASSIGNMENT|[14]|this.value|""|0x4d91298c
+		06:03:43.0 (37537142)|VARIABLE_ASSIGNMENT|[15]|this.urlEncoding|false|0x4d91298c
+		06:03:43.0 (37551777)|CONSTRUCTOR_EXIT|[20]|01p2v00000SpN2h|<init>(String,String,Boolean,Boolean)|WSParameter
+		06:03:43.0 (37567997)|CONSTRUCTOR_ENTRY|[20]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,WSParameter)|RestWS
+		06:03:43.0 (37581520)|VARIABLE_SCOPE_BEGIN|[10]|this|RestWS|true|false
+		06:03:43.0 (37604286)|VARIABLE_ASSIGNMENT|[10]|this|{}|0x4372de1f
+		06:03:43.0 (37623239)|VARIABLE_SCOPE_BEGIN|[10]|endpoint|String|false|false
+		06:03:43.0 (37638426)|VARIABLE_ASSIGNMENT|[10]|endpoint|"https://api.bigcomme (54 more) ..."
+		06:03:43.0 (37644745)|VARIABLE_SCOPE_BEGIN|[10]|method|String|false|false
+		06:03:43.0 (37658599)|VARIABLE_ASSIGNMENT|[10]|method|"GET"
+		06:03:43.0 (37665742)|VARIABLE_SCOPE_BEGIN|[10]|urlParameters|List<WSParameter>|true|false
+		06:03:43.0 (37678520)|VARIABLE_ASSIGNMENT|[10]|urlParameters|null|
+		06:03:43.0 (37685016)|VARIABLE_SCOPE_BEGIN|[10]|bodyParameter|WSParameter|true|false
+		06:03:43.0 (37707648)|VARIABLE_ASSIGNMENT|[10]|bodyParameter|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x4d91298c
+		06:03:43.0 (37726637)|VARIABLE_ASSIGNMENT|[2]|this.endpoint|""|0x4372de1f
+		06:03:43.0 (37759429)|VARIABLE_ASSIGNMENT|[7]|this.hasError|false|0x4372de1f
+		06:03:43.0 (37773283)|VARIABLE_ASSIGNMENT|[8]|this.errorMessage|""|0x4372de1f
+		06:03:43.0 (37880456)|VARIABLE_ASSIGNMENT|[11]|this.request|"System.HttpRequest[Endpoint=null, Method=null]"|0x4372de1f
+		06:03:43.0 (38002586)|VARIABLE_ASSIGNMENT|[14]|this.bodyParameter|0x4d91298c|0x4372de1f
+		06:03:43.0 (38023453)|VARIABLE_ASSIGNMENT|[15]|this.endpoint|"https://api.bigcomme (54 more) ..."|0x4372de1f
+		06:03:43.0 (38045324)|VARIABLE_ASSIGNMENT|[16]|this.parameters|null|0x4372de1f
+		06:03:43.0 (38061775)|CONSTRUCTOR_EXIT|[20]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,WSParameter)|RestWS
+		06:03:43.0 (38077526)|CONSTRUCTOR_EXIT|[24]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,String)|RestWS
+		06:03:43.0 (38091903)|CONSTRUCTOR_EXIT|[35]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>)|RestWS
+		06:03:43.0 (38100879)|VARIABLE_SCOPE_BEGIN|[35]|ws|RestWS|true|false
+		06:03:43.0 (38185862)|VARIABLE_ASSIGNMENT|[35]|ws|{"bodyParameter":"0x4d91298c","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x4372de1f
+		06:03:43.0 (38381033)|CONSTRUCTOR_ENTRY|[43]|01p2v00000Tr0Kh|<init>()|WSProductsFromBC.Response
+		06:03:43.0 (38398498)|VARIABLE_SCOPE_BEGIN|[60]|this|WSProductsFromBC.Response|true|false
+		06:03:43.0 (38427684)|VARIABLE_ASSIGNMENT|[60]|this|{}|0x640ec379
+		06:03:43.0 (38440242)|CONSTRUCTOR_ENTRY|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+		06:03:43.0 (38450847)|VARIABLE_SCOPE_BEGIN|[1]|this|WSResult|true|false
+		06:03:43.0 (38469144)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x640ec379
+		06:03:43.0 (38505051)|CONSTRUCTOR_EXIT|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+		06:03:43.0 (38519993)|CONSTRUCTOR_EXIT|[43]|01p2v00000Tr0Kh|<init>()|WSProductsFromBC.Response
+		06:03:43.0 (38550026)|METHOD_ENTRY|[43]|01p2v00000SpN2a|RestWS.invoke(WSResult)
+			06:03:43.0 (38558196)|VARIABLE_SCOPE_BEGIN|[78]|this|RestWS|true|false
+			06:03:43.0 (38640015)|VARIABLE_ASSIGNMENT|[78]|this|{"bodyParameter":"0x4d91298c","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x4372de1f
+			06:03:43.0 (38653728)|VARIABLE_SCOPE_BEGIN|[78]|result|WSResult|true|false
+			06:03:43.0 (38673835)|VARIABLE_ASSIGNMENT|[78]|result|{}|0x640ec379
+			06:03:43.0 (38706823)|METHOD_ENTRY|[88]|01p2v00000SpN2a|RestWS.getMissingParametersMessage()
+				06:03:43.0 (38725373)|VARIABLE_SCOPE_BEGIN|[27]|this|RestWS|true|false
+				06:03:43.0 (38780109)|VARIABLE_ASSIGNMENT|[27]|this|{"bodyParameter":"0x4d91298c","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x4372de1f
+				06:03:43.0 (38874956)|VARIABLE_SCOPE_BEGIN|[32]|parametersToCheck|List<WSParameter>|true|false
+				06:03:43.0 (38937346)|VARIABLE_ASSIGNMENT|[32]|parametersToCheck|[]|0x545dc1ba
+				06:03:43.0 (39051028)|VARIABLE_SCOPE_BEGIN|[40]|missingParms|List<String>|true|false
+				06:03:43.0 (39084657)|VARIABLE_ASSIGNMENT|[40]|missingParms|[]|0x243439e
+				06:03:43.0 (39227683)|VARIABLE_SCOPE_BEGIN|[41]|parameter|WSParameter|true|false
+				06:03:43.0 (39262537)|VARIABLE_ASSIGNMENT|[41]|parameter|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x4d91298c
+				06:03:43.0 (39300224)|VARIABLE_ASSIGNMENT|[41]|parameter|null|
+			06:03:43.0 (39338720)|METHOD_EXIT|[88]|01p2v00000SpN2a|RestWS.getMissingParametersMessage()
+			06:03:43.0 (39350396)|VARIABLE_SCOPE_BEGIN|[88]|missingParamsMessage|String|false|false
+			06:03:43.0 (39367518)|VARIABLE_ASSIGNMENT|[88]|missingParamsMessage|""
+			06:03:43.0 (39437063)|METHOD_ENTRY|[96]|01p2v00000SpN2a|RestWS.formatEndpoint()
+				06:03:43.0 (39453674)|VARIABLE_SCOPE_BEGIN|[58]|this|RestWS|true|false
+				06:03:43.0 (39538849)|VARIABLE_ASSIGNMENT|[58]|this|{"bodyParameter":"0x4d91298c","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x4372de1f
+			06:03:43.0 (39564936)|METHOD_EXIT|[96]|01p2v00000SpN2a|RestWS.formatEndpoint()
+			06:03:43.0 (39602356)|METHOD_ENTRY|[97]|01p2v00000SpN2a|RestWS.getBody()
+				06:03:43.0 (39619719)|VARIABLE_SCOPE_BEGIN|[69]|this|RestWS|true|false
+				06:03:43.0 (39688856)|VARIABLE_ASSIGNMENT|[69]|this|{"bodyParameter":"0x4d91298c","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966, Method=GET]"}|0x4372de1f
+			06:03:43.0 (39794125)|METHOD_EXIT|[97]|01p2v00000SpN2a|RestWS.getBody()
+			06:03:43.0 (39803115)|VARIABLE_SCOPE_BEGIN|[97]|body|String|false|false
+			06:03:43.0 (39817502)|VARIABLE_ASSIGNMENT|[97]|body|""
+			06:03:43.0 (39955924)|CALLOUT_REQUEST|[104]|System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966, Method=GET]
+			06:03:43.0 (634614634)|CALLOUT_RESPONSE|[104]|System.HttpResponse[Status=OK, StatusCode=200]
+			06:03:43.0 (634687481)|VARIABLE_SCOPE_BEGIN|[104]|response|System.HttpResponse|true|false
+			06:03:43.0 (634755898)|VARIABLE_ASSIGNMENT|[104]|response|"System.HttpResponse[Status=OK, StatusCode=200]"|0x6453aa87
+			06:03:43.0 (635248110)|USER_DEBUG|[107]|DEBUG|{"data":[{"id":14966,"name":"Nature's Sunshine Astragalus 450mg 100c","type":"physical","sku":"NSAST","description":"<p><span>Astragalus is a traditional Chinese herb commonly used to support the body's immune function following illness. It is now used increasingly by western herbalists to enhance immunity and as a \"rejuvenating tonic\".<\/span><br \/><br \/><\/p>\r\n<ul>\r\n<li>May assist with recovery after illness<\/li>\r\n<li>Rejuvenating<\/li>\r\n<\/ul>\r\n<p><span>Traditionally used in Chinese medicine to:<\/span><br \/><br \/><\/p>\r\n<ul>\r\n<li>Support the immune system to fight illness<\/li>\r\n<li>Support healthy immune system function<\/li>\r\n<li>Stimulate healthy immune system response<\/li>\r\n<\/ul>\r\n<p><span>Each gelatin capsule contains:<\/span><\/p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p><em>&nbsp;<\/em><\/p>\r\n<p><em>Astragalus membranaceus<\/em>&nbsp;(Astragalus) root powder<\/p>\r\n<\/td>\r\n<td>\r\n<p>&nbsp;<\/p>\r\n<p>450mg<\/p>\r\n<\/td>\r\n<\/tr>\r\n<\/tbody>\r\n<\/table>\r\n<p><br \/><span>No added gluten, lactose, soy, starch, sugars or salt, wheat products, artificial colourings, flavourings or preservatives.<\/span><\/p>\r\n<p>&nbsp;<\/p>\r\n<p><span><span>Adults:<\/span><span>&nbsp;Take 2 capsules three times daily with a meal, or as professionally prescribed<\/span><\/span><\/p>\r\n<p>&nbsp;<\/p>\r\n<p><span>Cautions:<\/span><br \/><span>Not recommended while pregnant or breast feeding.<\/span><br \/><span>Take two hours away from all prescription medications.<\/span><br \/><br \/><span>Warnings:<\/span><br \/><span>Always read the label. Follow directions for use.&nbsp;If symptoms persist, talk to your healthcare professional.<\/span><\/p>","weight":0.2,"width":0,"depth":0,"height":0,"price":39.39,"cost_price":23.87,"retail_price":0,"sale_price":0,"map_price":0,"tax_class_id":0,"product_tax_code":"","calculated_price":39.39,"categories":[693,1027],"brand_id":84,"option_set_id":null,"option_set_display":"right","inventory_level":0,"inventory_warning_level":0,"inventory_tracking":"none","reviews_rating_sum":0,"reviews_count":0,"total_sold":0,"fixed_cost_shipping_price":0,"is_free_shipping":true,"is_visible":true,"is_featured":true,"related_products":[-1],"warranty":"\"{\\\"0\\\": {\\\"tabName\\\": \\\"Features & Benefits\\\", \\\"tabContent\\\": \\\"<br>Astragalus is a traditional Chinese herb commonly used to support the body's immune function following illness. It is now used increasingly by western herbalists to enhance immunity and as a \\\"rejuvenating tonic\\\".<br><br><ul><li>May assist with recovery after illness<\/li><li>Rejuvenating<\/li><\/ul><br\/><br>Traditionally used in Chinese medicine to:<BR><br><ul><li>Support the immune system to fight illness<\/li><li>Support healthy immune system function<\/li><li>Stimulate healthy immune system response<\/li><\/ul>\\\"}, \\\"1\\\": {\\\"tabName\\\": \\\"Dose & Administration\\\", \\\"tabContent\\\": \\\"<br><b>Adults:<\/b> Take 2 capsules three times daily with a meal, or as professionally prescribed<br\/>\\\"}, \\\"2\\\": {\\\"tabName\\\": \\\"Ingredients\\\", \\\"tabContent\\\": \\\"<p> <\/p><p><b>Each gelatin capsule contains:<\/b><\/p><table ><tbody><tr><td ><p><i><br><\/i><\/p><p><i>Astragalus membranaceus<\/i> (Astragalus) root powder<\/p><\/td><td ><p><br><\/p><p>450mg<\/p><\/td><\/tr><\/tbody><\/table><br>No added gluten, lactose, soy, starch, sugars or salt, wheat products, artificial colourings, flavourings or preservatives.\\\"}, \\\"3\\\": {\\\"tabName\\\": \\\"Cautions & Contraindications\\\", \\\"tabContent\\\": \\\"<br><b>Cautions:<\/b><br>Not recommended while pregnant or breast feeding.<br>Take two hours away from all prescription medications.<br><br><b>Warnings:<\/b><br>Always read the label. Follow directions for use. If symptoms persist, talk to your healthcare professional.\\\"}}\"","bin_picking_number":"","layout_file":"product.html","upc":"99904170445","mpn":"","gtin":"","search_keywords":"Astragalus membranaceus, Astragalus","availability":"available","availability_description":"","gift_wrapping_options_type":"any","gift_wrapping_options_list":[],"sort_order":0,"condition":"New","is_condition_shown":true,"order_quantity_minimum":1,"order_quantity_maximum":200,"page_title":"","meta_keywords":[],"meta_description":"","date_created":"2021-07-08T08:54:54+00:00","date_modified":"2021-12-21T06:01:16+00:00","view_count":0,"preorder_release_date":null,"preorder_message":"","is_preorder_only":false,"is_price_hidden":false,"price_hidden_label":"","custom_url":{"url":"\/natures-sunshine-astragalus-450mg-100-capsules\/","is_customized":true},"base_variant_id":15356,"open_graph_type":"product","open_graph_title":"","open_graph_description":"","open_graph_use_meta_description":true,"open_graph_use_product_name":true,"open_graph_use_image":true}],"meta":{"pagination":{"total":1,"count":1,"per_page":50,"current_page":1,"total_pages":1,"links":{"current":"?id=14966&page=1&limit=50"},"too_many":false}}}
+			06:03:43.0 (635404963)|METHOD_ENTRY|[112]|01p2v00000Tr0Kh|WSProductsFromBC.Response.processResponse(System.HttpResponse)
+				06:03:43.0 (635440055)|VARIABLE_SCOPE_BEGIN|[63]|this|WSProductsFromBC.Response|true|false
+				06:03:43.0 (635558573)|VARIABLE_ASSIGNMENT|[63]|this|{"hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966, Method=GET]","response":"System.HttpResponse[Status=OK, StatusCode=200]"}|0x640ec379
+				06:03:43.0 (635572387)|VARIABLE_SCOPE_BEGIN|[63]|response|System.HttpResponse|true|false
+				06:03:43.0 (635600951)|VARIABLE_ASSIGNMENT|[63]|response|"System.HttpResponse[Status=OK, StatusCode=200]"|0x6453aa87
+				06:03:43.0 (635991122)|SYSTEM_METHOD_ENTRY|[1]|Type.Type()
+				06:03:43.0 (636005839)|SYSTEM_METHOD_EXIT|[1]|Type
+				06:03:43.0 (636049459)|VARIABLE_SCOPE_BEGIN|[4]|this|System.Type|true|false
+				06:03:43.0 (636079873)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x3cd32215
+				06:03:43.0 (636090874)|VARIABLE_SCOPE_BEGIN|[4]|apextype|java:common.apex.runtime.ApexObjectType|true|false
+				06:03:43.0 (636160730)|VARIABLE_ASSIGNMENT|[4]|apextype|"WSProductsFromBCResponse"|0x45adb09a
+				06:03:43.0 (636252656)|SYSTEM_METHOD_ENTRY|[1]|JSON.JSON()
+				06:03:43.0 (636263608)|SYSTEM_METHOD_EXIT|[1]|JSON
+				06:03:43.0 (636280197)|METHOD_ENTRY|[65]||System.JSON.deserialize(String, System.Type)
+				06:03:43.0 (638839175)|METHOD_EXIT|[65]||System.JSON.deserialize(String, System.Type)
+				06:03:43.0 (638863228)|VARIABLE_ASSIGNMENT|[64]|this.productsFromBigCommerce|0x44ffba85|0x640ec379
+			06:03:43.0 (638878334)|METHOD_EXIT|[112]|01p2v00000Tr0Kh|WSProductsFromBC.Response.processResponse(System.HttpResponse)
+		06:03:43.0 (638894075)|METHOD_EXIT|[43]|01p2v00000SpN2a|RestWS.invoke(WSResult)
+	06:03:43.0 (638908523)|METHOD_EXIT|[68]|01p2v00000Tr0Kh|WSProductsFromBC.getProductsFromBC(String)
+	06:03:43.0 (639004154)|VARIABLE_ASSIGNMENT|[68]|response|{"productsFromBigCommerce":"0x44ffba85","hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products?id=14966, Method=GET]","response":"System.HttpResponse[Status=OK, StatusCode=200]"}|0x640ec379
+	06:03:43.0 (639114054)|VARIABLE_SCOPE_BEGIN|[4]|WSGetAllProductImagesFromBC.SERVICE_CONFIG|Webservice_endpoint_setting__mdt|true|true
+	06:03:43.0 (639159483)|METHOD_ENTRY|[1]|01p2v00000U4Yxe|WSGetAllProductImagesFromBC.WSGetAllProductImagesFromBC()
+		06:03:43.0 (639186031)|METHOD_ENTRY|[5]|01p2v00000SpN2Y|GenericUtilsHelper.getWebServiceConfig(String)
+			06:03:43.0 (639208014)|VARIABLE_SCOPE_BEGIN|[86]|name|String|false|false
+			06:03:43.0 (639240346)|VARIABLE_ASSIGNMENT|[86]|name|"SALESFORCE.BIGCOMMER (2 more) ..."
+			06:03:43.0 (639256416)|METHOD_ENTRY|[87]|01p2v00000SpN2Y|GenericUtilsHelper.isSandboxEnviroment()
+			06:03:43.0 (639288591)|METHOD_EXIT|[87]|01p2v00000SpN2Y|GenericUtilsHelper.isSandboxEnviroment()
+			06:03:43.0 (639298417)|VARIABLE_SCOPE_BEGIN|[87]|isProduction|Boolean|false|false
+			06:03:43.0 (639320827)|VARIABLE_ASSIGNMENT|[87]|isProduction|false
+			06:03:43.0 (639890669)|SOQL_EXECUTE_BEGIN|[88]|Aggregations:0|SELECT Id, URL__c, ClientId__c, ClientSecret__c, ActivateNatualScriptCallout__c, StoreHash__c, AppStoreUrl__c, AccessToken__c, ShipStation_Packing_UserId__c, ShipStation_Admin_UserId__c FROM Webservice_endpoint_setting__mdt WHERE (MasterLabel = :tmpVar1 AND Is_Production__c = :tmpVar2)
+			06:03:43.0 (642327756)|SOQL_EXECUTE_END|[88]|Rows:1
+			06:03:43.0 (642461454)|VARIABLE_SCOPE_BEGIN|[88]|result|List<Webservice_endpoint_setting__mdt>|true|false
+			06:03:43.0 (642518461)|VARIABLE_ASSIGNMENT|[88]|result|[{"Id":"m002v000000yiYYAAY","URL__c":"https://api.bigcomme (26 more) ...","ClientId__c":"qgoe1p6a5xvhgkkvsiu5 (11 more) ...","ClientSecret__c":"d6631082dbbca140cafb (44 more) ...","ActivateNatualScriptCallout__c":false,"StoreHash__c":"n9dr7ak2qq","AppStoreUrl__c":"https://natural-chem (30 more) ...","AccessToken__c":"64so0mrm0qmlsrl3dl8l (11 more) ..."}]|0x747dafdc
+		06:03:43.0 (642599558)|METHOD_EXIT|[5]|01p2v00000SpN2Y|GenericUtilsHelper.getWebServiceConfig(String)
+		06:03:43.0 (642644623)|VARIABLE_ASSIGNMENT|[4]|WSGetAllProductImagesFromBC.SERVICE_CONFIG|{"Id":"m002v000000yiYYAAY","URL__c":"https://api.bigcomme (26 more) ...","ClientId__c":"qgoe1p6a5xvhgkkvsiu5 (11 more) ...","ClientSecret__c":"d6631082dbbca140cafb (44 more) ...","ActivateNatualScriptCallout__c":false,"StoreHash__c":"n9dr7ak2qq","AppStoreUrl__c":"https://natural-chem (30 more) ...","AccessToken__c":"64so0mrm0qmlsrl3dl8l (11 more) ..."}|0x1def79f4
+	06:03:43.0 (642667367)|METHOD_EXIT|[1]|WSGetAllProductImagesFromBC
+	06:03:43.0 (642694761)|METHOD_ENTRY|[69]|01p2v00000U4Yxe|WSGetAllProductImagesFromBC.getAllProductImagesFromBC(String)
+		06:03:43.0 (642719993)|VARIABLE_SCOPE_BEGIN|[7]|bcProductId|String|false|false
+		06:03:43.0 (642738296)|VARIABLE_ASSIGNMENT|[7]|bcProductId|"14966"
+		06:03:43.0 (642869844)|CONSTRUCTOR_ENTRY|[8]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>)|RestWS
+		06:03:43.0 (642911005)|VARIABLE_SCOPE_BEGIN|[23]|this|RestWS|true|false
+		06:03:43.0 (642947099)|VARIABLE_ASSIGNMENT|[23]|this|{}|0x5b6bcf19
+		06:03:43.0 (642958553)|VARIABLE_SCOPE_BEGIN|[23]|endpoint|String|false|false
+		06:03:43.0 (642977381)|VARIABLE_ASSIGNMENT|[23]|endpoint|"https://api.bigcomme (58 more) ..."
+		06:03:43.0 (642985487)|VARIABLE_SCOPE_BEGIN|[23]|method|String|false|false
+		06:03:43.0 (642998716)|VARIABLE_ASSIGNMENT|[23]|method|"GET"
+		06:03:43.0 (643007940)|VARIABLE_SCOPE_BEGIN|[23]|urlParameters|List<WSParameter>|true|false
+		06:03:43.0 (643028823)|VARIABLE_ASSIGNMENT|[23]|urlParameters|null|
+		06:03:43.0 (643050064)|CONSTRUCTOR_ENTRY|[24]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,String)|RestWS
+		06:03:43.0 (643061450)|VARIABLE_SCOPE_BEGIN|[19]|this|RestWS|true|false
+		06:03:43.0 (643081760)|VARIABLE_ASSIGNMENT|[19]|this|{}|0x5b6bcf19
+		06:03:43.0 (643092022)|VARIABLE_SCOPE_BEGIN|[19]|endpoint|String|false|false
+		06:03:43.0 (643109338)|VARIABLE_ASSIGNMENT|[19]|endpoint|"https://api.bigcomme (58 more) ..."
+		06:03:43.0 (643116414)|VARIABLE_SCOPE_BEGIN|[19]|method|String|false|false
+		06:03:43.0 (643131950)|VARIABLE_ASSIGNMENT|[19]|method|"GET"
+		06:03:43.0 (643139056)|VARIABLE_SCOPE_BEGIN|[19]|urlParameters|List<WSParameter>|true|false
+		06:03:43.0 (643152174)|VARIABLE_ASSIGNMENT|[19]|urlParameters|null|
+		06:03:43.0 (643159369)|VARIABLE_SCOPE_BEGIN|[19]|bodyParameter|String|false|false
+		06:03:43.0 (643174143)|VARIABLE_ASSIGNMENT|[19]|bodyParameter|""
+		06:03:43.0 (643201693)|CONSTRUCTOR_ENTRY|[20]|01p2v00000SpN2h|<init>(String,String,Boolean,Boolean)|WSParameter
+		06:03:43.0 (643214186)|VARIABLE_SCOPE_BEGIN|[11]|this|WSParameter|true|false
+		06:03:43.0 (643235735)|VARIABLE_ASSIGNMENT|[11]|this|{}|0x427198e7
+		06:03:43.0 (643245707)|VARIABLE_SCOPE_BEGIN|[11]|name|String|false|false
+		06:03:43.0 (643260236)|VARIABLE_ASSIGNMENT|[11]|name|"body"
+		06:03:43.0 (643268991)|VARIABLE_SCOPE_BEGIN|[11]|value|String|false|false
+		06:03:43.0 (643282252)|VARIABLE_ASSIGNMENT|[11]|value|""
+		06:03:43.0 (643292700)|VARIABLE_SCOPE_BEGIN|[11]|isRequired|Boolean|false|false
+		06:03:43.0 (643305043)|VARIABLE_ASSIGNMENT|[11]|isRequired|false
+		06:03:43.0 (643313493)|VARIABLE_SCOPE_BEGIN|[11]|urlEncoding|Boolean|false|false
+		06:03:43.0 (643326786)|VARIABLE_ASSIGNMENT|[11]|urlEncoding|false
+		06:03:43.0 (643379436)|VARIABLE_ASSIGNMENT|[12]|this.name|"body"|0x427198e7
+		06:03:43.0 (643403551)|VARIABLE_ASSIGNMENT|[13]|this.isRequired|false|0x427198e7
+		06:03:43.0 (643420225)|VARIABLE_ASSIGNMENT|[14]|this.value|""|0x427198e7
+		06:03:43.0 (643442768)|VARIABLE_ASSIGNMENT|[15]|this.urlEncoding|false|0x427198e7
+		06:03:43.0 (643457536)|CONSTRUCTOR_EXIT|[20]|01p2v00000SpN2h|<init>(String,String,Boolean,Boolean)|WSParameter
+		06:03:43.0 (643472470)|CONSTRUCTOR_ENTRY|[20]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,WSParameter)|RestWS
+		06:03:43.0 (643482766)|VARIABLE_SCOPE_BEGIN|[10]|this|RestWS|true|false
+		06:03:43.0 (643503503)|VARIABLE_ASSIGNMENT|[10]|this|{}|0x5b6bcf19
+		06:03:43.0 (643511401)|VARIABLE_SCOPE_BEGIN|[10]|endpoint|String|false|false
+		06:03:43.0 (643524314)|VARIABLE_ASSIGNMENT|[10]|endpoint|"https://api.bigcomme (58 more) ..."
+		06:03:43.0 (643529095)|VARIABLE_SCOPE_BEGIN|[10]|method|String|false|false
+		06:03:43.0 (643539687)|VARIABLE_ASSIGNMENT|[10]|method|"GET"
+		06:03:43.0 (643544495)|VARIABLE_SCOPE_BEGIN|[10]|urlParameters|List<WSParameter>|true|false
+		06:03:43.0 (643553446)|VARIABLE_ASSIGNMENT|[10]|urlParameters|null|
+		06:03:43.0 (643558533)|VARIABLE_SCOPE_BEGIN|[10]|bodyParameter|WSParameter|true|false
+		06:03:43.0 (643583197)|VARIABLE_ASSIGNMENT|[10]|bodyParameter|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x427198e7
+		06:03:43.0 (643603336)|VARIABLE_ASSIGNMENT|[2]|this.endpoint|""|0x5b6bcf19
+		06:03:43.0 (643642673)|VARIABLE_ASSIGNMENT|[7]|this.hasError|false|0x5b6bcf19
+		06:03:43.0 (643658760)|VARIABLE_ASSIGNMENT|[8]|this.errorMessage|""|0x5b6bcf19
+		06:03:43.0 (643740206)|VARIABLE_ASSIGNMENT|[11]|this.request|"System.HttpRequest[Endpoint=null, Method=null]"|0x5b6bcf19
+		06:03:43.0 (643800602)|VARIABLE_ASSIGNMENT|[14]|this.bodyParameter|0x427198e7|0x5b6bcf19
+		06:03:43.0 (643815643)|VARIABLE_ASSIGNMENT|[15]|this.endpoint|"https://api.bigcomme (58 more) ..."|0x5b6bcf19
+		06:03:43.0 (643827341)|VARIABLE_ASSIGNMENT|[16]|this.parameters|null|0x5b6bcf19
+		06:03:43.0 (643839921)|CONSTRUCTOR_EXIT|[20]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,WSParameter)|RestWS
+		06:03:43.0 (643852090)|CONSTRUCTOR_EXIT|[24]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>,String)|RestWS
+		06:03:43.0 (643864206)|CONSTRUCTOR_EXIT|[8]|01p2v00000SpN2a|<init>(String,String,List<WSParameter>)|RestWS
+		06:03:43.0 (643870569)|VARIABLE_SCOPE_BEGIN|[8]|ws|RestWS|true|false
+		06:03:43.0 (643938466)|VARIABLE_ASSIGNMENT|[8]|ws|{"bodyParameter":"0x427198e7","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x5b6bcf19
+		06:03:43.0 (644122511)|CONSTRUCTOR_ENTRY|[16]|01p2v00000U4Yxe|<init>()|WSGetAllProductImagesFromBC.Response
+		06:03:43.0 (644140531)|VARIABLE_SCOPE_BEGIN|[19]|this|WSGetAllProductImagesFromBC.Response|true|false
+		06:03:43.0 (644165693)|VARIABLE_ASSIGNMENT|[19]|this|{}|0x24377984
+		06:03:43.0 (644174486)|CONSTRUCTOR_ENTRY|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+		06:03:43.0 (644183450)|VARIABLE_SCOPE_BEGIN|[1]|this|WSResult|true|false
+		06:03:43.0 (644197594)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x24377984
+		06:03:43.0 (644228128)|CONSTRUCTOR_EXIT|[EXTERNAL]|01p2v00000SpN2i|<init>()|WSResult
+		06:03:43.0 (644243604)|CONSTRUCTOR_EXIT|[16]|01p2v00000U4Yxe|<init>()|WSGetAllProductImagesFromBC.Response
+		06:03:43.0 (644259593)|METHOD_ENTRY|[16]|01p2v00000SpN2a|RestWS.invoke(WSResult)
+			06:03:43.0 (644267680)|VARIABLE_SCOPE_BEGIN|[78]|this|RestWS|true|false
+			06:03:43.0 (644365137)|VARIABLE_ASSIGNMENT|[78]|this|{"bodyParameter":"0x427198e7","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x5b6bcf19
+			06:03:43.0 (644378113)|VARIABLE_SCOPE_BEGIN|[78]|result|WSResult|true|false
+			06:03:43.0 (644400016)|VARIABLE_ASSIGNMENT|[78]|result|{}|0x24377984
+			06:03:43.0 (644427340)|METHOD_ENTRY|[88]|01p2v00000SpN2a|RestWS.getMissingParametersMessage()
+				06:03:43.0 (644433498)|VARIABLE_SCOPE_BEGIN|[27]|this|RestWS|true|false
+				06:03:43.0 (644482808)|VARIABLE_ASSIGNMENT|[27]|this|{"bodyParameter":"0x427198e7","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x5b6bcf19
+				06:03:43.0 (644526896)|VARIABLE_SCOPE_BEGIN|[32]|parametersToCheck|List<WSParameter>|true|false
+				06:03:43.0 (644572809)|VARIABLE_ASSIGNMENT|[32]|parametersToCheck|[]|0x5f252820
+				06:03:43.0 (644632919)|VARIABLE_SCOPE_BEGIN|[40]|missingParms|List<String>|true|false
+				06:03:43.0 (644664406)|VARIABLE_ASSIGNMENT|[40]|missingParms|[]|0x5ab337da
+				06:03:43.0 (644725747)|VARIABLE_SCOPE_BEGIN|[41]|parameter|WSParameter|true|false
+				06:03:43.0 (644756435)|VARIABLE_ASSIGNMENT|[41]|parameter|{"isRequired":false,"name":"body","urlEncoding":false,"value":""}|0x427198e7
+				06:03:43.0 (644789156)|VARIABLE_ASSIGNMENT|[41]|parameter|null|
+			06:03:43.0 (644815603)|METHOD_EXIT|[88]|01p2v00000SpN2a|RestWS.getMissingParametersMessage()
+			06:03:43.0 (644823727)|VARIABLE_SCOPE_BEGIN|[88]|missingParamsMessage|String|false|false
+			06:03:43.0 (644834548)|VARIABLE_ASSIGNMENT|[88]|missingParamsMessage|""
+			06:03:43.0 (644870199)|METHOD_ENTRY|[96]|01p2v00000SpN2a|RestWS.formatEndpoint()
+				06:03:43.0 (644878976)|VARIABLE_SCOPE_BEGIN|[58]|this|RestWS|true|false
+				06:03:43.0 (644949593)|VARIABLE_ASSIGNMENT|[58]|this|{"bodyParameter":"0x427198e7","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=null, Method=GET]"}|0x5b6bcf19
+			06:03:43.0 (644974654)|METHOD_EXIT|[96]|01p2v00000SpN2a|RestWS.formatEndpoint()
+			06:03:43.0 (644999548)|METHOD_ENTRY|[97]|01p2v00000SpN2a|RestWS.getBody()
+				06:03:43.0 (645007584)|VARIABLE_SCOPE_BEGIN|[69]|this|RestWS|true|false
+				06:03:43.0 (645077455)|VARIABLE_ASSIGNMENT|[69]|this|{"bodyParameter":"0x427198e7","endpoint":"https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images","errorMessage":"","hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images, Method=GET]"}|0x5b6bcf19
+			06:03:43.0 (645130137)|METHOD_EXIT|[97]|01p2v00000SpN2a|RestWS.getBody()
+			06:03:43.0 (645146121)|VARIABLE_SCOPE_BEGIN|[97]|body|String|false|false
+			06:03:43.0 (645166706)|VARIABLE_ASSIGNMENT|[97]|body|""
+			06:03:43.0 (648146478)|CALLOUT_REQUEST|[104]|System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images, Method=GET]
+			06:03:43.0 (915055439)|CALLOUT_RESPONSE|[104]|System.HttpResponse[Status=OK, StatusCode=200]
+			06:03:43.0 (915149864)|VARIABLE_SCOPE_BEGIN|[104]|response|System.HttpResponse|true|false
+			06:03:43.0 (915221701)|VARIABLE_ASSIGNMENT|[104]|response|"System.HttpResponse[Status=OK, StatusCode=200]"|0x2ba334cf
+			06:03:43.0 (915585937)|USER_DEBUG|[107]|DEBUG|{"data":[{"id":20032,"product_id":14966,"is_thumbnail":true,"sort_order":1,"description":"","image_file":"h\/013\/1636696594952_Nature_s_Sunshine_Astragalus_450mg_100c_media_01__56793.jpg","url_zoom":"https:\/\/cdn11.bigcommerce.com\/s-n9dr7ak2qq\/products\/14966\/images\/20032\/1636696594952_Nature_s_Sunshine_Astragalus_450mg_100c_media_01__56793.1640066477.1280.1280.jpg?c=2","url_standard":"https:\/\/cdn11.bigcommerce.com\/s-n9dr7ak2qq\/products\/14966\/images\/20032\/1636696594952_Nature_s_Sunshine_Astragalus_450mg_100c_media_01__56793.1640066477.386.513.jpg?c=2","url_thumbnail":"https:\/\/cdn11.bigcommerce.com\/s-n9dr7ak2qq\/products\/14966\/images\/20032\/1636696594952_Nature_s_Sunshine_Astragalus_450mg_100c_media_01__56793.1640066477.220.290.jpg?c=2","url_tiny":"https:\/\/cdn11.bigcommerce.com\/s-n9dr7ak2qq\/products\/14966\/images\/20032\/1636696594952_Nature_s_Sunshine_Astragalus_450mg_100c_media_01__56793.1640066477.44.58.jpg?c=2","date_modified":"2021-12-21T06:01:17+00:00"}],"meta":{"pagination":{"total":1,"count":1,"per_page":50,"current_page":1,"total_pages":1,"links":{"current":"?page=1&limit=50"}}}}
+			06:03:43.0 (915689136)|METHOD_ENTRY|[112]|01p2v00000U4Yxe|WSGetAllProductImagesFromBC.Response.processResponse(System.HttpResponse)
+				06:03:43.0 (915703348)|VARIABLE_SCOPE_BEGIN|[22]|this|WSGetAllProductImagesFromBC.Response|true|false
+				06:03:43.0 (915813862)|VARIABLE_ASSIGNMENT|[22]|this|{"hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images, Method=GET]","response":"System.HttpResponse[Status=OK, StatusCode=200]"}|0x24377984
+				06:03:43.0 (915827743)|VARIABLE_SCOPE_BEGIN|[22]|response|System.HttpResponse|true|false
+				06:03:43.0 (915853564)|VARIABLE_ASSIGNMENT|[22]|response|"System.HttpResponse[Status=OK, StatusCode=200]"|0x2ba334cf
+				06:03:43.0 (916097215)|VARIABLE_SCOPE_BEGIN|[4]|this|System.Type|true|false
+				06:03:43.0 (916121949)|VARIABLE_ASSIGNMENT|[4]|this|{}|0x6703978c
+				06:03:43.0 (916132125)|VARIABLE_SCOPE_BEGIN|[4]|apextype|java:common.apex.runtime.ApexObjectType|true|false
+				06:03:43.0 (916182481)|VARIABLE_ASSIGNMENT|[4]|apextype|"WSGetAllProductImagesFromBCResp"|0xaebd1c5
+				06:03:43.0 (916276004)|METHOD_ENTRY|[24]||System.JSON.deserialize(String, System.Type)
+				06:03:43.0 (917328519)|METHOD_EXIT|[24]||System.JSON.deserialize(String, System.Type)
+				06:03:43.0 (917350300)|VARIABLE_ASSIGNMENT|[23]|this.productImagesFromBigCommerce|0x5fd9a46|0x24377984
+			06:03:43.0 (917362917)|METHOD_EXIT|[112]|01p2v00000U4Yxe|WSGetAllProductImagesFromBC.Response.processResponse(System.HttpResponse)
+		06:03:43.0 (917377086)|METHOD_EXIT|[16]|01p2v00000SpN2a|RestWS.invoke(WSResult)
+	06:03:43.0 (917400825)|METHOD_EXIT|[69]|01p2v00000U4Yxe|WSGetAllProductImagesFromBC.getAllProductImagesFromBC(String)
+	06:03:43.0 (917491614)|VARIABLE_ASSIGNMENT|[69]|imagesResponse|{"productImagesFromBigCommerce":"0x5fd9a46","hasError":false,"request":"System.HttpRequest[Endpoint=https://api.bigcommerce.com/stores/n9dr7ak2qq/v3/catalog/products/14966/images, Method=GET]","response":"System.HttpResponse[Status=OK, StatusCode=200]"}|0x24377984
+	06:03:43.0 (917602144)|VARIABLE_SCOPE_BEGIN|[84]|brandSFIdMap|Map<String,String>|true|false
+	06:03:43.0 (917634670)|VARIABLE_ASSIGNMENT|[84]|brandSFIdMap|{}|0x7eb9d282
+	06:03:43.0 (917693667)|VARIABLE_SCOPE_BEGIN|[85]|brandBCIdSet|Set<String>|true|false
+	06:03:43.0 (917727214)|VARIABLE_ASSIGNMENT|[85]|brandBCIdSet|[]|0x2a885169
+	06:03:43.0 (917763545)|VARIABLE_SCOPE_BEGIN|[86]|productPriceInBCMap|Map<String,Decimal>|true|false
+	06:03:43.0 (917780162)|VARIABLE_ASSIGNMENT|[86]|productPriceInBCMap|{}|0x76409162
+	06:03:43.0 (917955324)|VARIABLE_SCOPE_BEGIN|[87]|productList2Upsert|List<Product2>|true|false
+	06:03:43.0 (917983892)|VARIABLE_ASSIGNMENT|[87]|productList2Upsert|[]|0x1f860a46
+	06:03:43.0 (918095370)|VARIABLE_SCOPE_BEGIN|[88]|pricebookEntryList2Insert|List<PricebookEntry>|true|false
+	06:03:43.0 (918117797)|VARIABLE_ASSIGNMENT|[88]|pricebookEntryList2Insert|[]|0x2f9be6f6
+	06:03:43.0 (918143895)|VARIABLE_SCOPE_BEGIN|[89]|pricebookEntryInfo2Update|Map<String,Decimal>|true|false
+	06:03:43.0 (918162997)|VARIABLE_ASSIGNMENT|[89]|pricebookEntryInfo2Update|{}|0x4770f975
+	06:03:43.0 (918230537)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"data":"0x1ab243ad","meta":"0x6aeeba5b"}|0x44ffba85
+	06:03:43.0 (918271804)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"data":"0x1ab243ad","meta":"0x6aeeba5b"}|0x44ffba85
+	06:03:43.0 (918419967)|VARIABLE_SCOPE_BEGIN|[92]|productBC|WSProductsFromBCResponse.Data|true|false
+	06:03:43.0 (918634304)|VARIABLE_ASSIGNMENT|[92]|productBC|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (918869287)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (919112413)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (919215016)|VARIABLE_ASSIGNMENT|[92]|productBC|null|
+	06:03:43.0 (919987429)|SOQL_EXECUTE_BEGIN|[97]|Aggregations:0|SELECT Id, BC_BrandId__c FROM Brand__c WHERE BC_BrandId__c = :tmpVar1
+	06:03:43.0 (940110781)|SOQL_EXECUTE_END|[97]|Rows:1
+	06:03:43.0 (940398246)|SYSTEM_METHOD_ENTRY|[7]|QueryLocatorIterator.QueryLocatorIterator()
+	06:03:43.0 (940416990)|SYSTEM_METHOD_EXIT|[7]|QueryLocatorIterator
+	06:03:43.0 (940557710)|VARIABLE_SCOPE_BEGIN|[15]|this|Database.QueryLocatorIterator|true|false
+	06:03:43.0 (940598887)|VARIABLE_ASSIGNMENT|[15]|this|{}|0x5f85d1bc
+	06:03:43.0 (940609509)|VARIABLE_SCOPE_BEGIN|[15]|values|List<SObject>|true|false
+	06:03:43.0 (940638973)|VARIABLE_ASSIGNMENT|[15]|values|[{"Id":"a0W1y000002cm26EAA","BC_BrandId__c":"84"}]|0x48df8645
+	06:03:43.0 (940649543)|VARIABLE_SCOPE_BEGIN|[15]|ql|Database.QueryLocator|true|false
+	06:03:43.0 (940696604)|VARIABLE_ASSIGNMENT|[15]|ql|{"query":"SELECT Id, BC_BrandI (49 more) ..."}|0x522c4b7a
+	06:03:43.0 (940706765)|VARIABLE_SCOPE_BEGIN|[15]|totalNumRecords|Integer|false|false
+	06:03:43.0 (940724351)|VARIABLE_ASSIGNMENT|[15]|totalNumRecords|1
+	06:03:43.0 (940731588)|VARIABLE_SCOPE_BEGIN|[15]|queryMoreSize|Integer|false|false
+	06:03:43.0 (940743632)|VARIABLE_ASSIGNMENT|[15]|queryMoreSize|49996
+	06:03:43.0 (940843437)|METHOD_ENTRY|[97]||Database.QueryLocatorIterator.hasNext()
+	06:03:43.0 (940943644)|METHOD_EXIT|[97]||Database.QueryLocatorIterator.hasNext()
+	06:03:43.0 (940952444)|METHOD_ENTRY|[97]||Database.QueryLocatorIterator.next()
+	06:03:43.0 (941070947)|METHOD_EXIT|[97]||Database.QueryLocatorIterator.next()
+	06:03:43.0 (941083509)|VARIABLE_SCOPE_BEGIN|[97]|brand|Brand__c|true|false
+	06:03:43.0 (941107691)|VARIABLE_ASSIGNMENT|[97]|brand|{"Id":"a0W1y000002cm26EAA","BC_BrandId__c":"84"}|0xcc154fb
+	06:03:43.0 (941266414)|METHOD_ENTRY|[97]||Database.QueryLocatorIterator.hasNext()
+	06:03:43.0 (941284206)|METHOD_EXIT|[97]||Database.QueryLocatorIterator.hasNext()
+	06:03:43.0 (941296699)|VARIABLE_ASSIGNMENT|[97]|brand|null|
+	06:03:43.0 (941357515)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"data":"0x1ab243ad","meta":"0x6aeeba5b"}|0x44ffba85
+	06:03:43.0 (941423153)|VARIABLE_SCOPE_BEGIN|[104]|productBC|WSProductsFromBCResponse.Data|true|false
+	06:03:43.0 (941939380)|VARIABLE_ASSIGNMENT|[104]|productBC|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (942117191)|VARIABLE_SCOPE_BEGIN|[105]|product|Product2|true|false
+	06:03:43.0 (942146997)|VARIABLE_ASSIGNMENT|[105]|product|{}|0x38981688
+	06:03:43.0 (942394479)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (942598849)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (942759260)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (943523998)|METHOD_ENTRY|[1]|01p1y000003V7Yy|ProductsFromBCBatchHelper.ProductsFromBCBatchHelper()
+		06:03:43.0 (944292358)|SYSTEM_MODE_ENTER|false
+		06:03:43.0 (944324288)|SYSTEM_MODE_EXIT|false
+	06:03:43.0 (944349447)|METHOD_EXIT|[1]|ProductsFromBCBatchHelper
+	06:03:43.0 (944378491)|METHOD_ENTRY|[108]|01p1y000003V7Yy|ProductsFromBCBatchHelper.getWarrantyFieldValue(String, String)
+		06:03:43.0 (944391014)|VARIABLE_SCOPE_BEGIN|[19]|bcWarrantyFieldValue|String|false|false
+		06:03:43.0 (944411859)|VARIABLE_ASSIGNMENT|[19]|bcWarrantyFieldValue|"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ..."
+		06:03:43.0 (944420474)|VARIABLE_SCOPE_BEGIN|[19]|bcProductId|String|false|false
+		06:03:43.0 (944433439)|VARIABLE_ASSIGNMENT|[19]|bcProductId|"14966"
+		06:03:43.0 (944449848)|SYSTEM_MODE_ENTER|false
+		06:03:43.0 (944777402)|VARIABLE_SCOPE_BEGIN|[44]|warrantyValuesMap|Map<String,Map<String,ANY>>|true|false
+		06:03:43.0 (944809708)|VARIABLE_ASSIGNMENT|[44]|warrantyValuesMap|{"0":{},"1":{},"2":{},"3":{}}|0x707e5e22
+		06:03:43.0 (945200182)|VARIABLE_SCOPE_BEGIN|[51]|unescapeWarrantyFieldResponse|String|false|false
+		06:03:43.0 (945219598)|VARIABLE_ASSIGNMENT|[51]|unescapeWarrantyFieldResponse|"{\"0\": {\"tabName\": \"F (1446 more) ..."
+		06:03:43.0 (945825312)|METHOD_ENTRY|[1]|01p1y000002uJ67|NaturalChemistDebugging.NaturalChemistDebugging()
+		06:03:43.0 (945852705)|METHOD_EXIT|[1]|NaturalChemistDebugging
+		06:03:43.0 (945878820)|METHOD_ENTRY|[56]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+			06:03:43.0 (945903333)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+			06:03:43.0 (945922823)|VARIABLE_ASSIGNMENT|[3]|name|"unescapeWarrantyFiel (10 more) ..."
+			06:03:43.0 (945931284)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+			06:03:43.0 (945943579)|VARIABLE_ASSIGNMENT|[3]|element|"{\"0\": {\"tabName\": \"F (1446 more) ..."
+			06:03:43.0 (946960450)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+			06:03:43.0 (946984189)|VARIABLE_ASSIGNMENT|[5]|print|true
+			06:03:43.0 (947087389)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - unescapeWarrantyFieldResponse  : {"0": {"tabName": "Features & Benefits", "tabContent": "<br>Astragalus is a traditional Chinese herb commonly used to support the body's immune function following illness. It is now used increasingly by western herbalists to enhance immunity and as a "rejuvenating tonic".<br><br><ul><li>May assist with recovery after illness</li><li>Rejuvenating</li></ul><br/><br>Traditionally used in Chinese medicine to:<BR><br><ul><li>Support the immune system to fight illness</li><li>Support healthy immune system function</li><li>Stimulate healthy immune system response</li></ul>"}, "1": {"tabName": "Dose & Administration", "tabContent": "<br><b>Adults:</b> Take 2 capsules three times daily with a meal, or as professionally prescribed<br/>"}, "2": {"tabName": "Ingredients", "tabContent": "<p> </p><p><b>Each gelatin capsule contains:</b></p><table ><tbody><tr><td ><p><i><br></i></p><p><i>Astragalus membranaceus</i> (Astragalus) root powder</p></td><td ><p><br></p><p>450mg</p></td></tr></tbody></table><br>No added gluten, lactose, soy, starch, sugars or salt, wheat products, artificial colourings, flavourings or preservatives."}, "3": {"tabName": "Cautions & Contraindications", "tabContent": "<br><b>Cautions:</b><br>Not recommended while pregnant or breast feeding.<br>Take two hours away from all prescription medications.<br><br><b>Warnings:</b><br>Always read the label. Follow directions for use. If symptoms persist, talk to your healthcare professional."}}
+		06:03:43.0 (947113954)|METHOD_EXIT|[56]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+		06:03:43.0 (948249525)|VARIABLE_SCOPE_BEGIN|[58]|formattingBeforeDeserialized|String|false|false
+		06:03:43.0 (948267660)|VARIABLE_ASSIGNMENT|[58]|formattingBeforeDeserialized|"{\"0\": {\"tabName\": \"F (1448 more) ..."
+		06:03:43.0 (948284123)|METHOD_ENTRY|[81]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+			06:03:43.0 (948294603)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+			06:03:43.0 (948306133)|VARIABLE_ASSIGNMENT|[3]|name|"formattingBeforeDese (9 more) ..."
+			06:03:43.0 (948311416)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+			06:03:43.0 (948321686)|VARIABLE_ASSIGNMENT|[3]|element|"{\"0\": {\"tabName\": \"F (1448 more) ..."
+			06:03:43.0 (948457775)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+			06:03:43.0 (948474598)|VARIABLE_ASSIGNMENT|[5]|print|true
+			06:03:43.0 (948521026)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - formattingBeforeDeserialized  : {"0": {"tabName": "Features & Benefits", "tabContent": "<br>Astragalus is a traditional Chinese herb commonly used to support the body's immune function following illness. It is now used increasingly by western herbalists to enhance immunity and as a \"rejuvenating tonic\".<br><br><ul><li>May assist with recovery after illness</li><li>Rejuvenating</li></ul><br/><br>Traditionally used in Chinese medicine to:<BR><br><ul><li>Support the immune system to fight illness</li><li>Support healthy immune system function</li><li>Stimulate healthy immune system response</li></ul>"}, "1": {"tabName": "Dose & Administration", "tabContent": "<br><b>Adults:</b> Take 2 capsules three times daily with a meal, or as professionally prescribed<br/>"}, "2": {"tabName": "Ingredients", "tabContent": "<p> </p><p><b>Each gelatin capsule contains:</b></p><table ><tbody><tr><td ><p><i><br></i></p><p><i>Astragalus membranaceus</i> (Astragalus) root powder</p></td><td ><p><br></p><p>450mg</p></td></tr></tbody></table><br>No added gluten, lactose, soy, starch, sugars or salt, wheat products, artificial colourings, flavourings or preservatives."}, "3": {"tabName": "Cautions & Contraindications", "tabContent": "<br><b>Cautions:</b><br>Not recommended while pregnant or breast feeding.<br>Take two hours away from all prescription medications.<br><br><b>Warnings:</b><br>Always read the label. Follow directions for use. If symptoms persist, talk to your healthcare professional."}}
+		06:03:43.0 (948551145)|METHOD_EXIT|[81]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+		06:03:43.0 (948580231)|METHOD_ENTRY|[84]|01p1y000003V7Yy|ProductsFromBCBatchHelper.generateWarrantyInformation(Map<String,Map<String,ANY>>, String)
+			06:03:43.0 (948604218)|VARIABLE_SCOPE_BEGIN|[101]|warrantyValuesMap|Map<String,Map<String,ANY>>|true|false
+			06:03:43.0 (948629978)|VARIABLE_ASSIGNMENT|[101]|warrantyValuesMap|{"0":{},"1":{},"2":{},"3":{}}|0x707e5e22
+			06:03:43.0 (948641493)|VARIABLE_SCOPE_BEGIN|[101]|formattingBeforeDeserialized|String|false|false
+			06:03:43.0 (948659246)|VARIABLE_ASSIGNMENT|[101]|formattingBeforeDeserialized|"{\"0\": {\"tabName\": \"F (1448 more) ..."
+			06:03:43.0 (948692275)|METHOD_ENTRY|[102]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+				06:03:43.0 (948703249)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+				06:03:43.0 (948720416)|VARIABLE_ASSIGNMENT|[3]|name|"formattingBeforeDese (10 more) ..."
+				06:03:43.0 (948727391)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+				06:03:43.0 (948743554)|VARIABLE_ASSIGNMENT|[3]|element|"{\"0\": {\"tabName\": \"F (1448 more) ..."
+				06:03:43.0 (948846031)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+				06:03:43.0 (948867651)|VARIABLE_ASSIGNMENT|[5]|print|true
+				06:03:43.0 (948913694)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - formattingBeforeDeserialized:  : {"0": {"tabName": "Features & Benefits", "tabContent": "<br>Astragalus is a traditional Chinese herb commonly used to support the body's immune function following illness. It is now used increasingly by western herbalists to enhance immunity and as a \"rejuvenating tonic\".<br><br><ul><li>May assist with recovery after illness</li><li>Rejuvenating</li></ul><br/><br>Traditionally used in Chinese medicine to:<BR><br><ul><li>Support the immune system to fight illness</li><li>Support healthy immune system function</li><li>Stimulate healthy immune system response</li></ul>"}, "1": {"tabName": "Dose & Administration", "tabContent": "<br><b>Adults:</b> Take 2 capsules three times daily with a meal, or as professionally prescribed<br/>"}, "2": {"tabName": "Ingredients", "tabContent": "<p> </p><p><b>Each gelatin capsule contains:</b></p><table ><tbody><tr><td ><p><i><br></i></p><p><i>Astragalus membranaceus</i> (Astragalus) root powder</p></td><td ><p><br></p><p>450mg</p></td></tr></tbody></table><br>No added gluten, lactose, soy, starch, sugars or salt, wheat products, artificial colourings, flavourings or preservatives."}, "3": {"tabName": "Cautions & Contraindications", "tabContent": "<br><b>Cautions:</b><br>Not recommended while pregnant or breast feeding.<br>Take two hours away from all prescription medications.<br><br><b>Warnings:</b><br>Always read the label. Follow directions for use. If symptoms persist, talk to your healthcare professional."}}
+			06:03:43.0 (948943082)|METHOD_EXIT|[102]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+			06:03:43.0 (948961845)|METHOD_ENTRY|[103]||System.JSON.deserializeUntyped(String)
+			06:03:43.0 (949731164)|METHOD_EXIT|[103]||System.JSON.deserializeUntyped(String)
+			06:03:43.0 (949745352)|VARIABLE_SCOPE_BEGIN|[103]|warrantyDeserielizeResponse|Object|false|false
+			06:03:43.0 (949797655)|VARIABLE_ASSIGNMENT|[103]|warrantyDeserielizeResponse|{"0":{"tabName":"Features & Benefits","tabContent":"<br>Astragalus is a  (496 more) ..."},"1":{"tabName":"Dose & Administratio (1 more) ...","tabContent":"<br><b>Adults:<\/b> T (82 more) ..."},"2":{"tabName":"Ingredients","tabContent":"<p> <\/p><p><b>Each g (322 more) ..."},"3":{"tabName":"Cautions & Contraind (8 more) ...","tabContent":"<br><b>Cautions:<\/b> (247 more) ..."}}
+			06:03:43.0 (949829430)|VARIABLE_SCOPE_BEGIN|[105]|warrantyHeaderMap|Map<String,ANY>|true|false
+			06:03:43.0 (949846508)|VARIABLE_ASSIGNMENT|[105]|warrantyHeaderMap|{}|0x3bdd136f
+			06:03:43.0 (949868339)|VARIABLE_SCOPE_BEGIN|[106]|warrantyTabContentMap|Map<String,ANY>|true|false
+			06:03:43.0 (949884108)|VARIABLE_ASSIGNMENT|[106]|warrantyTabContentMap|{}|0x4e8d7039
+			06:03:43.0 (949921214)|VARIABLE_ASSIGNMENT|[108]|warrantyHeaderMap|{"0":{"tabName":"Features & Benefits","tabContent":"<br>Astragalus is a  (496 more) ..."},"1":{"tabName":"Dose & Administratio (1 more) ...","tabContent":"<br><b>Adults:<\/b> T (82 more) ..."},"2":{"tabName":"Ingredients","tabContent":"<p> <\/p><p><b>Each g (322 more) ..."},"3":{"tabName":"Cautions & Contraind (8 more) ...","tabContent":"<br><b>Cautions:<\/b> (247 more) ..."}}|0x59b40bca
+			06:03:43.0 (950086763)|VARIABLE_SCOPE_BEGIN|[109]|headerValue|String|false|false
+			06:03:43.0 (950104085)|VARIABLE_ASSIGNMENT|[109]|headerValue|"0"
+			06:03:43.0 (950201667)|VARIABLE_ASSIGNMENT|[112]|warrantyTabContentMap|{"tabName":"Features & Benefits","tabContent":"<br>Astragalus is a  (496 more) ..."}|0xb12c2e0
+			06:03:43.0 (950294497)|VARIABLE_SCOPE_BEGIN|[115]|wrapperFieldName|String|false|false
+			06:03:43.0 (950311732)|VARIABLE_ASSIGNMENT|[115]|wrapperFieldName|"featuresAndBenefits"
+			06:03:43.0 (950358433)|METHOD_ENTRY|[117]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+				06:03:43.0 (950367237)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+				06:03:43.0 (950383825)|VARIABLE_ASSIGNMENT|[3]|name|"warrantyTabContentMa (26 more) ..."
+				06:03:43.0 (950391784)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+				06:03:43.0 (950407282)|VARIABLE_ASSIGNMENT|[3]|element|true
+				06:03:43.0 (950527399)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+				06:03:43.0 (950548030)|VARIABLE_ASSIGNMENT|[5]|print|true
+				06:03:43.0 (950593187)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - warrantyTabContentMap.containsKey(tabContent)  : true
+			06:03:43.0 (950609319)|METHOD_EXIT|[117]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+			06:03:43.0 (950766433)|VARIABLE_SCOPE_BEGIN|[109]|headerValue|String|false|false
+			06:03:43.0 (950782439)|VARIABLE_ASSIGNMENT|[109]|headerValue|"1"
+			06:03:43.0 (950830927)|VARIABLE_ASSIGNMENT|[112]|warrantyTabContentMap|{"tabName":"Dose & Administratio (1 more) ...","tabContent":"<br><b>Adults:<\/b> T (82 more) ..."}|0x5807fe86
+			06:03:43.0 (950911966)|VARIABLE_SCOPE_BEGIN|[115]|wrapperFieldName|String|false|false
+			06:03:43.0 (950928924)|VARIABLE_ASSIGNMENT|[115]|wrapperFieldName|"doseAndAdministratio (1 more) ..."
+			06:03:43.0 (950948152)|METHOD_ENTRY|[117]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+				06:03:43.0 (950957237)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+				06:03:43.0 (950971530)|VARIABLE_ASSIGNMENT|[3]|name|"warrantyTabContentMa (26 more) ..."
+				06:03:43.0 (950981058)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+				06:03:43.0 (950994460)|VARIABLE_ASSIGNMENT|[3]|element|true
+				06:03:43.0 (951115672)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+				06:03:43.0 (951137227)|VARIABLE_ASSIGNMENT|[5]|print|true
+				06:03:43.0 (951177759)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - warrantyTabContentMap.containsKey(tabContent)  : true
+			06:03:43.0 (951193682)|METHOD_EXIT|[117]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+			06:03:43.0 (951284814)|VARIABLE_SCOPE_BEGIN|[109]|headerValue|String|false|false
+			06:03:43.0 (951300402)|VARIABLE_ASSIGNMENT|[109]|headerValue|"2"
+			06:03:43.0 (951345703)|VARIABLE_ASSIGNMENT|[112]|warrantyTabContentMap|{"tabName":"Ingredients","tabContent":"<p> <\/p><p><b>Each g (322 more) ..."}|0x7dae5107
+			06:03:43.0 (951433951)|VARIABLE_SCOPE_BEGIN|[115]|wrapperFieldName|String|false|false
+			06:03:43.0 (951449884)|VARIABLE_ASSIGNMENT|[115]|wrapperFieldName|"ingredients"
+			06:03:43.0 (951484909)|METHOD_ENTRY|[117]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+				06:03:43.0 (951494517)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+				06:03:43.0 (951508683)|VARIABLE_ASSIGNMENT|[3]|name|"warrantyTabContentMa (26 more) ..."
+				06:03:43.0 (951516072)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+				06:03:43.0 (951530303)|VARIABLE_ASSIGNMENT|[3]|element|true
+				06:03:43.0 (951633004)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+				06:03:43.0 (951653780)|VARIABLE_ASSIGNMENT|[5]|print|true
+				06:03:43.0 (951694459)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - warrantyTabContentMap.containsKey(tabContent)  : true
+			06:03:43.0 (951709797)|METHOD_EXIT|[117]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+			06:03:43.0 (951804269)|VARIABLE_SCOPE_BEGIN|[109]|headerValue|String|false|false
+			06:03:43.0 (951819132)|VARIABLE_ASSIGNMENT|[109]|headerValue|"3"
+			06:03:43.0 (951864103)|VARIABLE_ASSIGNMENT|[112]|warrantyTabContentMap|{"tabName":"Cautions & Contraind (8 more) ...","tabContent":"<br><b>Cautions:<\/b> (247 more) ..."}|0x43def23
+			06:03:43.0 (951937817)|VARIABLE_SCOPE_BEGIN|[115]|wrapperFieldName|String|false|false
+			06:03:43.0 (951955031)|VARIABLE_ASSIGNMENT|[115]|wrapperFieldName|"cautionsAndContraind (8 more) ..."
+			06:03:43.0 (951973467)|METHOD_ENTRY|[117]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+				06:03:43.0 (951980500)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+				06:03:43.0 (951993900)|VARIABLE_ASSIGNMENT|[3]|name|"warrantyTabContentMa (26 more) ..."
+				06:03:43.0 (952002630)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+				06:03:43.0 (952014880)|VARIABLE_ASSIGNMENT|[3]|element|true
+				06:03:43.0 (952125785)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+				06:03:43.0 (952145698)|VARIABLE_ASSIGNMENT|[5]|print|true
+				06:03:43.0 (952186994)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - warrantyTabContentMap.containsKey(tabContent)  : true
+			06:03:43.0 (952200648)|METHOD_EXIT|[117]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+			06:03:43.0 (952283279)|VARIABLE_ASSIGNMENT|[109]|headerValue|null
+			06:03:43.0 (952303379)|METHOD_ENTRY|[126]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+				06:03:43.0 (952318278)|VARIABLE_SCOPE_BEGIN|[3]|name|String|false|false
+				06:03:43.0 (952334417)|VARIABLE_ASSIGNMENT|[3]|name|"Inside generateWarra (16 more) ..."
+				06:03:43.0 (952340488)|VARIABLE_SCOPE_BEGIN|[3]|element|Object|false|false
+				06:03:43.0 (952372504)|VARIABLE_ASSIGNMENT|[3]|element|{"0":{"featuresAndBenefits":"<br>Astragalus is a  (496 more) ..."},"1":{"doseAndAdministration":"<br><b>Adults:<\/b> T (82 more) ..."},"2":{"ingredients":"<p> <\/p><p><b>Each g (322 more) ..."},"3":{"cautionsAndContraindications":"<br><b>Cautions:<\/b> (247 more) ..."}}
+				06:03:43.0 (952464221)|VARIABLE_SCOPE_BEGIN|[5]|print|Boolean|false|false
+				06:03:43.0 (952483497)|VARIABLE_ASSIGNMENT|[5]|print|true
+				06:03:43.0 (952538522)|USER_DEBUG|[7]|DEBUG|NaturalChemistLog - Inside generateWarrantyInformation:  : {0={featuresAndBenefits=<br>Astragalus is a traditional Chinese herb commonly used to support the body's immune function following illness. It is now used increasingly by western herbalists to enhance immunity and as a "rejuvenating tonic".<br><br><ul><li>May assist with recovery after illness</li><li>Rejuvenating</li></ul><br/><br>Traditionally used in Chinese medicine to:<BR><br><ul><li>Support the immune system to fight illness</li><li>Support healthy immune system function</li><li>Stimulate healthy immune system response</li></ul>}, 1={doseAndAdministration=<br><b>Adults:</b> Take 2 capsules three times daily with a meal, or as professionally prescribed<br/>}, 2={ingredients=<p> </p><p><b>Each gelatin capsule contains:</b></p><table ><tbody><tr><td ><p><i><br></i></p><p><i>Astragalus membranaceus</i> (Astragalus) root powder</p></td><td ><p><br></p><p>450mg</p></td></tr></tbody></table><br>No added gluten, lactose, soy, starch, sugars or salt, wheat products, artificial colourings, flavourings or preservatives.}, 3={cautionsAndContraindications=<br><b>Cautions:</b><br>Not recommended while pregnant or breast feeding.<br>Take two hours away from all prescription medications.<br><br><b>Warnings:</b><br>Always read the label. Follow directions for use. If symptoms persist, talk to your healthcare professional.}}
+			06:03:43.0 (952565820)|METHOD_EXIT|[126]|01p1y000002uJ67|NaturalChemistDebugging.printDebug(String, Object)
+		06:03:43.0 (952576313)|METHOD_EXIT|[84]|01p1y000003V7Yy|ProductsFromBCBatchHelper.generateWarrantyInformation(Map<String,Map<String,ANY>>, String)
+		06:03:43.0 (952818096)|CONSTRUCTOR_ENTRY|[93]|01p1y000003V7Yy|<init>(Object,Object,Object,Object)|ProductsFromBCBatchHelper.WarrantyFieldWrapper
+		06:03:43.0 (952845554)|VARIABLE_SCOPE_BEGIN|[11]|this|ProductsFromBCBatchHelper.WarrantyFieldWrapper|true|false
+		06:03:43.0 (952886734)|VARIABLE_ASSIGNMENT|[11]|this|{}|0x2ae6917d
+		06:03:43.0 (952898106)|VARIABLE_SCOPE_BEGIN|[11]|featuresAndBenefits|Object|false|false
+		06:03:43.0 (952913700)|VARIABLE_ASSIGNMENT|[11]|featuresAndBenefits|"<br>Astragalus is a  (496 more) ..."
+		06:03:43.0 (952922976)|VARIABLE_SCOPE_BEGIN|[11]|doseAndAdministration|Object|false|false
+		06:03:43.0 (952938025)|VARIABLE_ASSIGNMENT|[11]|doseAndAdministration|"<br><b>Adults:<\/b> T (82 more) ..."
+		06:03:43.0 (952945473)|VARIABLE_SCOPE_BEGIN|[11]|ingredients|Object|false|false
+		06:03:43.0 (952960587)|VARIABLE_ASSIGNMENT|[11]|ingredients|"<p> <\/p><p><b>Each g (322 more) ..."
+		06:03:43.0 (952968138)|VARIABLE_SCOPE_BEGIN|[11]|cautionsAndContraindications|Object|false|false
+		06:03:43.0 (952982776)|VARIABLE_ASSIGNMENT|[11]|cautionsAndContraindications|"<br><b>Cautions:<\/b> (247 more) ..."
+		06:03:43.0 (953038835)|VARIABLE_ASSIGNMENT|[12]|this.featuresAndBenefits|"<br>Astragalus is a  (496 more) ..."|0x2ae6917d
+		06:03:43.0 (953057769)|VARIABLE_ASSIGNMENT|[13]|this.doseAndAdministration|"<br><b>Adults:<\/b> T (82 more) ..."|0x2ae6917d
+		06:03:43.0 (953074111)|VARIABLE_ASSIGNMENT|[14]|this.ingredients|"<p> <\/p><p><b>Each g (322 more) ..."|0x2ae6917d
+		06:03:43.0 (953089538)|VARIABLE_ASSIGNMENT|[15]|this.cautionsAndContraindications|"<br><b>Cautions:<\/b> (247 more) ..."|0x2ae6917d
+		06:03:43.0 (953109523)|CONSTRUCTOR_EXIT|[93]|01p1y000003V7Yy|<init>(Object,Object,Object,Object)|ProductsFromBCBatchHelper.WarrantyFieldWrapper
+		06:03:43.0 (953121732)|SYSTEM_MODE_EXIT|false
+	06:03:43.0 (953132304)|METHOD_EXIT|[108]|01p1y000003V7Yy|ProductsFromBCBatchHelper.getWarrantyFieldValue(String, String)
+	06:03:43.0 (953142461)|VARIABLE_SCOPE_BEGIN|[108]|warrantyFieldValues|ProductsFromBCBatchHelper.WarrantyFieldWrapper|true|false
+	06:03:43.0 (953177725)|VARIABLE_ASSIGNMENT|[108]|warrantyFieldValues|{"cautionsAndContraindications":"<br><b>Cautions:<\/b> (247 more) ...","doseAndAdministration":"<br><b>Adults:<\/b> T (82 more) ...","featuresAndBenefits":"<br>Astragalus is a  (496 more) ...","ingredients":"<p> <\/p><p><b>Each g (322 more) ..."}|0x2ae6917d
+	06:03:43.0 (953561883)|VARIABLE_ASSIGNMENT|[111]|this.Features_Benefits__c|"<br>Astragalus is a  (496 more) ..."|0x38981688
+	06:03:43.0 (953693781)|VARIABLE_ASSIGNMENT|[112]|this.Dose_Administration__c|"<br><b>Adults:<\/b> T (82 more) ..."|0x38981688
+	06:03:43.0 (954012888)|VARIABLE_ASSIGNMENT|[113]|this.Ingredients__c|"<p> <\/p><p><b>Each g (322 more) ..."|0x38981688
+	06:03:43.0 (954145716)|VARIABLE_ASSIGNMENT|[114]|this.Cautions_Contraindications__c|"<br><b>Cautions:<\/b> (247 more) ..."|0x38981688
+	06:03:43.0 (954367179)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (954564149)|VARIABLE_ASSIGNMENT|[119]|this.Name|"Nature's Sunshine As (19 more) ..."|0x38981688
+	06:03:43.0 (954764838)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (954830304)|VARIABLE_ASSIGNMENT|[120]|this.ProductCode|"NSAST"|0x38981688
+	06:03:43.0 (955002892)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (955109266)|VARIABLE_ASSIGNMENT|[121]|this.BC_ProductID__c|"14966"|0x38981688
+	06:03:43.0 (955354248)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (955509468)|VARIABLE_ASSIGNMENT|[122]|this.Price__c|39.39|0x38981688
+	06:03:43.0 (955712460)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (955817795)|VARIABLE_ASSIGNMENT|[123]|this.Cost_Price__c|23.87|0x38981688
+	06:03:43.0 (955996115)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (956106323)|VARIABLE_ASSIGNMENT|[124]|this.Product_Weight__c|0.2|0x38981688
+	06:03:43.0 (956286232)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (956373948)|VARIABLE_ASSIGNMENT|[125]|this.Product_Width__c|0.0|0x38981688
+	06:03:43.0 (956552116)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (956638219)|VARIABLE_ASSIGNMENT|[126]|this.Product_Height__c|0.0|0x38981688
+	06:03:43.0 (956826642)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (956912375)|VARIABLE_ASSIGNMENT|[127]|this.Product_Depth__c|0.0|0x38981688
+	06:03:43.0 (957092651)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (957155355)|VARIABLE_ASSIGNMENT|[128]|this.Product_UPC_EAN__c|"99904170445"|0x38981688
+	06:03:43.0 (957326741)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (957388038)|VARIABLE_ASSIGNMENT|[129]|this.Item_Type__c|null|0x38981688
+	06:03:43.0 (957600979)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (957659181)|VARIABLE_ASSIGNMENT|[130]|this.Product_Visible__c|true|0x38981688
+	06:03:43.0 (957707495)|VARIABLE_ASSIGNMENT|[131]|this.IsActive|true|0x38981688
+	06:03:43.0 (957924569)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (957991604)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"is_customized":true,"url":"/natures-sunshine-as (28 more) ..."}|0x4587d308
+	06:03:43.0 (958089082)|VARIABLE_ASSIGNMENT|[132]|this.Product_URL__c|"/natures-sunshine-as (28 more) ..."|0x38981688
+	06:03:43.0 (958272416)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (958356940)|VARIABLE_ASSIGNMENT|[133]|this.Product_Tax_Class__c|"0"|0x38981688
+	06:03:43.0 (958541370)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (958621016)|VARIABLE_ASSIGNMENT|[134]|this.Retail_Price__c|0.0|0x38981688
+	06:03:43.0 (958804301)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (958874308)|VARIABLE_ASSIGNMENT|[135]|this.Sale_Price__c|0.0|0x38981688
+	06:03:43.0 (959043441)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (959196818)|VARIABLE_ASSIGNMENT|[136]|this.BC_Date_Modified__c|"2021-12-21T00:00:00.000Z"|0x38981688
+	06:03:43.0 (959375490)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (959465502)|VARIABLE_ASSIGNMENT|[137]|this.Brand__c|"84"|0x38981688
+	06:03:43.0 (959643379)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (959706209)|VARIABLE_ASSIGNMENT|[138]|this.Product_Availability__c|"available"|0x38981688
+	06:03:43.0 (959872730)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (959970057)|VARIABLE_ASSIGNMENT|[141]|this.Current_Stock_Level__c|0|0x38981688
+	06:03:43.0 (960154750)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (960219015)|VARIABLE_ASSIGNMENT|[142]|this.Track_Inventory__c|"none"|0x38981688
+	06:03:43.0 (960386320)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (960468035)|VARIABLE_ASSIGNMENT|[143]|this.Inventory_Warning_Level__c|0|0x38981688
+	06:03:43.0 (960530041)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"data":"0x70257129","meta":"0x2bbd7d60"}|0x5fd9a46
+	06:03:43.0 (960639370)|VARIABLE_ASSIGNMENT|[151]|this.noImagesInBC__c|false|0x38981688
+	06:03:43.0 (960676562)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"data":"0x70257129","meta":"0x2bbd7d60"}|0x5fd9a46
+	06:03:43.0 (960765930)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"date_modified":"2021-12-21T06:01:17+ (5 more) ...","description":"","id":20032,"image_file":"h/013/1636696594952_ (59 more) ...","is_thumbnail":true,"product_id":14966,"sort_order":1,"url_standard":"https://cdn11.bigcom (147 more) ...","url_thumbnail":"https://cdn11.bigcom (147 more) ...","url_tiny":"https://cdn11.bigcom (145 more) ...","url_zoom":"https://cdn11.bigcom (149 more) ..."}|0x6011da8
+	06:03:43.0 (960818987)|VARIABLE_ASSIGNMENT|[152]|this.Standard_Image__c|"https://cdn11.bigcom (147 more) ..."|0x38981688
+	06:03:43.0 (960854789)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"data":"0x70257129","meta":"0x2bbd7d60"}|0x5fd9a46
+	06:03:43.0 (960919881)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"date_modified":"2021-12-21T06:01:17+ (5 more) ...","description":"","id":20032,"image_file":"h/013/1636696594952_ (59 more) ...","is_thumbnail":true,"product_id":14966,"sort_order":1,"url_standard":"https://cdn11.bigcom (147 more) ...","url_thumbnail":"https://cdn11.bigcom (147 more) ...","url_tiny":"https://cdn11.bigcom (145 more) ...","url_zoom":"https://cdn11.bigcom (149 more) ..."}|0x6011da8
+	06:03:43.0 (960968905)|VARIABLE_ASSIGNMENT|[153]|this.Thumbnail_Image__c|"https://cdn11.bigcom (147 more) ..."|0x38981688
+	06:03:43.0 (961005720)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"data":"0x70257129","meta":"0x2bbd7d60"}|0x5fd9a46
+	06:03:43.0 (961105540)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"date_modified":"2021-12-21T06:01:17+ (5 more) ...","description":"","id":20032,"image_file":"h/013/1636696594952_ (59 more) ...","is_thumbnail":true,"product_id":14966,"sort_order":1,"url_standard":"https://cdn11.bigcom (147 more) ...","url_thumbnail":"https://cdn11.bigcom (147 more) ...","url_tiny":"https://cdn11.bigcom (145 more) ...","url_zoom":"https://cdn11.bigcom (149 more) ..."}|0x6011da8
+	06:03:43.0 (961164836)|VARIABLE_ASSIGNMENT|[154]|this.Tiny_Image__c|"https://cdn11.bigcom (145 more) ..."|0x38981688
+	06:03:43.0 (961199288)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"data":"0x70257129","meta":"0x2bbd7d60"}|0x5fd9a46
+	06:03:43.0 (961263904)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"date_modified":"2021-12-21T06:01:17+ (5 more) ...","description":"","id":20032,"image_file":"h/013/1636696594952_ (59 more) ...","is_thumbnail":true,"product_id":14966,"sort_order":1,"url_standard":"https://cdn11.bigcom (147 more) ...","url_thumbnail":"https://cdn11.bigcom (147 more) ...","url_tiny":"https://cdn11.bigcom (145 more) ...","url_zoom":"https://cdn11.bigcom (149 more) ..."}|0x6011da8
+	06:03:43.0 (961315887)|VARIABLE_ASSIGNMENT|[155]|this.Zoom_Image__c|"https://cdn11.bigcom (149 more) ..."|0x38981688
+	06:03:43.0 (961523397)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (961767213)|VARIABLE_ASSIGNMENT|[164]|this.Brand_BC__c|"a0W1y000002cm26EAA"|0x38981688
+	06:03:43.0 (961967913)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (962206130)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (962394821)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (962686761)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (962905950)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (963100802)|VARIABLE_ASSIGNMENT|[EXTERNAL]|this|{"availability":"available","availability_description":"","base_variant_id":15356,"bin_picking_number":"","brand_id":84,"calculated_price":39.39,"categories":"0x45fbeac8","condition":"New","cost_price":23.87,"custom_url":"0x4587d308","date_created":"2021-07-08T08:54:54+ (5 more) ...","date_modified":"2021-12-21T06:01:16+ (5 more) ...","depth":0.0,"description":"<p><span>Astragalus  (1462 more) ...","fixed_cost_shipping_price":0,"gift_wrapping_options_type":"any","gtin":"","height":0.0,"id":14966,"inventory_level":0,"inventory_tracking":"none","inventory_warning_level":0,"is_condition_shown":true,"is_featured":true,"is_free_shipping":true,"is_preorder_only":false,"is_price_hidden":false,"is_visible":true,"layout_file":"product.html","map_price":0,"meta_description":"","mpn":"","name":"Nature's Sunshine As (19 more) ...","open_graph_description":"","open_graph_title":"","open_graph_type":"product","open_graph_use_image":true,"open_graph_use_meta_description":true,"open_graph_use_product_name":true,"option_set_display":"right","order_quantity_maximum":200,"order_quantity_minimum":1,"page_title":"","preorder_message":"","price":39.39,"price_hidden_label":"","product_tax_code":"","related_products":"0x6ed80672","retail_price":0.0,"reviews_count":0,"reviews_rating_sum":0,"sale_price":0.0,"search_keywords":"Astragalus membranac (15 more) ...","sku":"NSAST","sort_order":0,"tax_class_id":0,"total_sold":0,"upc":"99904170445","view_count":0,"warranty":"\"{\\\"0\\\": {\\\"tabName\\ (1490 more) ...","weight":0.2,"width":0.0}|0x71e2d17c
+	06:03:43.0 (963196629)|VARIABLE_ASSIGNMENT|[104]|productBC|null|
+	06:03:43.0 (963411152)|DML_BEGIN|[178]|Op:Upsert|Type:Product2|Rows:1
+	06:03:43.0 (998585467)|CODE_UNIT_STARTED|[EXTERNAL]|Workflow:Product2
+		06:03:44.12 (1012343042)|WF_RULE_EVAL_BEGIN|Workflow
+		06:03:44.12 (1012399031)|WF_CRITERIA_BEGIN|[Product: Nature's Sunshine Astragalus 450mg 100c 01t1y000001f2NF]|Product_Process3011y0000003tMw|01Q1y0000001Yq2|ON_ALL_CHANGES|0
+		06:03:44.12 (1012589112)|WF_FORMULA|Formula:ENCODED:[treatNullAsNull]true|Values:
+		06:03:44.12 (1012601493)|WF_CRITERIA_END|true
+		06:03:44.12 (1013067051)|WF_SPOOL_ACTION_BEGIN|Workflow
+		06:03:44.12 (1013118589)|WF_ACTION| Flow Trigger: 1;
+		06:03:44.12 (1013126022)|WF_RULE_EVAL_END
+		06:03:44.14 (1014987736)|FLOW_CREATE_INTERVIEW_BEGIN|00D1y0000008m7I|3001y0000005LMn|3011y0000003tMw
+		06:03:44.14 (1015671361)|FLOW_CREATE_INTERVIEW_END|949638adbebb891f605d67fa9dd017e97c26832-6b93|Product Process
+		06:03:44.12 (1015740165)|WF_FLOW_ACTION_BEGIN|09L1y0000000r0i
+		06:03:44.16 (1016347935)|FLOW_START_INTERVIEWS_BEGIN|1
+		06:03:44.16 (1016396831)|FLOW_START_INTERVIEW_BEGIN|949638adbebb891f605d67fa9dd017e97c26832-6b93|Product Process
+		06:03:44.16 (1036679655)|FLOW_START_INTERVIEW_END|949638adbebb891f605d67fa9dd017e97c26832-6b93|Product Process
+		06:03:44.16 (1036715498)|FLOW_START_INTERVIEWS_END|1
+		06:03:44.16 (1036734879)|FLOW_INTERVIEW_FINISHED|949638adbebb891f605d67fa9dd017e97c26832-6b93|Product Process
+		06:03:44.12 (1040155659)|WF_FLOW_ACTION_END|09L1y0000000r0i
+		06:03:44.12 (1040300269)|WF_ACTIONS_END| Flow Trigger: 1;
+	06:03:44.12 (1040315312)|CODE_UNIT_FINISHED|Workflow:Product2
+	06:03:44.12 (1045390580)|DML_END|[178]
+	06:03:44.12 (1045572528)|VARIABLE_SCOPE_BEGIN|[178]|productResults|List<Database.UpsertResult>|true|false
+	06:03:44.12 (1045630393)|VARIABLE_ASSIGNMENT|[178]|productResults|[01t1y000001f2NFAAY]|0x741d4970
+	06:03:44.12 (1045721784)|VARIABLE_SCOPE_BEGIN|[180]|productsInsertedIds|Set<Id>|true|false
+	06:03:44.12 (1045753070)|VARIABLE_ASSIGNMENT|[180]|productsInsertedIds|[]|0x6e241d23
+	06:03:44.12 (1045790020)|VARIABLE_SCOPE_BEGIN|[181]|productsUpdatedIds|Set<Id>|true|false
+	06:03:44.12 (1045809369)|VARIABLE_ASSIGNMENT|[181]|productsUpdatedIds|[]|0x453d8b02
+	06:03:44.12 (1046862561)|VARIABLE_SCOPE_BEGIN|[183]|result|Database.UpsertResult|true|false
+	06:03:44.12 (1046891124)|VARIABLE_ASSIGNMENT|[183]|result|01t1y000001f2NFAAY|0x1c62f203
+	06:03:44.12 (1047070777)|VARIABLE_ASSIGNMENT|[183]|result|null|
+	06:03:44.12 (1047522831)|METHOD_ENTRY|[194]|01p2v00000SpN2Y|GenericUtilsHelper.createLogsFromDatabaseUpsertResultErrors(List<Database.UpsertResult>, String, String)
+		06:03:44.12 (1047537508)|VARIABLE_SCOPE_BEGIN|[64]|results|List<Database.UpsertResult>|true|false
+		06:03:44.12 (1047562922)|VARIABLE_ASSIGNMENT|[64]|results|[01t1y000001f2NFAAY]|0x741d4970
+		06:03:44.12 (1047573242)|VARIABLE_SCOPE_BEGIN|[64]|logName|String|false|false
+		06:03:44.12 (1047595993)|VARIABLE_ASSIGNMENT|[64]|logName|"Product Upsert - Ord (30 more) ..."
+		06:03:44.12 (1047603816)|VARIABLE_SCOPE_BEGIN|[64]|logDetails|String|false|false
+		06:03:44.12 (1047621062)|VARIABLE_ASSIGNMENT|[64]|logDetails|"Response:[WSResult.h (4914 more) ..."
+		06:03:44.12 (1047676793)|VARIABLE_ASSIGNMENT|[65]|logDetails|"Response:[WSResult.h (4914 more) ..."
+		06:03:44.12 (1047825965)|VARIABLE_SCOPE_BEGIN|[67]|singleContactLogErros|List<WS_BigCommerce_Log__c>|true|false
+		06:03:44.12 (1047854581)|VARIABLE_ASSIGNMENT|[67]|singleContactLogErros|[]|0x4326f04
+		06:03:44.12 (1047938714)|VARIABLE_SCOPE_BEGIN|[68]|result|Database.UpsertResult|true|false
+		06:03:44.12 (1047957545)|VARIABLE_ASSIGNMENT|[68]|result|01t1y000001f2NFAAY|0x1c62f203
+		06:03:44.12 (1048131011)|VARIABLE_ASSIGNMENT|[68]|result|null|
+	06:03:44.12 (1048164130)|METHOD_EXIT|[194]|01p2v00000SpN2Y|GenericUtilsHelper.createLogsFromDatabaseUpsertResultErrors(List<Database.UpsertResult>, String, String)
+	06:03:44.12 (1048705718)|SOQL_EXECUTE_BEGIN|[196]|Aggregations:0|SELECT Id, Name FROM Pricebook2 WHERE (Name = 'Standard Price Book' OR Name = 'BigCommerce Standard') ORDER BY Name DESC NULLS FIRST
+	06:03:44.12 (1056916969)|SOQL_EXECUTE_END|[196]|Rows:2
+	06:03:44.12 (1057086349)|VARIABLE_SCOPE_BEGIN|[196]|getPricebook|List<Pricebook2>|true|false
+	06:03:44.12 (1057127562)|VARIABLE_ASSIGNMENT|[196]|getPricebook|[{"Id":"01s2v00000K0XPHAA3","Name":"Standard Price Book"},{"Id":"01s2v00000LxP2kAAF","Name":"BigCommerce Standard"}]|0x298dd71f
+	06:03:44.12 (1057517924)|SOQL_EXECUTE_BEGIN|[203]|Aggregations:0|SELECT Id, BC_ProductID__c FROM Product2 WHERE Id = :tmpVar1
+	06:03:44.12 (1059312054)|SOQL_EXECUTE_END|[203]|Rows:0
+	06:03:44.12 (1059473836)|VARIABLE_SCOPE_BEGIN|[15]|this|Database.QueryLocatorIterator|true|false
+	06:03:44.12 (1059514783)|VARIABLE_ASSIGNMENT|[15]|this|{}|0x1dae3338
+	06:03:44.12 (1059525938)|VARIABLE_SCOPE_BEGIN|[15]|values|List<SObject>|true|false
+	06:03:44.12 (1059539331)|VARIABLE_ASSIGNMENT|[15]|values|null|
+	06:03:44.12 (1059547796)|VARIABLE_SCOPE_BEGIN|[15]|ql|Database.QueryLocator|true|false
+	06:03:44.12 (1059574169)|VARIABLE_ASSIGNMENT|[15]|ql|{"query":"SELECT Id, BC_Produc (40 more) ..."}|0x193ba03e
+	06:03:44.12 (1059582187)|VARIABLE_SCOPE_BEGIN|[15]|totalNumRecords|Integer|false|false
+	06:03:44.12 (1059597993)|VARIABLE_ASSIGNMENT|[15]|totalNumRecords|0
+	06:03:44.12 (1059604754)|VARIABLE_SCOPE_BEGIN|[15]|queryMoreSize|Integer|false|false
+	06:03:44.12 (1059617144)|VARIABLE_ASSIGNMENT|[15]|queryMoreSize|49994
+	06:03:44.12 (1059709292)|METHOD_ENTRY|[203]||Database.QueryLocatorIterator.hasNext()
+	06:03:44.12 (1059732984)|METHOD_EXIT|[203]||Database.QueryLocatorIterator.hasNext()
+	06:03:44.12 (1059747046)|VARIABLE_ASSIGNMENT|[203]|product|null|
+	06:03:44.12 (1059877421)|VARIABLE_SCOPE_BEGIN|[224]|pbe2UpdateMap|Map<String,Map<String,PricebookEntry>>|true|false
+	06:03:44.12 (1059898652)|VARIABLE_ASSIGNMENT|[224]|pbe2UpdateMap|{}|0x2566f4ed
+	06:03:44.12 (1060634318)|SOQL_EXECUTE_BEGIN|[227]|Aggregations:0|SELECT Id, Product2Id, Product2.BC_ProductId__c, Pricebook2.Name FROM PricebookEntry WHERE (Product2Id = :tmpVar1 AND (Pricebook2.Name = 'BigCommerce Standard' OR Pricebook2.Name = 'Standard Price Book'))
+	06:03:44.12 (1081903169)|SOQL_EXECUTE_END|[227]|Rows:2
+	06:03:44.12 (1082165212)|VARIABLE_SCOPE_BEGIN|[15]|this|Database.QueryLocatorIterator|true|false
+	06:03:44.12 (1082211717)|VARIABLE_ASSIGNMENT|[15]|this|{}|0xc862088
+	06:03:44.12 (1082224951)|VARIABLE_SCOPE_BEGIN|[15]|values|List<SObject>|true|false
+	06:03:44.12 (1082287408)|VARIABLE_ASSIGNMENT|[15]|values|[{"Id":"01u1y0000010xwEAAQ","Product2Id":"01t1y000001f2NFAAY","Pricebook2Id":"01s2v00000LxP2kAAF","Product2":{"Id":"01t1y000001f2NFAAY","BC_ProductID__c":"14966"},"Pricebook2":{"Id":"01s2v00000LxP2kAAF","Name":"BigCommerce Standard"}},{"Id":"01u1y0000010xwDAAQ","Product2Id":"01t1y000001f2NFAAY","Pricebook2Id":"01s2v00000K0XPHAA3","Product2":{"Id":"01t1y000001f2NFAAY","BC_ProductID__c":"14966"},"Pricebook2":{"Id":"01s2v00000K0XPHAA3","Name":"Standard Price Book"}}]|0x6c2467ea
+	06:03:44.12 (1082301636)|VARIABLE_SCOPE_BEGIN|[15]|ql|Database.QueryLocator|true|false
+	06:03:44.12 (1082326897)|VARIABLE_ASSIGNMENT|[15]|ql|{"query":"SELECT Id, Product2I (184 more) ..."}|0x75c07896
+	06:03:44.12 (1082336664)|VARIABLE_SCOPE_BEGIN|[15]|totalNumRecords|Integer|false|false
+	06:03:44.12 (1082354014)|VARIABLE_ASSIGNMENT|[15]|totalNumRecords|2
+	06:03:44.12 (1082361882)|VARIABLE_SCOPE_BEGIN|[15]|queryMoreSize|Integer|false|false
+	06:03:44.12 (1082378190)|VARIABLE_ASSIGNMENT|[15]|queryMoreSize|49992
+	06:03:44.12 (1082478316)|METHOD_ENTRY|[227]||Database.QueryLocatorIterator.hasNext()
+	06:03:44.12 (1082523615)|METHOD_EXIT|[227]||Database.QueryLocatorIterator.hasNext()
+	06:03:44.12 (1082533504)|METHOD_ENTRY|[227]||Database.QueryLocatorIterator.next()
+	06:03:44.12 (1082649036)|METHOD_EXIT|[227]||Database.QueryLocatorIterator.next()
+	06:03:44.12 (1082663903)|VARIABLE_SCOPE_BEGIN|[227]|pbe|PricebookEntry|true|false
+	06:03:44.12 (1082699500)|VARIABLE_ASSIGNMENT|[227]|pbe|{"Id":"01u1y0000010xwEAAQ","Product2Id":"01t1y000001f2NFAAY","Pricebook2Id":"01s2v00000LxP2kAAF","Product2":{"Id":"01t1y000001f2NFAAY","BC_ProductID__c":"14966"},"Pricebook2":{"Id":"01s2v00000LxP2kAAF","Name":"BigCommerce Standard"}}|0x66a4da00
+	06:03:44.12 (1083173245)|METHOD_ENTRY|[227]||Database.QueryLocatorIterator.hasNext()
+	06:03:44.12 (1083209268)|METHOD_EXIT|[227]||Database.QueryLocatorIterator.hasNext()
+	06:03:44.12 (1083215849)|METHOD_ENTRY|[227]||Database.QueryLocatorIterator.next()
+	06:03:44.12 (1083285503)|METHOD_EXIT|[227]||Database.QueryLocatorIterator.next()
+	06:03:44.12 (1083295217)|VARIABLE_SCOPE_BEGIN|[227]|pbe|PricebookEntry|true|false
+	06:03:44.12 (1083332174)|VARIABLE_ASSIGNMENT|[227]|pbe|{"Id":"01u1y0000010xwDAAQ","Product2Id":"01t1y000001f2NFAAY","Pricebook2Id":"01s2v00000K0XPHAA3","Product2":{"Id":"01t1y000001f2NFAAY","BC_ProductID__c":"14966"},"Pricebook2":{"Id":"01s2v00000K0XPHAA3","Name":"Standard Price Book"}}|0x5d87d4f9
+	06:03:44.12 (1083428703)|METHOD_ENTRY|[227]||Database.QueryLocatorIterator.hasNext()
+	06:03:44.12 (1083445045)|METHOD_EXIT|[227]||Database.QueryLocatorIterator.hasNext()
+	06:03:44.12 (1083457236)|VARIABLE_ASSIGNMENT|[227]|pbe|null|
+	06:03:44.12 (1083880552)|SOQL_EXECUTE_BEGIN|[241]|Aggregations:0|SELECT Id, BC_ProductId__c FROM Product2 WHERE Id = :tmpVar1
+	06:03:44.12 (1095366598)|SOQL_EXECUTE_END|[241]|Rows:1
+	06:03:44.12 (1095597423)|VARIABLE_SCOPE_BEGIN|[241]|productInfo|Map<Id,Product2>|true|false
+	06:03:44.12 (1095639308)|VARIABLE_ASSIGNMENT|[241]|productInfo|{"01t1y000001f2NFAAY":{"Id":"01t1y000001f2NFAAY","BC_ProductID__c":"14966"}}|0x12ea6a1f
+	06:03:44.12 (1095703109)|VARIABLE_SCOPE_BEGIN|[247]|pricebook2BeUpdated|List<PricebookEntry>|true|false
+	06:03:44.12 (1095734151)|VARIABLE_ASSIGNMENT|[247]|pricebook2BeUpdated|[]|0x3711e0d8
+	06:03:44.12 (1095897385)|VARIABLE_SCOPE_BEGIN|[249]|productId|Id|false|false
+	06:03:44.12 (1095960297)|VARIABLE_ASSIGNMENT|[249]|productId|"01t1y000001f2NFAAY"
+	06:03:44.12 (1096325626)|VARIABLE_ASSIGNMENT|[252]|this.UnitPrice|39.39|0x5d87d4f9
+	06:03:44.12 (1096615031)|VARIABLE_ASSIGNMENT|[257]|this.UnitPrice|39.39|0x66a4da00
+	06:03:44.12 (1096757855)|VARIABLE_ASSIGNMENT|[249]|productId|null
+	06:03:44.12 (1096799486)|VARIABLE_SCOPE_BEGIN|[291]|pricebookEntries2Upsert|List<PricebookEntry>|true|false
+	06:03:44.12 (1096826105)|VARIABLE_ASSIGNMENT|[291]|pricebookEntries2Upsert|[]|0x4c5c00e2
+	06:03:44.12 (1097016552)|DML_BEGIN|[296]|Op:Upsert|Type:PricebookEntry|Rows:2
+	06:03:44.12 (1164113700)|DML_END|[296]
+	06:03:44.12 (1164293004)|VARIABLE_ASSIGNMENT|[61]|wra|null|
+	06:03:44.172 (1172879628)|CUMULATIVE_LIMIT_USAGE
+	06:03:44.172 (1172879628)|LIMIT_USAGE_FOR_NS|(default)|
+	  Number of SOQL queries: 0 out of 200
+	  Number of query rows: 0 out of 50000
+	  Number of SOSL queries: 0 out of 20
+	  Number of DML statements: 0 out of 150
+	  Number of Publish Immediate DML: 0 out of 150
+	  Number of DML rows: 0 out of 10000
+	  Maximum CPU time: 0 out of 60000
+	  Maximum heap size: 0 out of 12000000
+	  Number of callouts: 0 out of 0
+	  Number of Email Invocations: 0 out of 10
+	  Number of future calls: 0 out of 0
+	  Number of queueable jobs added to the queue: 0 out of 1
+	  Number of Mobile Apex push calls: 0 out of 10
+	
+	06:03:44.172 (1172879628)|CUMULATIVE_LIMIT_USAGE_END
+	
+06:03:44.12 (1172949271)|CODE_UNIT_FINISHED|ProductsFromBCBatch
+06:03:44.12 (1172966524)|EXECUTION_FINISHED
