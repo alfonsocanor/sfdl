@@ -185,7 +185,7 @@ async function promtRequiredArguments(options) {
         );
     }
 
-    if (!configInfo || !configInfo.authToken || !configInfo.instanceUrl) {
+    if (!options.format && (!configInfo || !configInfo.authToken || !configInfo.instanceUrl)) {
         questions.push({
             type: 'input',
             name: 'authToken',
