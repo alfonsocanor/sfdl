@@ -39,6 +39,9 @@ function methodEntryExitCodeUnitStartedFinished2Hierarchy(filePath){
             return tabs2Add2Line(tabs2Add - 1) + line;
         }
         if(fileLinesAnalyseFunctions['isMethodEntryExit'](line) || fileLinesAnalyseFunctions['isCodeUnitFinished'](line)){
+            if(tabs2Add  == 0){
+                return tabs2Add;
+            }
             tabs2Add--;
         }
         return tabs2Add2Line(tabs2Add) + line;
