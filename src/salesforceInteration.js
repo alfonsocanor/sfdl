@@ -9,6 +9,11 @@ export async function getApexLogsInformation(sessionInformation) {
     return await getInformationFromSalesforce(url2GetApexLogIds, null, sessionInformation);
 }
 
+export async function getRecordsFromSalesforce(sessionInformation, query){
+    let url2GetApexLogIds = sessionInformation.instanceUrl + '/services/data/v51.0/query/?q=' + query;
+    return getInformationFromSalesforce(url2GetApexLogIds, null, sessionInformation);
+}
+
 export function processApexLogs(sessionInformation, apexLogList) {
     let promises2Return = [];
 
@@ -40,7 +45,8 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
                 'Content-type': 'application/json'
             }
         }
-
+        console.log('requestUrl: ' + requestUrl);
+        console.log('options:' , options);
         const req = http.request(requestUrl, options, function(res) {
             if (sessionInformation.debug) console.log('response code: ' + res.statusCode);
 

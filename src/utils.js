@@ -59,5 +59,11 @@ export function getInformationFromConfig() {
     return fs.existsSync('config.json') ? JSON.parse(fs.readFileSync('config.json')) : null;
 }
 
+export function getQueryFromConfigAndSobject2Compare(sobject){
+    let compareInformation = getInformationFromConfig().compare.queries.find(element => Object.keys(element)[0] === sobject); 
+
+    return compareInformation[sobject].query;
+}
+
 //====== end   General purpose functions =====
 

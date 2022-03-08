@@ -1,4 +1,5 @@
 import arg from 'arg';
+import { info } from 'console';
 import inquirer from 'inquirer';
 
 const fs = require('fs');
@@ -19,6 +20,8 @@ export async function cli(args) {
 
     sessionInformation = await promtRequiredArguments(options);
 
+    
+
     if (sessionInformation.createDraftConfig) {
         utils.createDraftConfigFile();
         return;
@@ -27,6 +30,15 @@ export async function cli(args) {
         return;
     } else if (sessionInformation.version){
         utils.printOnConsole('sfdl version ' + SFDL_BUILD_VERSION, utils.FONTMAGENTA);
+        return;
+    }
+
+    if (sessionInformation.compare){
+        let sobject = sessionInformation.compare.split(') ')[1];
+        let query = utils.getQueryFromConfigAndSobject2Compare(sobject);
+        console.log(query);
+        let allRecords = await salesforceInteration.getRecordsFromSalesforce(sessionInformation, query);
+        console.log(allRecords);
         return;
     }
 
@@ -129,6 +141,7 @@ function parseArgumentsIntoOptions(rawArgs) {
         '--format': Boolean,
         '--help': Boolean,
         '--version': Boolean,
+        '--compare': Boolean,
         '-q': '--queryWhere',
         '-n': '--folderName',
         '-d': '--debug',
@@ -149,6 +162,7 @@ function parseArgumentsIntoOptions(rawArgs) {
         format: args['--format'] || false,
         help: args['--help'] || false,
         version: args['--version'] || false,
+        compare: args['--compare'] || false
     }
 }
 
@@ -163,6 +177,26 @@ async function promtRequiredArguments(options) {
     const formatExtraQuestions = [];
 
     const configInfo = utils.getInformationFromConfig();
+
+    if (options.compare){
+        const infoFromConfiguration = utils.getInformationFromConfig();
+        let sobjectChoices = [];
+        let counterChoice = 1;
+
+        infoFromConfiguration.compare.queries.forEach( sobject =>{
+            sobjectChoices.push(counterChoice.toString() + ') ' + Object.keys(sobject)[0]);
+            counterChoice++;
+        });
+
+        questions.push(
+            {
+                type: 'list',
+                name: 'compare',
+                message: 'Select the SObject to compare',
+                choices: sobjectChoices,
+            }
+        )  
+    }
 
     if (options.format) {
         questions.push(
@@ -245,5 +279,6 @@ async function promtRequiredArguments(options) {
         formatFolderClearFinest: (answers.format && answers.format.includes('3)')) || false,
         formatFolderHierarchy: (answers.format && answers.format.includes('4)')) || false,
         formatPath2SaveSoqlInfo: formatExtraAnswer.formatPath2SaveSoqlInfo || '',
+        compare: answers.compare || false
     };
 }
