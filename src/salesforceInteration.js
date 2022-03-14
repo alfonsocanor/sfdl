@@ -45,8 +45,7 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
                 'Content-type': 'application/json'
             }
         }
-        console.log('requestUrl: ' + requestUrl);
-        console.log('options:' , options);
+
         const req = http.request(requestUrl, options, function(res) {
             if (sessionInformation.debug) console.log('response code: ' + res.statusCode);
 

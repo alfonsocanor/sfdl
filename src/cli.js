@@ -6,6 +6,7 @@ const fs = require('fs');
 const utils = require('./utils');
 const filesManipulation = require('./filesManipulation');
 const salesforceInteration = require('./salesforceInteration');
+const orgComparison = require('./orgComparison');
 const SFDL_BUILD_VERSION = require('../package.json').version;
 
 let sessionInformation;
@@ -34,11 +35,7 @@ export async function cli(args) {
     }
 
     if (sessionInformation.compare){
-        let sobject = sessionInformation.compare.split(') ')[1];
-        let query = utils.getQueryFromConfigAndSobject2Compare(sobject);
-        console.log(query);
-        let allRecords = await salesforceInteration.getRecordsFromSalesforce(sessionInformation, query);
-        console.log(allRecords);
+        orgComparison.startComparison(sessionInformation);
         return;
     }
 
@@ -178,26 +175,6 @@ async function promtRequiredArguments(options) {
 
     const configInfo = utils.getInformationFromConfig();
 
-    if (options.compare){
-        const infoFromConfiguration = utils.getInformationFromConfig();
-        let sobjectChoices = [];
-        let counterChoice = 1;
-
-        infoFromConfiguration.compare.queries.forEach( sobject =>{
-            sobjectChoices.push(counterChoice.toString() + ') ' + Object.keys(sobject)[0]);
-            counterChoice++;
-        });
-
-        questions.push(
-            {
-                type: 'list',
-                name: 'compare',
-                message: 'Select the SObject to compare',
-                choices: sobjectChoices,
-            }
-        )  
-    }
-
     if (options.format) {
         questions.push(
             {
@@ -279,6 +256,6 @@ async function promtRequiredArguments(options) {
         formatFolderClearFinest: (answers.format && answers.format.includes('3)')) || false,
         formatFolderHierarchy: (answers.format && answers.format.includes('4)')) || false,
         formatPath2SaveSoqlInfo: formatExtraAnswer.formatPath2SaveSoqlInfo || '',
-        compare: answers.compare || false
+        compare: options.compare || false
     };
 }

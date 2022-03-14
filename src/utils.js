@@ -21,10 +21,32 @@ export function printOnConsole(value, action){
 //====== start General purpose functions =====
 
 export function createDraftConfigFile() {
-    let configFileBody = {
-        "authToken": "",
-        "instanceUrl": ""
-    };
+    let configFileBody = 
+        {
+            "authToken":"",
+            "instanceUrl":"",
+            "compare":{
+                "authToken":"",
+                "instanceUrl":"",
+                "queries":[
+                    {
+                        "vlocity_cmt__TriggerSetup__c":{
+                            "query":"SELECT Name, vlocity_cmt__isTriggerOn__c FROM vlocity_cmt__TriggerSetup__c ORDER BY Name",
+                            "nameFields":"Name",
+                            "valueFields":"vlocity_cmt__IsTriggerOn__c"
+                        }
+                    },
+                    {
+                        "vlocity_cmt__InterfaceImplementationDetail__c":{
+                            "query":"SELECT vlocity_cmt__InterfaceId__r.Name, vlocity_cmt__IsActive__c FROM vlocity_cmt__InterfaceImplementationDetail__c ORDER BY vlocity_cmt__InterfaceId__r.Name",
+                            "nameFields":"vlocity_cmt__InterfaceId__r.Name",
+                            "valueFields":"vlocity_cmt__IsActive__c"
+                        }
+                    }
+                ]
+            }
+        };
+
     if (!fs.existsSync('config.json')) {
         fs.writeFile('config.json', JSON.stringify(configFileBody, null, '\t'), function(err) {
             if (err) return console.log(err);
@@ -58,12 +80,5 @@ export function sfdlHelp(){
 export function getInformationFromConfig() {
     return fs.existsSync('config.json') ? JSON.parse(fs.readFileSync('config.json')) : null;
 }
-
-export function getQueryFromConfigAndSobject2Compare(sobject){
-    let compareInformation = getInformationFromConfig().compare.queries.find(element => Object.keys(element)[0] === sobject); 
-
-    return compareInformation[sobject].query;
-}
-
 //====== end   General purpose functions =====
 
