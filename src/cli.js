@@ -35,6 +35,7 @@ export async function cli(args) {
     }
 
     if (sessionInformation.compare){
+        utils.printOnConsole('comparing...', utils.FONTYELLOW);
         orgComparison.startComparison(sessionInformation);
         return;
     }

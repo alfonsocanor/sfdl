@@ -19,7 +19,6 @@ export function processApexLogs(sessionInformation, apexLogList) {
 
     apexLogList.forEach(apexLog => {
         let completeUrl = sessionInformation.instanceUrl + apexLogBodyUrl + apexLog.Id + '/Body';
-
         if (sessionInformation.debug) console.log('processApexLogs completeUrl: ', completeUrl);
 
         //Some operation values contains '/' char
@@ -40,6 +39,7 @@ export function processApexLogs(sessionInformation, apexLogList) {
 function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInformation) {
     return new Promise((resolve, reject) => {
         let options = {
+            rejectUnauthorized:false,
             headers: {
                 'Authorization': sessionInformation.authToken,
                 'Content-type': 'application/json'
@@ -69,11 +69,7 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
                     if (sessionInformation.debug) console.log('error: ', e);
                     reject(e);
                 }
-
-                resolve({
-                    response,
-                    additionalOutputs
-                });
+                resolve({response, additionalOutputs});
             });
         });
 
