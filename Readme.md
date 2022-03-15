@@ -5,7 +5,7 @@ sfdl is a command line interface tool to download, format and extract informatio
 # Releases
 - **v1.x.x** - This version is focused on troubleshooting analysis, requiring to extract <em>Manage Package logs using Grant Salesforce Support</em> login access where Users don't have credentials (username/password) for authentication. [Workaround](#workaround-to-get-theauthToken) described bellow.<br/>
 ```v.1.0.0: Download, format, transform and extract logs information``` 
- 
+```v.1.0.4: Comparing org records feature (--compare) ```
 # Installation
 
 - Download and Install Node at: [https://nodejs.org/](https://nodejs.org/) 
@@ -71,3 +71,4 @@ The options using `--optionName` are:
 |format OR -f|It will display 3 options: <br/>&nbsp;&nbsp;&nbsp;1) One file: Extract all query lines, <br/>&nbsp;&nbsp;&nbsp;2) One file: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE, <br/>&nbsp;&nbsp;&nbsp;3) All files in a folder: Clear out HEAP_ALLOCATE and STATEMENT_EXECUTE ||
 |help|Additional information related to sfdl cli app||
 |version OR -v|current version sfdl installed in your system||
+|compare|It will use all the information from config to query and compare orgs records looking for differences and creating a file with them if exist||
