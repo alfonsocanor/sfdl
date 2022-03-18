@@ -4,9 +4,9 @@ sfdl is a command line interface tool to download, format and extract informatio
 
 # Releases
 - **v1.x.x** - This version is focused on troubleshooting analysis, requiring to extract <em>Manage Package logs using Grant Salesforce Support</em> login access where Users don't have credentials (username/password) for authentication. [Workaround](#workaround-to-get-theauthToken) described bellow.<br/>
-- ```v.1.0.0: Download, format, transform and extract logs information``` 
+	- ```v.1.0.0: Download, format, transform and extract logs information``` 
 
-- ```v.1.0.4: Comparing org records feature (--compare) ```
+	- ```v.1.0.4: Comparing org records feature (--compare) ```
 # Installation
 
 - Download and Install Node at: [https://nodejs.org/](https://nodejs.org/) 
