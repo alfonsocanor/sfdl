@@ -1,6 +1,30 @@
 const fs = require('fs');
 const utils = require('./utils');
 
+export async function executeFormatting(sessionInformation){
+    let formatOptionSelected = utils.extractValuesFromSessionInformationFormatOptions(sessionInformation);
+
+    if(formatOptionSelected.inBatch){
+        await transformAllFilesInAFolder(sessionInformation, formatOptionSelected.function2Execute);
+        utils.printOnConsole('Done!', utils.FONTGREEN);
+    } else {
+        let linesFormattedArray = invokeFilterFormatFunctions(sessionInformation.formatPath, formatOptionSelected.function2Execute);
+    
+        //let fileFormatted;
+        
+        if(formatOptionSelected.extractExtraFormatting){
+            !fs.existsSync(sessionInformation.formatPath2SaveSoqlInfo) && fs.mkdirSync(sessionInformation.formatPath2SaveSoqlInfo, {recursive: true});
+            linesFormattedArray = linesFormattedArray.map(value => formatSoqlLines2Save(value));//.linesFormattedArray.join('\n');
+            sessionInformation.formatPath = sessionInformation.formatFullPath2SaveSoqlInfo;
+        } //else {
+        
+        let fileFormatted = linesFormattedArray.join('\n');
+        //}        
+        utils.printOnConsole('saving...', utils.FONTBLUE);
+        saveApexLog(sessionInformation.formatPath, fileFormatted);
+        utils.printOnConsole('Done!', utils.FONTGREEN);
+    }
+}
 
 export async function transformAllFilesInAFolder(sessionInformation, function2Execute){
     return new Promise((resolve, reject) => {
@@ -93,6 +117,7 @@ export function saveApexLog(filePathAndName, apexLogBody) {
 }
 
 export function fileLines2Array(filePath){
+    console.log('filePath: ' + filePath);
     const fileData = fs.readFileSync(filePath, { encoding: 'utf8' });
 
     //Create an array that contains all the lines of the file

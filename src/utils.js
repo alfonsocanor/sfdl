@@ -18,8 +18,6 @@ export function printOnConsole(value, action){
 }
 //====== end  style functions =======
 
-//====== start General purpose functions =====
-
 export function createDraftConfigFile() {
     let configFileBody = 
         {
@@ -80,5 +78,11 @@ export function sfdlHelp(){
 export function getInformationFromConfig() {
     return fs.existsSync('config.json') ? JSON.parse(fs.readFileSync('config.json')) : null;
 }
-//====== end   General purpose functions =====
+
+export function extractValuesFromSessionInformationFormatOptions(sessionInformation){
+    const formatOptionsInformation = Object.keys(sessionInformation)
+        .filter(key => sessionInformation[key]['isSelected'])
+        .map(key => sessionInformation[key]);
+    return formatOptionsInformation[0];
+}
 

@@ -21,8 +21,6 @@ export async function cli(args) {
 
     sessionInformation = await promtRequiredArguments(options);
 
-    
-
     if (sessionInformation.createDraftConfig) {
         utils.createDraftConfigFile();
         return;
@@ -43,8 +41,15 @@ export async function cli(args) {
     if (sessionInformation.format){
         utils.printOnConsole('formatting...', utils.FONTYELLOW);
 
-        //OneFile
-        if(sessionInformation.formatFileClearFinest && sessionInformation.formatPath && fs.existsSync(sessionInformation.formatPath)){
+        if(!sessionInformation.formatPath || !fs.existsSync(sessionInformation.formatPath)){
+            utils.printOnConsole('Incorrect Path or File', utils.FONTRED);
+            return;
+        }
+
+        filesManipulation.executeFormatting(sessionInformation);
+
+        /* //OneFile
+        if(false){//sessionInformation.formatFileClearFinest){
             let linesFormattedArray = filesManipulation.invokeFilterFormatFunctions(sessionInformation.formatPath, 'removeHeapAllocateAndStatementExecute');
             let fileFormatted = linesFormattedArray.join('\n');
             utils.printOnConsole('saving...', utils.FONTBLUE);
@@ -52,7 +57,8 @@ export async function cli(args) {
             utils.printOnConsole('Done!', utils.FONTGREEN);
 
         //OneFile
-        } else if(sessionInformation.formatExtractQueries && sessionInformation.formatPath && fs.existsSync(sessionInformation.formatPath)){
+        } else if(true){//sessionInformation.formatExtractQueries){
+            console.log('here at formatExtractQueries');
             !fs.existsSync(sessionInformation.formatPath2SaveSoqlInfo) && fs.mkdirSync(sessionInformation.formatPath2SaveSoqlInfo, {recursive: true});
             let linesFormattedArray = filesManipulation.invokeFilterFormatFunctions(sessionInformation.formatPath, 'extractSoqlLine');
             let clearSoqlLine = linesFormattedArray.map(value => filesManipulation.formatSoqlLines2Save(value));
@@ -62,10 +68,17 @@ export async function cli(args) {
             //Ex: ./ApexLogs/0.0307MB | Batch Apex | 2022-01-16T18:38:15 | API System User | 07L1y000005sfwOEAQ.log
             //The '.sql' is meant to see the SQL icon in the file in VSCode
             let nameOfTheSoqlFile = '/SOQL | ' + sessionInformation.formatPath.substring(sessionInformation.formatPath.lastIndexOf('/') + 1);
-            filesManipulation.saveApexLog(sessionInformation.formatPath2SaveSoqlInfo + nameOfTheSoqlFile.replace('.log','.sql'), fileFormatted);
+
+            console.log(sessionInformation.formatPath2SaveSoqlInfo);
+
+            let finalName = sessionInformation.formatPath2SaveSoqlInfo + nameOfTheSoqlFile.replace('.log','.sql');
+
+            console.log('asd ' + finalName);
+
+            filesManipulation.saveApexLog(sessionInformation.formatFullPath2SaveSoqlInfo, fileFormatted);
         
         //OneFile
-        } else if(sessionInformation.formatFileHierarchy && sessionInformation.formatPath && fs.existsSync(sessionInformation.formatPath)){
+        } else if(sessionInformation.formatFileHierarchy){
             let linesFormattedArray = filesManipulation.invokeFilterFormatFunctions(sessionInformation.formatPath, 'methodEntryExitCodeUnitStartedFinished2Hierarchy');
             let fileFormatted = linesFormattedArray.join('\n');
             utils.printOnConsole('saving...', utils.FONTBLUE);
@@ -73,19 +86,19 @@ export async function cli(args) {
             utils.printOnConsole('Done!', utils.FONTGREEN);
 
         //Folder
-        } else if(sessionInformation.formatFolderHierarchy && sessionInformation.formatPath && fs.existsSync(sessionInformation.formatPath)){
+        } else if(sessionInformation.formatFolderHierarchy){
             filesManipulation.transformAllFilesInAFolder(sessionInformation, 'methodEntryExitCodeUnitStartedFinished2Hierarchy')
             .then(() => utils.printOnConsole('Done transformAllFilesInAFolder!', utils.FONTGREEN));
 
         //Folder
-        } else if(sessionInformation.formatFolderClearFinest && sessionInformation.formatPath && fs.existsSync(sessionInformation.formatPath)){
+        } else if(sessionInformation.formatFolderClearFinest){
             filesManipulation.transformAllFilesInAFolder(sessionInformation, 'removeHeapAllocateAndStatementExecute')
             .then(() => utils.printOnConsole('Done formatFolderClearFinest!', utils.FONTGREEN));
 
         //Error
         } else {
             utils.printOnConsole('Incorrect Path or File', utils.FONTRED);
-        }
+        } */
 
         return;
     }
@@ -127,6 +140,7 @@ export async function cli(args) {
         utils.printOnConsole('No logs to download...', utils.FONTMAGENTA);
     }
 }
+
 
 function parseArgumentsIntoOptions(rawArgs) {
     const args = arg({
@@ -226,7 +240,7 @@ async function promtRequiredArguments(options) {
     }
 
     const answers = await inquirer.prompt(questions);
-    var formatExtraAnswer = {};
+    let formatExtraAnswer = {};
 
     if(answers.format && answers.format.includes('1)')){
         formatExtraQuestions.push(
@@ -252,11 +266,19 @@ async function promtRequiredArguments(options) {
         methodHierarchy: options.methodHierarchy || false,
         format: options.format || false,
         formatPath: answers.formatPath || null,
-        formatExtractQueries: (answers.format && answers.format.includes('1)')) || false,
-        formatFileClearFinest: (answers.format && answers.format.includes('2)')) || false,
-        formatFolderClearFinest: (answers.format && answers.format.includes('3)')) || false,
-        formatFolderHierarchy: (answers.format && answers.format.includes('4)')) || false,
+        formatExtractQueries: {extractExtraFormatting: true, inBatch:false, isSelected:(answers.format && answers.format.includes('1)')) || false, function2Execute:'extractSoqlLine'},
+        formatFileClearFinest: {extractExtraFormatting: false, inBatch:false, isSelected:(answers.format && answers.format.includes('2)')) || false, function2Execute:'removeHeapAllocateAndStatementExecute'},
+        formatFolderClearFinest: {extractExtraFormatting: false, inBatch:true, isSelected:(answers.format && answers.format.includes('3)')) || false, function2Execute:'removeHeapAllocateAndStatementExecute'},
+        formatFolderHierarchy: {extractExtraFormatting: false, inBatch:true, isSelected:(answers.format && answers.format.includes('4)')) || false, function2Execute:'methodEntryExitCodeUnitStartedFinished2Hierarchy'},
         formatPath2SaveSoqlInfo: formatExtraAnswer.formatPath2SaveSoqlInfo || '',
+        formatFullPath2SaveSoqlInfo: generateSOQLFilePath(answers.formatPath, formatExtraAnswer.formatPath2SaveSoqlInfo) || '',
         compare: options.compare || false
     };
+
+    function generateSOQLFilePath(formatPath, formatPath2SaveSoqlInfo){
+        //Ex: ./ApexLogs/0.0307MB | Batch Apex | 2022-01-16T18:38:15 | API System User | 07L1y000005sfwOEAQ.log
+        //The '.sql' is meant to see the SQL icon in the file in VSCode
+        let nameOfTheSoqlFile = formatPath ? '/SOQL | ' + formatPath.substring(formatPath.lastIndexOf('/') + 1) : '';
+        return formatPath2SaveSoqlInfo + nameOfTheSoqlFile.replace('.log','.sql');
+    }
 }
