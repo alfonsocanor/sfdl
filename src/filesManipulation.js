@@ -2,28 +2,28 @@ const fs = require('fs');
 const utils = require('./utils');
 
 export async function executeFormatting(sessionInformation){
-    let formatOptionSelected = utils.extractValuesFromSessionInformationFormatOptions(sessionInformation);
+    let formatOptionSelectedArray = utils.extractValuesFromSessionInformationFormatOptions(sessionInformation);
+    utils.printOnConsole('formatting...', utils.FONTYELLOW);
 
-    if(formatOptionSelected.inBatch){
-        await transformAllFilesInAFolder(sessionInformation, formatOptionSelected.function2Execute);
-        utils.printOnConsole('Done!', utils.FONTGREEN);
-    } else {
-        let linesFormattedArray = invokeFilterFormatFunctions(sessionInformation.formatPath, formatOptionSelected.function2Execute);
-    
-        //let fileFormatted;
-        
-        if(formatOptionSelected.extractExtraFormatting){
-            !fs.existsSync(sessionInformation.formatPath2SaveSoqlInfo) && fs.mkdirSync(sessionInformation.formatPath2SaveSoqlInfo, {recursive: true});
-            linesFormattedArray = linesFormattedArray.map(value => formatSoqlLines2Save(value));//.linesFormattedArray.join('\n');
-            sessionInformation.formatPath = sessionInformation.formatFullPath2SaveSoqlInfo;
-        } //else {
-        
-        let fileFormatted = linesFormattedArray.join('\n');
-        //}        
-        utils.printOnConsole('saving...', utils.FONTBLUE);
-        saveApexLog(sessionInformation.formatPath, fileFormatted);
-        utils.printOnConsole('Done!', utils.FONTGREEN);
-    }
+    formatOptionSelectedArray.forEach(async (formatOptionSelected) => {
+        if(formatOptionSelected.inBatch){
+            await transformAllFilesInAFolder(sessionInformation, formatOptionSelected.function2Execute);
+        } else {
+            let linesFormattedArray = invokeFilterFormatFunctions(sessionInformation.formatPath, formatOptionSelected.function2Execute);
+            
+            if(formatOptionSelected.extractExtraFormatting){
+                !fs.existsSync(sessionInformation.formatPath2SaveSoqlInfo) && fs.mkdirSync(sessionInformation.formatPath2SaveSoqlInfo, {recursive: true});
+                linesFormattedArray = linesFormattedArray.map(value => formatSoqlLines2Save(value));
+                sessionInformation.formatPath = sessionInformation.formatFullPath2SaveSoqlInfo;
+            }
+            
+            let fileFormatted = linesFormattedArray.join('\n');
+            utils.printOnConsole('saving...', utils.FONTBLUE);
+            saveApexLog(sessionInformation.formatPath, fileFormatted);
+        }
+    })
+
+    utils.printOnConsole('Done!', utils.FONTGREEN);
 }
 
 export async function transformAllFilesInAFolder(sessionInformation, function2Execute){
@@ -32,7 +32,9 @@ export async function transformAllFilesInAFolder(sessionInformation, function2Ex
         let fileNameArray = getAllFilesFromAFolder(path);
 
         resolve(fileNameArray.forEach((fileName) => {
-            if (sessionInformation.debug) console.log('fullPath: ' + path + '/' + fileName);
+            if (sessionInformation.debug) {
+                console.log('fullPath: ' + path + '/' + fileName);
+            }
 
             let linesFormattedArray = invokeFilterFormatFunctions(path+ '/' + fileName, function2Execute);
             let fileFormatted = linesFormattedArray.join('\n');
@@ -42,34 +44,33 @@ export async function transformAllFilesInAFolder(sessionInformation, function2Ex
 }
 
 export function invokeFilterFormatFunctions(filePath, function2Execute){
-    if(function2Execute === 'methodEntryExitCodeUnitStartedFinished2Hierarchy'){
-        return methodEntryExitCodeUnitStartedFinished2Hierarchy(filePath); 
-    }
-
     let fileLinesArray = fileLines2Array(filePath);
-
-    return fileLinesArray.filter(
-        line => fileLinesAnalyseFunctions[function2Execute](line) ? false : true
-    );
+    return invokeLinesFormatting[function2Execute] ? invokeLinesFormatting[function2Execute](fileLinesArray) : invokeLinesFormatting['defaultFormatting'](fileLinesArray, function2Execute);
 }
 
-function methodEntryExitCodeUnitStartedFinished2Hierarchy(filePath){
-    let fileLinesArray = fileLines2Array(filePath);
-
-    let tabs2Add = 0;
-    return fileLinesArray.map(line => {
-        if(fileLinesAnalyseFunctions['isMethodEntryLine'](line) || fileLinesAnalyseFunctions['isCodeUnitStarted'](line)){
-            tabs2Add++;
-            return tabs2Add2Line(tabs2Add - 1) + line;
-        }
-        if(fileLinesAnalyseFunctions['isMethodEntryExit'](line) || fileLinesAnalyseFunctions['isCodeUnitFinished'](line)){
-            if(tabs2Add  == 0){
-                return tabs2Add;
+const invokeLinesFormatting = {
+    methodEntryExitCodeUnitStartedFinished2Hierarchy(fileLinesArray){
+        let tabs2Add = 0;
+        return fileLinesArray.map(line => {
+            if(fileLinesAnalyseFunctions['isMethodEntryLine'](line) || fileLinesAnalyseFunctions['isCodeUnitStarted'](line)){
+                tabs2Add++;
+                return tabs2Add2Line(tabs2Add - 1) + line;
             }
-            tabs2Add--;
-        }
-        return tabs2Add2Line(tabs2Add) + line;
-    })
+            if(fileLinesAnalyseFunctions['isMethodEntryExit'](line) || fileLinesAnalyseFunctions['isCodeUnitFinished'](line)){
+                if(tabs2Add  == 0){
+                    return tabs2Add;
+                }
+                tabs2Add--;
+            }
+            return tabs2Add2Line(tabs2Add) + line;
+        })
+    },
+
+    defaultFormatting(fileLinesArray, function2Execute){
+        return fileLinesArray.filter(
+            line => fileLinesAnalyseFunctions[function2Execute](line) ? false : true
+        );
+    }
 }
 
 function tabs2Add2Line(numberOfTabs){
@@ -117,7 +118,6 @@ export function saveApexLog(filePathAndName, apexLogBody) {
 }
 
 export function fileLines2Array(filePath){
-    console.log('filePath: ' + filePath);
     const fileData = fs.readFileSync(filePath, { encoding: 'utf8' });
 
     //Create an array that contains all the lines of the file

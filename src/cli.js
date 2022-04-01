@@ -1,5 +1,4 @@
 import arg from 'arg';
-import { info } from 'console';
 import inquirer from 'inquirer';
 
 const fs = require('fs');
@@ -12,8 +11,10 @@ const SFDL_BUILD_VERSION = require('../package.json').version;
 let sessionInformation;
 
 export async function cli(args) {
+    let options;
+    
     try{
-        var options = parseArgumentsIntoOptions(args);
+        options = parseArgumentsIntoOptions(args);
     } catch(e){
         utils.printOnConsole(e.toString() + '\n\nRun sfdl --help for more information', utils.FONTMAGENTA);
         return;
@@ -48,58 +49,6 @@ export async function cli(args) {
 
         filesManipulation.executeFormatting(sessionInformation);
 
-        /* //OneFile
-        if(false){//sessionInformation.formatFileClearFinest){
-            let linesFormattedArray = filesManipulation.invokeFilterFormatFunctions(sessionInformation.formatPath, 'removeHeapAllocateAndStatementExecute');
-            let fileFormatted = linesFormattedArray.join('\n');
-            utils.printOnConsole('saving...', utils.FONTBLUE);
-            filesManipulation.saveApexLog(sessionInformation.formatPath, fileFormatted);
-            utils.printOnConsole('Done!', utils.FONTGREEN);
-
-        //OneFile
-        } else if(true){//sessionInformation.formatExtractQueries){
-            console.log('here at formatExtractQueries');
-            !fs.existsSync(sessionInformation.formatPath2SaveSoqlInfo) && fs.mkdirSync(sessionInformation.formatPath2SaveSoqlInfo, {recursive: true});
-            let linesFormattedArray = filesManipulation.invokeFilterFormatFunctions(sessionInformation.formatPath, 'extractSoqlLine');
-            let clearSoqlLine = linesFormattedArray.map(value => filesManipulation.formatSoqlLines2Save(value));
-            let fileFormatted = clearSoqlLine.join('\n');
-            utils.printOnConsole('saving...', utils.FONTBLUE);
-
-            //Ex: ./ApexLogs/0.0307MB | Batch Apex | 2022-01-16T18:38:15 | API System User | 07L1y000005sfwOEAQ.log
-            //The '.sql' is meant to see the SQL icon in the file in VSCode
-            let nameOfTheSoqlFile = '/SOQL | ' + sessionInformation.formatPath.substring(sessionInformation.formatPath.lastIndexOf('/') + 1);
-
-            console.log(sessionInformation.formatPath2SaveSoqlInfo);
-
-            let finalName = sessionInformation.formatPath2SaveSoqlInfo + nameOfTheSoqlFile.replace('.log','.sql');
-
-            console.log('asd ' + finalName);
-
-            filesManipulation.saveApexLog(sessionInformation.formatFullPath2SaveSoqlInfo, fileFormatted);
-        
-        //OneFile
-        } else if(sessionInformation.formatFileHierarchy){
-            let linesFormattedArray = filesManipulation.invokeFilterFormatFunctions(sessionInformation.formatPath, 'methodEntryExitCodeUnitStartedFinished2Hierarchy');
-            let fileFormatted = linesFormattedArray.join('\n');
-            utils.printOnConsole('saving...', utils.FONTBLUE);
-            filesManipulation.saveApexLog(sessionInformation.formatPath, fileFormatted);
-            utils.printOnConsole('Done!', utils.FONTGREEN);
-
-        //Folder
-        } else if(sessionInformation.formatFolderHierarchy){
-            filesManipulation.transformAllFilesInAFolder(sessionInformation, 'methodEntryExitCodeUnitStartedFinished2Hierarchy')
-            .then(() => utils.printOnConsole('Done transformAllFilesInAFolder!', utils.FONTGREEN));
-
-        //Folder
-        } else if(sessionInformation.formatFolderClearFinest){
-            filesManipulation.transformAllFilesInAFolder(sessionInformation, 'removeHeapAllocateAndStatementExecute')
-            .then(() => utils.printOnConsole('Done formatFolderClearFinest!', utils.FONTGREEN));
-
-        //Error
-        } else {
-            utils.printOnConsole('Incorrect Path or File', utils.FONTRED);
-        } */
-
         return;
     }
 
@@ -122,20 +71,9 @@ export async function cli(args) {
                     filesManipulation.saveApexLog(sessionInformation.folderName + '/' + data.additionalOutputs.fileName, data.response);
                 });
 
-                //If logs are Finest Level - Clear all HEAP_ALLOCATE and STATEMENT_EXECUTE lines
-                if (sessionInformation.clearFinest) {
-                    utils.printOnConsole('formatting finest...', utils.FONTYELLOW);
-                    filesManipulation.transformAllFilesInAFolder(sessionInformation, 'removeHeapAllocateAndStatementExecute');
-                }
-                
-                if (sessionInformation.methodHierarchy){
-                    utils.printOnConsole('formatting methods...', utils.FONTYELLOW);
-                    filesManipulation.transformAllFilesInAFolder(sessionInformation, 'methodEntryExitCodeUnitStartedFinished2Hierarchy')
-                }
+                //It's possible to use clearFinest and methodHierarchy in the same transaction (-c -m)
+                filesManipulation.executeFormatting(sessionInformation);
             })
-            .then(() => {
-                utils.printOnConsole('Done!', utils.FONTGREEN);
-            });
     } else {
         utils.printOnConsole('No logs to download...', utils.FONTMAGENTA);
     }
@@ -262,10 +200,10 @@ async function promtRequiredArguments(options) {
         queryWhere: answers.queryWhere || '',
         folderName: answers.folderName || './ApexLogs',
         debug: options.debug || false,
-        clearFinest: options.clearFinest || false,
-        methodHierarchy: options.methodHierarchy || false,
+        clearFinest: {inBatch:true, isSelected: (options.clearFinest || false), function2Execute:'removeHeapAllocateAndStatementExecute'},
+        methodHierarchy: {inBatch:true, isSelected: (options.methodHierarchy || false), function2Execute:'methodEntryExitCodeUnitStartedFinished2Hierarchy'},
         format: options.format || false,
-        formatPath: answers.formatPath || null,
+        formatPath: answers.formatPath || '',
         formatExtractQueries: {extractExtraFormatting: true, inBatch:false, isSelected:(answers.format && answers.format.includes('1)')) || false, function2Execute:'extractSoqlLine'},
         formatFileClearFinest: {extractExtraFormatting: false, inBatch:false, isSelected:(answers.format && answers.format.includes('2)')) || false, function2Execute:'removeHeapAllocateAndStatementExecute'},
         formatFolderClearFinest: {extractExtraFormatting: false, inBatch:true, isSelected:(answers.format && answers.format.includes('3)')) || false, function2Execute:'removeHeapAllocateAndStatementExecute'},

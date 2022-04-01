@@ -47,7 +47,9 @@ export function createDraftConfigFile() {
 
     if (!fs.existsSync('config.json')) {
         fs.writeFile('config.json', JSON.stringify(configFileBody, null, '\t'), function(err) {
-            if (err) return console.log(err);
+            if (error) {
+                return console.log(error);
+            }
         });
     }
 }
@@ -83,6 +85,6 @@ export function extractValuesFromSessionInformationFormatOptions(sessionInformat
     const formatOptionsInformation = Object.keys(sessionInformation)
         .filter(key => sessionInformation[key]['isSelected'])
         .map(key => sessionInformation[key]);
-    return formatOptionsInformation[0];
+    return formatOptionsInformation;
 }
 
