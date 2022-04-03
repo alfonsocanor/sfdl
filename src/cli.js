@@ -21,9 +21,9 @@ export async function cli(args) {
     sessionInformation = await promtRequiredArguments(options);
 
     let cliInformation2Process = utils.extractValuesFromSessionInformationFormatOptions(sessionInformation, 'isSelectedAndCli');
-    let function2Execute = cliInformation2Process.function2Execute ? cliInformation2Process.function2Execute : 'downloadLogs';
-
-    await invokeCliFunctions[function2Execute](sessionInformation);
+    let function2Execute = cliInformation2Process.length && cliInformation2Process[0].function2Execute ? cliInformation2Process.function2Execute : 'downloadLogs';
+        
+    invokeCliFunctions[function2Execute](sessionInformation);
 }
 
 const invokeCliFunctions = {
@@ -43,19 +43,23 @@ const invokeCliFunctions = {
     formatLogs(sessionInformation){
         if(!sessionInformation.formatPath || !fs.existsSync(sessionInformation.formatPath)){
             utils.printOnConsole('Incorrect Path or File', utils.FONTRED);
-            return true;
+            return;
         }
 
         utils.printOnConsole('formatting...', utils.FONTYELLOW);
-
         filesManipulation.executeFormatting(sessionInformation);
     },
     async downloadLogs(sessionInformation){
+        if(sessionInformation.formatPath && !fs.existsSync(sessionInformation.formatPath)){
+            utils.printOnConsole('Incorrect Path or File', utils.FONTRED);
+            return;
+        }
+
         let apexLogInformation = await salesforceInteration.getApexLogsInformation(sessionInformation);
 
         if(JSON.parse(apexLogInformation.response).size === 0){
             utils.printOnConsole('No logs to download...', utils.FONTMAGENTA);
-            return true;
+            return;
         }
 
         utils.printOnConsole('downloading...', utils.FONTYELLOW);
