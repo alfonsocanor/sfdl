@@ -2,9 +2,12 @@ const fs = require('fs');
 const utils = require('./utils');
 
 export async function executeFormatting(sessionInformation){
-    let formatOptionSelectedArray = utils.extractValuesFromSessionInformationFormatOptions(sessionInformation);
-    utils.printOnConsole('formatting...', utils.FONTYELLOW);
+    let formatOptionSelectedArray = utils.extractValuesFromSessionInformationFormatOptions(sessionInformation, 'isSelectedAndOption');
 
+    if(formatOptionSelectedArray.size > 0){
+        utils.printOnConsole('formatting...', utils.FONTYELLOW);
+    }
+    
     formatOptionSelectedArray.forEach(async (formatOptionSelected) => {
         if(formatOptionSelected.inBatch){
             await transformAllFilesInAFolder(sessionInformation, formatOptionSelected.function2Execute);

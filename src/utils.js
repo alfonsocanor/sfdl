@@ -81,9 +81,9 @@ export function getInformationFromConfig() {
     return fs.existsSync('config.json') ? JSON.parse(fs.readFileSync('config.json')) : null;
 }
 
-export function extractValuesFromSessionInformationFormatOptions(sessionInformation){
+export function extractValuesFromSessionInformationFormatOptions(sessionInformation, selectedKey){
     const formatOptionsInformation = Object.keys(sessionInformation)
-        .filter(key => sessionInformation[key]['isSelected'])
+        .filter(key => sessionInformation[key][selectedKey])
         .map(key => sessionInformation[key]);
     return formatOptionsInformation;
 }
