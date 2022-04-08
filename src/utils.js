@@ -1,7 +1,6 @@
 const fs = require('fs');
 let Table = require('cli-table');
 
-//====== start style functions ======
 export const CONSOLEACTIONJOIN = '%s';
 export const CONSOLERESET = '\x1b[0m';
 export const CONSOLEBRIGHT = '\x1b[1m';
@@ -16,7 +15,6 @@ export const FONTCYAN = "\x1b[36m"  + CONSOLEACTIONJOIN + CONSOLEBRIGHT;
 export function printOnConsole(value, action){
     console.log(action + CONSOLERESET, value);
 }
-//====== end  style functions =======
 
 export function createDraftConfigFile() {
     let configFileBody = 
@@ -45,13 +43,11 @@ export function createDraftConfigFile() {
             }
         };
 
-    if (!fs.existsSync('config.json')) {
-        fs.writeFile('config.json', JSON.stringify(configFileBody, null, '\t'), function(err) {
-            if (error) {
-                return console.log(error);
-            }
-        });
-    }
+    fs.writeFile('config.json', JSON.stringify(configFileBody, null, '\t'), function(error) {
+        if (error) {
+            return utils.printOnConsole(error, utils.FONTRED);
+        }
+    });
 }
 
 export function sfdlHelp(){
@@ -74,7 +70,7 @@ export function sfdlHelp(){
     
     printOnConsole(table.toString(), FONTBLUE);
 
-    printOnConsole('\nRepository: https://github.com/alfonsocanor/sfdl\n', FONTWHITE);
+    printOnConsole('\nRepository: https://github.com/alfonsocanor/sfdl2u\n', FONTWHITE);
 }
 
 export function getInformationFromConfig() {
