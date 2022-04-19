@@ -5,5 +5,8 @@
 # node module
 /node_modules
 
+#folders
+/ApexLogs
+
 #other files
 config.json
