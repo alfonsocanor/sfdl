@@ -62,6 +62,7 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
             res.on('data', function(data) {
                 body.push(data);
             });
+
             res.on('end', function() {
                 let response = '';
                 try {
@@ -75,6 +76,7 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
                     }
                     reject(e);
                 }
+
                 resolve({response, additionalOutputs});
             });
         });

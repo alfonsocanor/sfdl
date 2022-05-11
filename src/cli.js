@@ -22,8 +22,6 @@ export async function cli(args) {
 
     let cliInformation2Process = utils.extractValuesFromSessionInformationFormatOptions(sessionInformation, 'isSelectedAndCli');
 
-    console.log(cliInformation2Process);
-
     let function2Execute = cliInformation2Process.length && cliInformation2Process[0].function2Execute ? cliInformation2Process[0].function2Execute : 'downloadLogs';
 
     invokeCliFunctions[function2Execute](sessionInformation);
