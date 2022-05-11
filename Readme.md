@@ -1,4 +1,4 @@
-![Alt Text](https://mindful-unicorn-vro2dw-dev-ed--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Gif&versionId=0685w00000QjZP3&operationContext=DELIVERY&contentId=05T5w00001RtqVM&page=0&d=/a/5w0000022qcz/xjkuSTtrvOpVh23Jvr6E3nNrHq6wXRhi4nmZivbAj8c&oid=00D5w000004ChOL&dpt=null&viewId=)
+![sfdl-gif-logo](https://mindful-unicorn-vro2dw-dev-ed--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Gif&versionId=0685w00000RGRCC&operationContext=DELIVERY&contentId=05T5w00001VH6UN&page=0&d=/a/5w000000JIhY/7PB7wJFC1iuk_VxensrXYn5j9BblMmtyknhcx00vVyQ&oid=00D5w000004ChOL)
 # sfdl
 sfdl is a command line interface tool to download, format and extract information from Salesforce Apex Logs. In addition, the compare feature allows to validate key/value records between two Salesforce orgs
 
@@ -6,7 +6,7 @@ sfdl is a command line interface tool to download, format and extract informatio
 - **v1.x.x** - This version is focused on troubleshooting analysis, requiring to extract <em>Manage Package logs using Grant Salesforce Support</em> login access where Users don't have credentials (username/password) for authentication. [Workaround](#workaround-to-get-theauthToken) described bellow.<br/>
 	- ```v.1.0.0: Download, format, transform and extract logs information``` 
 
-	- ```v.1.0.4: Comparing org records feature (--compare). An Ideal feature if you work with heavy configured logics and packages, for example, Salesforce Industries (Vlocity) package ```
+	- ```v.1.0.4: Comparing org records feature (--compare) ```
 # Installation
 
 - Download and Install Node at: [https://nodejs.org/](https://nodejs.org/) 
