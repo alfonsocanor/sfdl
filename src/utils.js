@@ -12,6 +12,12 @@ export const FONTMAGENTA = '\x1b[35m' + CONSOLEACTIONJOIN + CONSOLEBRIGHT;
 export const FONTWHITE = "\x1b[37m" + CONSOLEACTIONJOIN + CONSOLEBRIGHT;
 export const FONTCYAN = "\x1b[36m"  + CONSOLEACTIONJOIN + CONSOLEBRIGHT;
 
+export function printDebugLog(sessionInformation,logName, logValue){
+    if(sessionInformation.debug){
+        console.log(`${logName}`, logValue);
+    }
+}
+
 export function printOnConsole(value, action){
     console.log(action + CONSOLERESET, value);
 }

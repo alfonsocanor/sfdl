@@ -8,7 +8,7 @@ export function startComparison(sessionInformation){
 }
 
 async function processComparison(sessionInformation){ 
-    const results2Pring = [];
+    let results2Pring = [];
 
     const allSobject2Query = getAllQueryInformationFromConfigFile();
     for(let info of allSobject2Query){
@@ -32,8 +32,12 @@ async function processComparison(sessionInformation){
 
     const date4ComparatorResultFile = new Date(Date.now());
     
+    utils.printDebugLog(sessionInformation,'@results2Pring:', results2Pring);
+
     results2Pring.forEach(result => {
-        createFileWithComparingResults('./sfdl_comparator', JSON.stringify(date4ComparatorResultFile), createComparisonTable(result));
+        if(result.length){
+            createFileWithComparingResults('./sfdl_comparator', JSON.stringify(date4ComparatorResultFile), createComparisonTable(result));
+        }
     })
 }
 
