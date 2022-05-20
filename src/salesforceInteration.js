@@ -19,9 +19,8 @@ export function processApexLogs(sessionInformation, apexLogList) {
 
     apexLogList.forEach(apexLog => {
         let completeUrl = sessionInformation.instanceUrl + apexLogBodyUrl + apexLog.Id + '/Body';
-        if (sessionInformation.debug) {
-            console.log('processApexLogs completeUrl: ', completeUrl);
-        }
+
+        utils.printDebugLog(sessionInformation, 'processApexLogs completeUrl:', completeUrl);
 
         //Some operation values contains '/' char
         var regex = new RegExp('/', 'g');
@@ -49,9 +48,7 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
         }
 
         const req = http.request(requestUrl, options, function(res) {
-            if (sessionInformation.debug) {
-                console.log('response code: ' + res.statusCode);
-            }
+            utils.printDebugLog(sessionInformation, '@getInformationFromSalesforce http response code:', res.statusCode);
 
             if (res.statusCode < 200 || res.statusCode >= 300) {
                 utils.printOnConsole('Session expired or invalid || Error: renew or validate config.json file info, authToken and instanceUrl || statusCode: ' + res.statusCode, utils.FONTRED);
@@ -71,9 +68,7 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
                     }
                     response = JSON.parse(JSON.stringify(response));
                 } catch (e) {
-                    if (sessionInformation.debug) {
-                        console.log('error: ', e);
-                    }
+                    utils.printDebugLog(sessionInformation, '@getInformationFromSalesforce error: ', e);
                     reject(e);
                 }
 
@@ -82,9 +77,7 @@ function getInformationFromSalesforce(requestUrl, additionalOutputs, sessionInfo
         });
 
         req.on('error', (e) => {
-            if (sessionInformation.debug) {
-                console.log('error: ', e);
-            }
+            utils.printDebugLog(sessionInformation, '@getInformationFromSalesforce error: ', e);
             reject(e.message);
         });
         // send the request
