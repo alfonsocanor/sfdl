@@ -47,7 +47,7 @@ function comparingOrgsBySobject(sobjectApiName, key2Compare, value2Compare, orig
     originalOrgRecords.forEach(originalRecord => {
         let record2Compare = org2CompareRecords.find(compareRecord => compareRecord[key2Compare] === originalRecord[key2Compare]);
 
-        if(record2Compare && originalRecord[value2Compare] !== record2Compare[value2Compare]){
+        if(!record2Compare || (record2Compare && originalRecord[value2Compare] !== record2Compare[value2Compare])){
             records2Print.push(
                 {
                     sobjectApiName,
@@ -55,7 +55,7 @@ function comparingOrgsBySobject(sobjectApiName, key2Compare, value2Compare, orig
                         {
                             key2Compare: originalRecord[key2Compare],
                             originalValue: originalRecord[value2Compare],
-                            compareValue: record2Compare[value2Compare]
+                            compareValue: record2Compare ? record2Compare[value2Compare] : ''
                         }
                 }
             )
