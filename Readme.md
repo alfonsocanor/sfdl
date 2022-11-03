@@ -58,11 +58,9 @@ config.json contains the information required for authentication purpose.
 
 - Install [Salesforce Inspector Chrome extension](https://chrome.google.com/webstore/detail/salesforce-inspector/aodjmnfhjibkcdimpodiifdjnnncaafh)
 
-- Execute a query operation to get the cUrl request with the information required: ![getCurlRequest](https://mindful-unicorn-vro2dw-dev-ed--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=0685w00000OgnHN&operationContext=DELIVERY&contentId=05T5w00001MhpVv&page=0&d=/a/5w000000oHaB/uxDSW7RcSEK4D5W6mFJUs8ZbVRs8n791TFyOZ6B4iKw&oid=00D5w000004ChOL&dpt=null&viewId=)
+- Execute a query operation to get the cUrl request with the information required
 
-  
-
-- Create the config.json file in your troubleshooting folder using the information from cUrl request: ![createConfigFile](https://mindful-unicorn-vro2dw-dev-ed--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=0685w00000OgnHI&operationContext=DELIVERY&contentId=05T5w00001MhpVq&page=0&d=/a/5w000000oHaa/f197EyKd2DJb_zvvXLcKedackgpnEsjdY3VR5GetCFU&oid=00D5w000004ChOL&dpt=null&viewId=)
+- Create the config.json file in your troubleshooting folder using the information from cUrl request
 
 - If you copy/paste the cUrl request in the config file as the image above, delete the cUrl request information and save the file with the proper JSON format
 
