@@ -1,4 +1,6 @@
-![sfdl-gif-logo](https://mindful-unicorn-vro2dw-dev-ed--c.documentforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Gif&versionId=0685w00000RGRCC&operationContext=DELIVERY&contentId=05T5w00001VH6UN&page=0&d=/a/5w000000JIhY/7PB7wJFC1iuk_VxensrXYn5j9BblMmtyknhcx00vVyQ&oid=00D5w000004ChOL)
+<p align="center">  
+  <img width="192" height="192" src="https://salesforcedebuglogs.com/resources/blueSoda_medium.png">  
+</p>
 # sfdl
 sfdl is a command line interface tool to download, format and extract information from Salesforce Apex Logs. In addition, the compare feature allows to validate key/value records between two Salesforce orgs
 
